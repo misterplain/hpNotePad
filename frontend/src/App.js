@@ -6,6 +6,7 @@ function App() {
     <>
       <h1>title</h1>
       <h1>test commit</h1>
+      <h1>test commit from computer</h1>
     </>
   );
 }
