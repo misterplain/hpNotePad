@@ -1,12 +1,38 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Header from "./components/Header";
+import Bulletin from "./components/Bulletin";
+import Holidays from "./components/Holidays";
+import Ebay from "./components/Ebay";
+import Templates from "./components/Templates";
+import Container from "@mui/material/Container";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
-      <h1>title</h1>
-      <h1>test commit</h1>
-      <h1>test commit from computer</h1>
+      <Router>
+        {" "}
+        <Header />
+        <Container>
+          <Routes>
+            <Route path='/' element={<Navigate to='/bulletin' />} />
+            <Route path='/bulletin' element={<Bulletin />} />
+            <Route path='/holidays' element={<Holidays />} />
+            <Route path='/ebay' element={<Ebay />} />
+            <Route path='/templates' element={<Templates />} />
+          </Routes>
+        </Container>
+        <section>
+          <Outlet></Outlet>
+        </section>{" "}
+      </Router>
     </>
   );
 }
