@@ -5,42 +5,38 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Grid from "@mui/material/Grid";
+// import {DOAValues} from '../assets/doa'
+import {DOAValues} from '../assets/doa2'
+// import {DOA} from '../assets/doa'
 import { Link } from "react-scroll";
 
 // const doaTemplates = DOA;
 // console.log(doaTemplates);
 
+// const BringValues = ({name, date, text}) => {
+//   return (
+//     <>
+//       <Typography variant='body1'>
+//         {name}
+//         {date}
+//         {text}
+//       </Typography>
+//     </>
+//   );
+
+// }
+
 const Templates = () => {
   const doaTemplates = DOA;
-  console.log(doaTemplates);
-  //   const doaTemplates = [
-  //     {
-  //       id: "1",
-  //       button: "Button",
-  //     },
-  //     {
-  //       id: "2",
-  //       button: "Button",
-  //     },
-  //     {
-  //       id: "3",
-  //       button: "Button",
-  //     },
-  //   ];
+  // console.log(doaTemplates);
+  let date = "2021-10-01";
+  let name = "test234"
   return (
     <>
       <Grid container > </Grid>
       <Typography variant='h3' id="back-to-top-anchor">Buttons</Typography>
       <Grid item xs={12}></Grid>
       <ButtonGroup variant='outlined' aria-label='outlined button group'>
-        {" "}
-        {/* {doaTemplates.map((template) => {
-          return (
-            <Button key={template.id} variant='contained' color>
-              {template.button}
-            </Button>
-          );
-        })} */}
         <Link
           to='DOARefundCCCollection'
           spy={true}
@@ -66,17 +62,21 @@ const Templates = () => {
       </ButtonGroup>
       <Typography variant='h3'>Templates</Typography>
       <Grid item xs={12}>
-        {doaTemplates.map((template) => {
+        {/* {doaTemplates.map((template) => {
           return (
             <>
               <Typography key={template.id} variant='h5' id={template.id}>
                 {template.button}
               </Typography>
               <Typography variant='body1'>{template.text}</Typography>
+              <BringValues name={name} date={date} text={template.text} />
+              <DOAValues name={name} date={date} />
             </>
           );
-        })}
+        })} */}
+        <DOAValues name={name} date={date} />
       </Grid>
+      {/* <DOAValues name={name} date={date} /> */}
     </>
   );
 };

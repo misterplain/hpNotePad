@@ -176,6 +176,20 @@ export default function HideAppBar(props) {
                     </ListItemButton>
                   </ListItem>
                 </Link>
+                <Link
+                  to='contact'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+
+                      <ListItemText
+                        primary={"Add/Edit"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
               </List>
             </Toolbar>
           </AppBar>
