@@ -8,6 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+console.log('test')
 
 app.use("/", contactRoute);
 
