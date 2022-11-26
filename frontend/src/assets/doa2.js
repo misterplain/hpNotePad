@@ -35,7 +35,20 @@ export const DOAValues = ({ name, date }) => {
       id: "DOARefundCCLabel",
       button: "DOA Refund CC",
       title: "DOA refund credit card label",
-      text: "333 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      text: `Dear XXX,\n\nThank you for your email to HP Store. \n \nWe are sorry to hear that your HP Store product did not meet your expectations on this occasion, and we are now actively working to arrange the return and refund of your order. \n \nOur carrier Parcel Force has been requested to come to your original address on XXX Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse. Parcel Force are not always able to meet the requested collection dates, but they will contact you directly as soon as the date is fully booked in. 
+      
+      We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.
+      
+      Please write the HP Store order number XXX on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+      
+      Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+      
+      Once collection has been successful, we will proceed with your refund which will land in the original payment method within 10 working days. 
+      
+      If you require any further assistance, please let us know.
+      
+      Kind regards,
+      `,
     },
     {
       group: "DOA",
