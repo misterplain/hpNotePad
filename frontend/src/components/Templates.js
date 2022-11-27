@@ -32,7 +32,7 @@ const Templates = () => {
       <Grid container>
         <Grid item xs={12}>
           <form style={{ display: "flex" }}>
-            <FormGroup sx={{ width: "20%" }}>
+            <FormGroup sx={{ width: "30%" }}>
               <FormControlLabel
                 control={
                   <TextField
@@ -48,7 +48,7 @@ const Templates = () => {
                 }
               />
             </FormGroup>
-            <FormGroup sx={{ width: "20%" }}>
+            <FormGroup sx={{ width: "30%" }}>
               <FormControlLabel
                 control={
                   <TextField
@@ -56,6 +56,7 @@ const Templates = () => {
                     label='Customers Name'
                     type='text'
                     fullWidth
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
                     // defaultValue={name}
                     InputLabelProps={{
@@ -65,7 +66,7 @@ const Templates = () => {
                 }
               />
             </FormGroup>
-            <FormGroup sx={{ width: "20%" }}>
+            <FormGroup sx={{ width: "30%" }}>
               <FormControlLabel
                 control={
                   <TextField
@@ -73,6 +74,7 @@ const Templates = () => {
                     label='SCEO Number'
                     type='text'
                     fullWidth
+                    value={orderNumber}
                     onChange={(e) => setOrderNumber(e.target.value)}
                     InputLabelProps={{
                       shrink: true,
@@ -83,11 +85,11 @@ const Templates = () => {
             </FormGroup>
             <Button
               onClick={() => {
-                setName("XXX");
-                setOrderNumber("XXX");
-                setDate("XXX");
+                setName("");
+                setOrderNumber("");
+                setDate("");
               }}
-              sx={{ width: "20%", marginRight: ".5rem" }}
+              sx={{ width: "5%", marginRight: ".5rem" }}
               variant='outlined'
               color='primary'
             >
@@ -99,7 +101,7 @@ const Templates = () => {
                 setOrderNumber("in format SCEO********");
                 setDate("the date confirmed in your claim confirmation email");
               }}
-              sx={{ width: "20%" }}
+              sx={{ width: "5%" }}
               variant='outlined'
               color='secondary'
             >
@@ -107,7 +109,8 @@ const Templates = () => {
             </Button>
           </form>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} id='back-to-top-anchor'>
+        {/* DOA BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2} id='back-to-top-anchor'>
           <Typography
             variant='h6'
             component='h2'
@@ -121,6 +124,13 @@ const Templates = () => {
             aria-label='outlined button group'
             style={{ display: "inline" }}
           >
+            {" "}
+            <Link to='DOARepCollection' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep-Collect</Button>
+            </Link>
+            <Link to='DOARepLabel' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep-Label</Button>
+            </Link>
             <Link
               to='DOARefundCCCollection'
               spy={true}
@@ -137,15 +147,32 @@ const Templates = () => {
             >
               <Button fullWidth>Refund-PP-Collect</Button>
             </Link>
+            <Link
+              to='DOARefundWireCollection'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-Wire-Collect</Button>
+            </Link>
             <Link to='DOARefundCCLabel' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Refund-CC-Label</Button>
             </Link>
             <Link to='DOARefundPPLabel' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Refund-PP-Label</Button>
             </Link>
+            <Link
+              to='DOARefundWireLabel'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-Wire-Label</Button>
+            </Link>
           </ButtonGroup>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3} id='back-to-top-anchor'>
+        {/* CHANGE OF MIND BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2} id='back-to-top-anchor'>
           <Typography
             variant='h6'
             component='h2'
@@ -160,7 +187,7 @@ const Templates = () => {
             style={{ display: "inline" }}
           >
             <Link
-              // to='DOARefundCCCollection'
+              to='COMRefundCCCollection'
               spy={true}
               smooth={true}
               duration={500}
@@ -168,7 +195,7 @@ const Templates = () => {
               <Button fullWidth>Refund-CC-Collect</Button>
             </Link>
             <Link
-              // to='DOARefundPPCollection'
+              to='COMRefundPPCollection'
               spy={true}
               smooth={true}
               duration={500}
@@ -176,20 +203,124 @@ const Templates = () => {
               <Button fullWidth>Refund-PP-Collect</Button>
             </Link>
             <Link
-              // to='DOARefundCCLabel'
+              to='COMRefundWireCollection'
               spy={true}
               smooth={true}
               duration={500}
             >
+              <Button fullWidth>Refund-Wire-Collect</Button>
+            </Link>
+            <Link to='COMRefundCCLabel' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Refund-CC-Label</Button>
             </Link>
+            <Link to='COMRefundPPLabel' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Refund-PP-Label</Button>
+            </Link>
             <Link
-              // to='DOARefundPPLabel'
+              to='COMRefundWireLabel'
               spy={true}
               smooth={true}
               duration={500}
             >
+              <Button fullWidth>Refund-Wire-Label</Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+        {/* DAMAGE BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Damaged
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='DMGRepCollection' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep-Collect</Button>
+            </Link>
+            <Link to='DMGRepLabel' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep-Label</Button>
+            </Link>
+            <Link
+              to='DMGRefundCCCollection'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-CC-Collect</Button>
+            </Link>
+            <Link
+              to='DMGRefundPPCollection'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-PP-Collect</Button>
+            </Link>
+            <Link
+              to='DMGRefundWireCollection'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-Wire-Collect</Button>
+            </Link>
+            <Link to='DMGRefundCCLabel' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Refund-CC-Label</Button>
+            </Link>
+            <Link to='DMGRefundPPLabel' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Refund-PP-Label</Button>
+            </Link>
+            <Link
+              to='DMGRefundWireLabel'
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Button fullWidth>Refund-Wire-Label</Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+        {/* Missing BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Missing
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='MSGAllRep' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep - Mising All</Button>
+            </Link>
+            <Link to='MSGPartRep' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Rep - Missing Part</Button>
+            </Link>
+            <Link to='MSGAllRef' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Ref Missing All</Button>
+            </Link>
+            <Link to='MSGAllWireRef' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Ref Wire Missing All</Button>
+            </Link>
+            <Link to='MSGPartRef' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Ref Missing Part</Button>
+            </Link>
+            <Link to='MSGPartWireRef' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>Ref Wire Missing Part</Button>
             </Link>
           </ButtonGroup>
         </Grid>
