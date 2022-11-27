@@ -150,7 +150,7 @@ export default function HideAppBar(props) {
                     </ListItemButton>
                   </ListItem>
                 </Link>
-                <Link
+                {/* <Link
                   to='/ebay'
                   style={{ textDecoration: "none", color: "white" }}
                 >
@@ -162,7 +162,7 @@ export default function HideAppBar(props) {
                       />
                     </ListItemButton>
                   </ListItem>
-                </Link>
+                </Link> */}
                 <Link
                   to='templates'
                   style={{ textDecoration: "none", color: "white" }}
