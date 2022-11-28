@@ -30,7 +30,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
 
   const parse = require("html-react-parser");
   const example = parse("<p>Hi <b>${name}</b>,</p>");
-  const example2 = `<p>Hi <b>${name}</b></p>`;
+  const example2 = parse(`<p>Hi <b>${name}</b> this is me testing out the line breaks <br><br>it's really satisfying to consider the possibilities</p>`);
   const lineBreak = "\n\n";
 
   const replaceWithBr = (x) => {
@@ -43,7 +43,8 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       title: "test",
       // text: `Dear ${name},\n\nTbeen requested to come to your original address on ${date}. or transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the
       //   `,
-      text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
+      // text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
+      text: example2
     },
     {
       id: "test2",
