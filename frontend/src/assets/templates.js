@@ -13,7 +13,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
   const copyToClipboard = (e) => {
     setOpen(true);
     navigator.clipboard.writeText(e.toString());
-    navigator.clipboard.writeText(replaceWithBr(e.toString()));
+    // navigator.clipboard.writeText(replaceWithBr(e.toString()));
   };
 
   // const copyToClipboard = (e) => {
