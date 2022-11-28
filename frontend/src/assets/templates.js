@@ -12,9 +12,21 @@ export const TemplateText = ({ name, date, orderNumber }) => {
   const [open, setOpen] = useState(false);
   const copyToClipboard = (e) => {
     setOpen(true);
-    // navigator.clipboard.writeText(e.toString());
+    navigator.clipboard.writeText(e.toString());
     navigator.clipboard.writeText(replaceWithBr(e.toString()));
   };
+
+  // const copyToClipboard = (e) => {
+  //   let text = e.toString();
+  //   try {
+  //     let successful = document.execCommand("copy");
+  //     let msg = successful ? "successful" : "unsuccessful";
+  //     console.log("copying text command was " + msg);
+  //   } catch (err) {}
+  //   console.log("unable to copy text");
+
+  //   setOpen(true);
+  // };
 
   const parse = require("html-react-parser");
   const example = parse("<p>Hi <b>${name}</b>,</p>");
@@ -22,7 +34,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
   const lineBreak = "\n\n";
 
   const replaceWithBr = (x) => {
-    return x.replace(/\\n/g, "<br /><br />");
+    return x.replace(/\\n/g, "<h1>hello</h1>");
   };
 
   const testArray = [
@@ -38,9 +50,9 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       title: "test2",
       text: `Dear ${name},${replaceWithBr(
         lineBreak
-      )}Thank you for your email to HP Store.\n\nWe are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
+      )}Thank you for your email to HP Store.\\n We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
         lineBreak
-      )}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are \n\nnot always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.\n\nWe kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(
+      )}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(
         lineBreak
       )}Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.${replaceWithBr(
         lineBreak
@@ -267,13 +279,16 @@ export const TemplateText = ({ name, date, orderNumber }) => {
             </Grid>
             <Grid item xs={12}>
               {" "}
-              <Typography
+              {/* <Typography
                 key={template.id}
                 variant='body1'
                 style={{ whiteSpace: "pre-wrap" }}
               >
                 {template.text}
-              </Typography>
+              </Typography> */}
+              <div key={template.id} style={{ whiteSpace: "pre-wrap", color: 'red' }}>
+                {template.text}
+              </div>
             </Grid>
             <Divider />
           </Grid>
