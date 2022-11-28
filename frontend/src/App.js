@@ -29,6 +29,7 @@ function App() {
             {/* <Route path='/ebay' element={<Ebay />} /> */}
             <Route path='/templates' element={<Templates />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='*' element={<Navigate to='/bulletin' />} />
           </Routes>
         </Container>
         <section>
