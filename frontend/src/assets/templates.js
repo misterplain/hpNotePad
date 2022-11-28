@@ -16,26 +16,38 @@ export const TemplateText = ({ name, date, orderNumber }) => {
   };
 
   const parse = require("html-react-parser");
-  const example= parse('<p>Hi <b>${name}</b>,</p>')
-  const example2= `<p>Hi <b>${name}</b></p>`
+  const example = parse("<p>Hi <b>${name}</b>,</p>");
+  const example2 = `<p>Hi <b>${name}</b></p>`;
   const lineBreak = "\n\n";
 
-  const replaceWithBr=(x)=>{
-    return x.replace(/\\n/g, "<br />");
-  }
+  const replaceWithBr = (x) => {
+    return x.replace(/\\n/g, "<br /><br />");
+  };
 
   const testArray = [
     {
       id: "test",
       title: "test",
-      // text: `Dear ${name},\n\nTbeen requested to come to your original address on ${date}. or transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the 
+      // text: `Dear ${name},\n\nTbeen requested to come to your original address on ${date}. or transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the
       //   `,
-      text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`
+      text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
     },
     {
       id: "test2",
       title: "test2",
-      text: `Dear ${name},${replaceWithBr(lineBreak)}Thank you for your email to HP Store.\n\nWe are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(lineBreak)}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.\n\nWe kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(lineBreak)}Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.${replaceWithBr(lineBreak)}Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.${replaceWithBr(lineBreak)}If there is anything further you need, please do not hesitate to let us know.${replaceWithBr(lineBreak)}Kind regards,
+      text: `Dear ${name},${replaceWithBr(
+        lineBreak
+      )}Thank you for your email to HP Store.\n\nWe are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
+        lineBreak
+      )}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.\n\nWe kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(
+        lineBreak
+      )}Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.${replaceWithBr(
+        lineBreak
+      )}Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.${replaceWithBr(
+        lineBreak
+      )}If there is anything further you need, please do not hesitate to let us know.${replaceWithBr(
+        lineBreak
+      )}Kind regards,
         `,
     },
   ];
