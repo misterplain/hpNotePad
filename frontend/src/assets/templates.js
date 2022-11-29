@@ -56,7 +56,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       title: "test2",
       text: `Dear ${name},${replaceWithBr(
         lineBreak
-      )}Thank you for your email to HP Store.\\n We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
+      )}Thank you for your email to HP Store.\n\n We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
         lineBreak
       )}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(
         lineBreak
