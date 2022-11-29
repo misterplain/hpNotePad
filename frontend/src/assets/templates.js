@@ -14,24 +14,29 @@ export const TemplateText = ({ name, date, orderNumber }) => {
     setOpen(true);
     navigator.clipboard.writeText(e.toString());
     // navigator.clipboard.writeText(replaceWithBr(e.toString()));
+    // document.getElementById(id).select();
+    // document.execCommand('copy');
   };
 
-  // const copyToClipboard = (e) => {
-  //   let text = e.toString();
-  //   try {
-  //     let successful = document.execCommand("copy");
-  //     let msg = successful ? "successful" : "unsuccessful";
-  //     console.log("copying text command was " + msg);
-  //   } catch (err) {}
-  //   console.log("unable to copy text");
+  const copyToClipboardTest = (e) => {
+    let text = e.toString();
+    try {
+      let successful = document.execCommand("copy");
+      let msg = successful ? "successful" : "unsuccessful";
+      console.log("copying text command was " + msg);
+    } catch (err) {}
+    console.log("unable to copy text");
 
-  //   setOpen(true);
-  // };
+    setOpen(true);
+  };
 
   const parse = require("html-react-parser");
   const example = parse("<p>Hi <b>${name}</b>,</p>");
-  const example2 = parse(`<p>Hi <b>${name}</b> this is me testing out the line breaks <br><br>it's really satisfying to consider the possibilities</p>`);
+  const example2 = parse(
+    `<p>Hi <b>${name}</b> this is me testing out the line breaks <br><br>it's really satisfying to consider the possibilities</p>`
+  );
   const lineBreak = "\n\n";
+  console.log(example2);
 
   const replaceWithBr = (x) => {
     return x.replace(/\\n/g, "<h1>hello</h1>");
@@ -43,8 +48,8 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       title: "test",
       // text: `Dear ${name},\n\nTbeen requested to come to your original address on ${date}. or transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the
       //   `,
-      // text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
-      text: example2
+      text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
+      // text: `${example2}`,
     },
     {
       id: "test2",
@@ -264,7 +269,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
                 {template.title}
               </Typography>
               <BiCopy
-                onClick={() => copyToClipboard(template.text)}
+                onClick={() => copyToClipboardTest(template.text)}
                 style={{
                   cursor: "pointer",
                   marginLeft: "10px",
@@ -287,9 +292,15 @@ export const TemplateText = ({ name, date, orderNumber }) => {
               >
                 {template.text}
               </Typography> */}
-              <div key={template.id} style={{ whiteSpace: "pre-wrap", color: 'red' }}>
+              {/* <div key={template.id} style={{ whiteSpace: "pre-wrap", color: 'red' }}>
                 {template.text}
-              </div>
+              </div> */}
+              <textarea
+                key={template.id}
+                style={{ whiteSpace: "pre-wrap", color: "red" }}
+              >
+                {template.text}
+              </textarea>
             </Grid>
             <Divider />
           </Grid>
