@@ -18,14 +18,24 @@ export const TemplateText = ({ name, date, orderNumber }) => {
     // document.execCommand('copy');
   };
 
-  const copyToClipboardTest = (e) => {
-    let text = e.toString();
-    try {
-      let successful = document.execCommand("copy");
-      let msg = successful ? "successful" : "unsuccessful";
-      console.log("copying text command was " + msg);
-    } catch (err) {}
-    console.log("unable to copy text");
+  // const copyToClipboardTest = (e) => {
+  //   let text = e.toString();
+  //   try {
+  //     let successful = document.execCommand("copy");
+  //     let msg = successful ? "successful" : "unsuccessful";
+  //     console.log("copying text command was " + msg);
+  //   } catch (err) {}
+  //   console.log("unable to copy text");
+
+  //   setOpen(true);
+  // };
+
+ async function copyToClipboardTest2 (template)  {
+    if ("clipboard" in navigator) {
+      await navigator.clipboard.writeText(template.text);
+    } else {
+      document.execCommand("copy", true, template.text);
+    }
 
     setOpen(true);
   };
@@ -39,8 +49,10 @@ export const TemplateText = ({ name, date, orderNumber }) => {
   console.log(example2);
 
   const replaceWithBr = (x) => {
-    return x.replace(/\\n/g, "<h1>hello</h1>");
+    return x.replace(x, "<h1>hello</h1>");
   };
+
+  const boldParse = parse(`<h1>${name}</h1>`);
 
   const testArray = [
     {
@@ -48,8 +60,14 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       title: "test",
       // text: `Dear ${name},\n\nTbeen requested to come to your original address on ${date}. or transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the
       //   `,
-      text: `${example} + ${example2} +${replaceWithBr(lineBreak)} ${date}`,
-      // text: `${example2}`,
+      // text: `${example} + ${example2} +${parse(
+      //   replaceWithBr(lineBreak)
+      // )} ${date}  + ${boldParse}`,
+      text: `      ${name} + ${date} example
+
+      line break
+
+      double line brea\n\ntest line break `,
     },
     {
       id: "test2",
@@ -57,7 +75,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       text: `Dear ${name},${replaceWithBr(
         lineBreak
       )}Thank you for your email to HP Store.\n\n We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.${replaceWithBr(
-        lineBreak
+        `\n\n`
       )}Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.${replaceWithBr(
         lineBreak
       )}Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.${replaceWithBr(
@@ -254,12 +272,11 @@ export const TemplateText = ({ name, date, orderNumber }) => {
     <>
       {testArray.map((template) => {
         return (
-          <Grid container>
+          <Grid container key={template.id}>
             <Grid item xs={12}>
               {" "}
               <Typography
                 variant='h6'
-                id={template.id}
                 sx={{
                   display: "inline-block",
                   borderBottom: "1px solid green",
@@ -269,7 +286,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
                 {template.title}
               </Typography>
               <BiCopy
-                onClick={() => copyToClipboardTest(template.text)}
+                onClick={() => copyToClipboardTest2(template)}
                 style={{
                   cursor: "pointer",
                   marginLeft: "10px",
@@ -308,7 +325,7 @@ export const TemplateText = ({ name, date, orderNumber }) => {
       })}
       {TemplateTextArray.map((template) => {
         return (
-          <Grid container>
+          <Grid container key={template.id}>
             <Grid item xs={12}>
               {" "}
               <Typography
