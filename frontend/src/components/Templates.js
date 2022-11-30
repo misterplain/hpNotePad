@@ -124,12 +124,6 @@ const Templates = () => {
             aria-label='outlined button group'
             style={{ display: "inline" }}
           >
-            <Link to='test' spy={true} smooth={true} duration={500}>
-              <Button fullWidth>test</Button>
-            </Link>
-            <Link to='test2' spy={true} smooth={true} duration={500}>
-              <Button fullWidth>test2</Button>
-            </Link>
             <Link to='DOARepCollection' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Rep-Collect</Button>
             </Link>
