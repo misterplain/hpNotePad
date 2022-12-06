@@ -57,7 +57,7 @@ const Templates = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/templates");
+    navigate("/");
   })
 
   const [date, setDate] = useState("XXX");
