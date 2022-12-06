@@ -23,13 +23,13 @@ function App() {
         <Header />
         <Container>
           <Routes>
-            <Route path='/' element={<Navigate to='/bulletin' />} />
-            <Route path='/bulletin' element={<Bulletin />} />
+            <Route path='*' element={<Navigate to='/' />} />
+            <Route path='/' element={<Bulletin />} />
             <Route path='/holidays' element={<Holidays />} />
             {/* <Route path='/ebay' element={<Ebay />} /> */}
             <Route path='/templates' element={<Templates />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='*' element={<Navigate to='/bulletin' />} />
+           
           </Routes>
         </Container>
         <section>
