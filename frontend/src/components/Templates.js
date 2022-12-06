@@ -55,11 +55,6 @@ function getStyles(name, personName, theme) {
 
 const Templates = () => {
 
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate("/");
-  })
-
   const [date, setDate] = useState("XXX");
   const [name, setName] = useState("Customer");
   const [orderNumber, setOrderNumber] = useState("in format SCEO********");
