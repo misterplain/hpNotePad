@@ -90,6 +90,7 @@ const Templates = () => {
                       type='date'
                       fullWidth
                       onChange={(e) => setDate(convertDate(e.target.value))}
+                      onSelect={(e) => setDate(convertDate(e.target.value))}
                       InputLabelProps={{
                         shrink: true,
                       }}

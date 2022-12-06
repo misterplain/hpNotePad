@@ -94,7 +94,7 @@ const Contact = () => {
                 control={
                   <TextField
                     name='name'
-                    label='Name'
+                    label='Name (optional)'
                     variant='outlined'
                     color='secondary'
                     fullWidth
