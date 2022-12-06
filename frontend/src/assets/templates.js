@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import Divider from "@mui/material/Divider";
 import { BiCopy } from "react-icons/bi";
+import parse from "html-react-parser";
 
 export const TemplateText = ({ name, date, orderNumber, apology }) => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,16 @@ export const TemplateText = ({ name, date, orderNumber, apology }) => {
   let time = new Date();
   let hour = time.getHours();
 
+  const parse = require("html-react-parser");
+
   const TemplateTextArray = [
+    {
+      id: "test",
+      title: "test",
+      text: `Dear ${name},
+       ${date}. <strong>example</strong> <a href="https://www.google.com">example</a>
+        `,
+    },
     {
       id: "DOARepCollection",
       title: "DOA Refund CC Collection",
@@ -1555,7 +1565,10 @@ Kind regards,
                 {template.title}
               </Typography>
               <BiCopy
-                onClick={() => copyToClipboard(template.text)}
+                onClick={() => {
+                  console.log((JSON.stringify(template.text)));
+                  copyToClipboard(template.text);
+                }}
                 style={{
                   cursor: "pointer",
                   marginLeft: "10px",
@@ -1576,7 +1589,7 @@ Kind regards,
                 variant='body1'
                 style={{ whiteSpace: "pre-wrap" }}
               >
-                {template.text}
+                {parse(template.text)}
               </Typography>
             </Grid>
             <Divider />

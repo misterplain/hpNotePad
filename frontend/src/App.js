@@ -13,15 +13,17 @@ import {
   Routes,
   Navigate,
   Outlet,
+  HashRouter,
 } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-function App() {
+//hash router is not for the browser it's for the server
 
+function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         {" "}
         <Header />
         <Container>
@@ -37,7 +39,7 @@ function App() {
         <section>
           <Outlet></Outlet>
         </section>{" "}
-      </Router>
+      </HashRouter>
     </>
   );
 }

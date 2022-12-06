@@ -47,7 +47,7 @@ import {useNavigate} from 'react-router-dom';
 function getStyles(name, personName, theme) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
+      personName.indexOf(name) === -1 
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
@@ -203,6 +203,9 @@ const Templates = () => {
             aria-label='outlined button group'
             style={{ display: "inline" }}
           >
+                        <Link to='test' spy={true} smooth={true} duration={500}>
+              <Button fullWidth>test</Button>
+            </Link>
             <Link to='DOARepCollection' spy={true} smooth={true} duration={500}>
               <Button fullWidth>Rep-Collect</Button>
             </Link>

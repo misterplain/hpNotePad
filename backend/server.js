@@ -6,9 +6,14 @@ const contactRoute = require("./route/contactRoute");
 
 const app = express();
 
+app.use(
+  "/",
+  express.static(path.resolve(path.join(__dirname, "./build")))
+);
+
 app.use(express.json());
 app.use(cors());
-console.log('test')
+console.log("test");
 
 app.use("/", contactRoute);
 
