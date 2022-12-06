@@ -14,8 +14,11 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+
   return (
     <>
       <Router>
@@ -29,7 +32,6 @@ function App() {
             {/* <Route path='/ebay' element={<Ebay />} /> */}
             <Route path='/templates' element={<Templates />} />
             <Route path='/contact' element={<Contact />} />
-           
           </Routes>
         </Container>
         <section>

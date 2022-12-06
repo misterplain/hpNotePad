@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   ButtonGroup,
@@ -24,6 +24,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { TemplateText } from "../assets/templates";
 import { Link } from "react-scroll";
+import {useNavigate} from 'react-router-dom';
 
 // const ITEM_HEIGHT = 48;
 // const ITEM_PADDING_TOP = 8;
@@ -53,6 +54,12 @@ function getStyles(name, personName, theme) {
 }
 
 const Templates = () => {
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/templates");
+  })
+
   const [date, setDate] = useState("XXX");
   const [name, setName] = useState("Customer");
   const [orderNumber, setOrderNumber] = useState("in format SCEO********");
