@@ -1584,13 +1584,13 @@ Kind regards,
             </Grid>
             <Grid item xs={12}>
               {" "}
-              <Typography
+              <textfield
                 key={template.id}
                 variant='body1'
                 style={{ whiteSpace: "pre-wrap" }}
               >
                 {parse(template.text)}
-              </Typography>
+              </textfield>
             </Grid>
             <Divider />
           </Grid>
