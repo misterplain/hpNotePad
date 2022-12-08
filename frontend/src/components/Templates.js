@@ -31,7 +31,7 @@ const Templates = () => {
   const [open, setOpen] = useState(false);
 
   //set text editor value
-  const [text, setText] = useState("<b>default value</b>");
+  const [text, setText] = useState("");
   const [templateTitle, setTemplateTitle] = useState("Template / Text Editor");
 
   //convert date
@@ -56,7 +56,7 @@ const Templates = () => {
     } catch (e) {
       console.log(e);
     }
-    setOpen(true)
+    setOpen(true);
   };
 
   //change handler for apology checkbox
@@ -73,12 +73,15 @@ const Templates = () => {
       id: "test",
       title: "test title 1",
       text: `<p>test <strong>information</strong> 1<p> ${name} ${orderNumber}, ${
-        apology ? "Apologies for <br><a href='google.com'>link</a>the delay in our reply" : ""
+        apology
+          ? "Apologies for <br><a href='google.com'>link</a>the delay in our reply"
+          : ""
       } ${date}`,
-    }, {
+    },
+    {
       id: "DOARepCollection",
-      title: "DOA Refund CC Collection",
-      text: `Dear ${name},<br><br>
+      title: "DOA Replacemet Collection",
+      text: `Dear ${name}, <br><br>
       
 
 ${
@@ -111,8 +114,8 @@ Kind regards,
     },
     {
       id: "DOARepLabel",
-      title: "DOA Refund CC Collection",
-      text: `Dear ${name},<br><br>
+      title: "DOA Rep Label",
+      text: `Dear ${name}, <br><br>
 
 
 ${
@@ -122,10 +125,7 @@ ${
       }<br><br>
 
 
-We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
-
-
-We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office.<br><br> 
+We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office.<br><br> 
 
 
 We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.<br><br>
@@ -146,7 +146,7 @@ Kind regards,
     {
       id: "DOARefundCCCollection",
       title: "DOA Refund CC Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
 
 
 ${
@@ -180,7 +180,7 @@ Kind regards,
     {
       id: "DOARefundPPCollection",
       title: "DOA Refund PP Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
@@ -213,7 +213,7 @@ Kind regards,
     {
       id: "DOARefundWireCollection",
       title: "DOA Refund Wire Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
 
 
 ${
@@ -253,7 +253,7 @@ Kind regards,
     {
       id: "DOARefundCCLabel",
       title: "DOA Refund CC - Label",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
 
 
 ${
@@ -284,7 +284,7 @@ Kind regards,
     {
       id: "DOARefundPPLabel",
       title: "DOA Refund PP - Label",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
       
 
 ${
@@ -315,7 +315,7 @@ Kind regards,
     {
       id: "DOARefundWireLabel",
       title: "DOA Refund Wire Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
       
 
 ${
@@ -353,7 +353,7 @@ Kind regards,
     {
       id: "COMRefundCCCollection",
       title: "Change of Mind - CC - Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
   
   
 ${
@@ -387,7 +387,7 @@ Kind regards,
     {
       id: "COMRefundPPCollection",
       title: "Change of Mind - PP - Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
   
 
 ${
@@ -421,7 +421,7 @@ Kind regards,
     {
       id: "COMRefundWireCollection",
       title: "Change of Mind - Wire - Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
   
   
 ${
@@ -492,7 +492,7 @@ Kind regards,
     {
       id: "COMRefundPPLabel",
       title: "Change of Mind - P - Label",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
       
       
 ${
@@ -523,7 +523,7 @@ Kind regards,
     {
       id: "COMRefundWireLabel",
       title: "Change of Mind - Wire - Collection",
-      text: `Dear ${name},<br><br>
+      text: `Dear ${name}, <br><br>
       
       
 ${
@@ -561,32 +561,32 @@ Kind regards,
     {
       id: "DMGRepCollection",
       title: "Damaged Refund CC Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.
+We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
 
 
-Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.<br><br>
 
 
-Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.
+Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -595,32 +595,32 @@ Kind regards,
     {
       id: "DMGRepLabel",
       title: "Damaged Refund CC Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.
+We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
 
 
-We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office. 
+We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office.<br><br> 
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.<br><br>
 
 
-Please ensure that you get a receipt from the Post Office when you return this, this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Please ensure that you get a receipt from the Post Office when you return this, this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once the return has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.
+Once the return has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -629,32 +629,32 @@ Kind regards,
     {
       id: "DMGRefundCCCollection",
       title: "Damaged Refund CC Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.
+We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
 
 
-Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once collection has been successful, our refund process will begin, and the money will be returned to your account within 3-5 working days.
+Once collection has been successful, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -663,32 +663,32 @@ Kind regards,
     {
       id: "DMGRefundPPCollection",
       title: "DamagedRefund PP Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
   
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.
+We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
 
 
-Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once collection has been successful, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.
+Once collection has been successful, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -697,38 +697,38 @@ Kind regards,
     {
       id: "DMGRefundWireCollection",
       title: "Damaged Refund Wire Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.
+We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
 
 
-Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
 
 
-IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
 
 
-After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.
+After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -737,29 +737,29 @@ Kind regards,
     {
       id: "DMGRefundCCLabel",
       title: "Damaged Refund CC - Label",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.
+We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your account within 3-5 working days.
+Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -768,29 +768,29 @@ Kind regards,
     {
       id: "DMGRefundPPLabel",
       title: "Damaged Refund PP - Label",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.
+We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.
+Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -799,35 +799,35 @@ Kind regards,
     {
       id: "DMGRefundWireLabel",
       title: "Damaged Refund Wire Collection",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.
+We are sorry to hear that the product you have received is damaged. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
 
 
-We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
 
 
-Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
 
 
-As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
 
 
-IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
 
 
-After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.
+After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let us know.
+If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
 Kind regards,
@@ -837,23 +837,23 @@ Kind regards,
     {
       id: "MSGAllRep",
       title: "Missing All - Rep",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to have a replacement order sent out as soon as possible.
+We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to have a replacement order sent out as soon as possible.<br><br>
 
 
-You will receive a confirmation email as soon this is on its way to you.
+You will receive a confirmation email as soon this is on its way to you.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -863,23 +863,23 @@ Kind regards,
     {
       id: "MSGPartRep",
       title: "Missing Part - Rep",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to have the missing item sent out as soon as possible.
+We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to have the missing item sent out as soon as possible.<br><br>
 
 
-You will receive a confirmation email as soon this is on its way to you.
+You will receive a confirmation email as soon this is on its way to you.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -889,23 +889,23 @@ Kind regards,
     {
       id: "MSGAllRef",
       title: "Missing All - Refund",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to refund you as soon as possible.
+We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to refund you as soon as possible.<br><br>
 
 
-Your money will be returned to your account within 3-5 working days.
+Your money will be returned to your account within 3-5 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -915,26 +915,26 @@ Kind regards,
     {
       id: "MSGAllWireRef",
       title: "Missing All - Wire Refund",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to refund you as soon as possible.
+We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to refund you as soon as possible.<br><br>
 
 
-As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
 
 
-IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -944,23 +944,23 @@ Kind regards,
     {
       id: "MSGPartRef",
       title: "Missing All - Refund",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.
+We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.<br><br>
 
 
-Your money will be returned to your account within 3-5 working days.
+Your money will be returned to your account within 3-5 working days.<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -970,26 +970,26 @@ Kind regards,
     {
       id: "MSGPartWireRef",
       title: "Missing All - Wire Refund",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
       
       
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.
+We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.<br><br>
 
 
-As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
 
 
-IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
 
 
-If there is anything further you need, please do not hesitate to let me know.
+If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
 Kind regards,
@@ -999,35 +999,35 @@ Kind regards,
     {
       id: "MSRTech",
       title: "Misrouted - Tech",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to hear that you are experiencing some technical issues with your HP product and we want to direct you to our HP Technical Support team who will be happy to assist and support to resolve your issue as quickly as possible.
+We are sorry to hear that you are experiencing some technical issues with your HP product and we want to direct you to our HP Technical Support team who will be happy to assist and support to resolve your issue as quickly as possible.<br><br>
 
 
-Please contact our experienced Technical Support team under the phone number:
+Please contact our experienced Technical Support team under the phone number:<br>
 
-Consumer Products:   0207 660 0596
-Business Products:    0207 660 0403
-
-
-Important Information: Prior to calling our Technical Support please have your order details on hand, which should include the serial number of the device and a copy of the invoice if available.
+Consumer Products:   0207 660 0596<br>
+Business Products:    0207 660 0403<br><br>
 
 
-Please ensure you have enough time to support the call which may be extended if the agent is required to do some testing/troubleshooting on your product.
+Important Information: Prior to calling our Technical Support please have your order details on hand, which should include the serial number of the device and a copy of the invoice if available.<br><br>
 
 
-If you have received your HP Store order within the last 30 days, and the Tech Support Team cannot assist directly and your item is marked as faulty, please revert back to us with the case notes and case ID provided by the Tech Team, and we will raise your claim for return of this device. Please specify if you prefer a replacement or a refund.
+Please ensure you have enough time to support the call which may be extended if the agent is required to do some testing/troubleshooting on your product.<br><br>
 
 
-For more information on the HP Technical support please review our FAQs page.
+If you have received your HP Store order within the last 30 days, and the Tech Support Team cannot assist directly and your item is marked as faulty, please revert back to us with the case notes and case ID provided by the Tech Team, and we will raise your claim for return of this device. Please specify if you prefer a replacement or a refund.<br><br>
+
+
+For more information on the HP Technical support please review our FAQs page.<br><br>
 
 
 Kind regards,`,
@@ -1035,26 +1035,26 @@ Kind regards,`,
     {
       id: "MSRSales",
       title: "Misrouted - Sales",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
  
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
        
-Please contact our experienced sales team on
+Please contact our experienced sales team on<br>
        
-Consumer 0207 660 3859
+Consumer 0207 660 3859<br>
        
-Business 0207 660 3858
+Business 0207 660 3858<br><br>
 
 
-You may also contact them via email at hpstoresalesuk@hp.com.
+You may also contact them via email at hpstoresalesuk@hp.com.<br><br>
        
-They will assist you in choosing the correct product for your needs.
+They will assist you in choosing the correct product for your needs.<br><br>
        
 Kind Regards,
        `,
@@ -1062,25 +1062,25 @@ Kind Regards,
     {
       id: "MSRSapos",
       title: "Misrouted- Sapos",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
   
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to advise that we are unable to assist you directly with your sales enquiry.
+We are sorry to advise that we are unable to assist you directly with your sales enquiry.<br><br>
 
 
-Please contact our experienced Sales Team, who will be happy to assist you and can be reached under the phone number:
+Please contact our experienced Sales Team, who will be happy to assist you and can be reached under the phone number:<br>
 
-0207 660 3115 (Mon-Fri, office hours).
+0207 660 3115 (Mon-Fri, office hours).<br><br>
 
 
-If there is anything further we can do to assist please let us know.
+If there is anything further we can do to assist please let us know.<br><br>
 
 
 Kind regards,
@@ -1089,24 +1089,24 @@ Kind regards,
     {
       id: "MSRRecycling",
       title: "Recycling",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Thank you for contacting HP Store Post sales.
+Thank you for contacting HP Store Post sales.<br><br>
 
 
-You can find all information on HP recycling at the HP Website below:
-https://www8.hp.com/uk/en/home/recycling.html
+You can find all information on HP recycling at the HP Website below:<br>
+<a href="https://www8.hp.com/uk/en/home/recycling.html">https://www8.hp.com/uk/en/home/recycling.html</a><br><br>
 
 
-If you require any further assistance, please let us know.
+If you require any further assistance, please let us know.<br><br>
 
 
 Kind regards,
@@ -1115,24 +1115,24 @@ Kind regards,
     {
       id: "MSRPromotions",
       title: "Misrouted - Promotions",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Unfortunately, we are unable to assist you with this enquiry.
+Unfortunately, we are unable to assist you with this enquiry.<br><br>
 
 
-Please contact our Promotions team, who will be happy to assist you and can be reached at the following email address: promotions@GPS1.hp.com.
+Please contact our Promotions team, who will be happy to assist you and can be reached at the following email address: promotions@GPS1.hp.com.<br><br>
 
 
-More information can be found on current HP promotions on our FAQs page below:
-https://www.hp.com/gb-en/shop/faq.aspx
+More information can be found on current HP promotions on our FAQs page below:<br>
+<a href="https://www.hp.com/gb-en/shop/faq.aspx">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
 
 
 Kind regards,
@@ -1141,17 +1141,17 @@ Kind regards,
     {
       id: "MSRNonHP",
       title: "Misrouted - Non-HP",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We can only assist with orders placed directly on the HP Store. If this relates to an HP Store order, please provide your order number in format SCEOxxxxxxxx and we will look into your query. If you've purchased from another seller, you may contact them directly for assistance.
+We can only assist with orders placed directly on the HP Store. If this relates to an HP Store order, please provide your order number in format SCEOxxxxxxxx and we will look into your query. If you've purchased from another seller, you may contact them directly for assistance.<br><br>
 
 
 Kind regards,
@@ -1160,20 +1160,20 @@ Kind regards,
     {
       id: "MSRInstantInk",
       title: "Misrouted - Instant Ink",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Please contact the Instant Ink team directly on 0207 660 0596.
+Please contact the Instant Ink team directly on 0207 660 0596.<br><br>
       
 
-If you require any further assistance, please let us know.
+If you require any further assistance, please let us know.<br><br>
       
 
 Kind regards,
@@ -1182,21 +1182,21 @@ Kind regards,
     {
       id: "MSCInvoice",
       title: "Invoice Copy",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Please find attached a copy of your invoice. 
+Please find attached a copy of your invoice. <br><br>
 
  
 If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:
-https://www.hp.com/gb-en/shop/faq.aspx
+<a href="https://www.hp.com/gb-en/shop/faq.aspx">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
 
 
 Kind regards,
@@ -1205,23 +1205,23 @@ Kind regards,
     {
       id: "MSCHolding",
       title: "Escalation - Holding",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We have sent your enquiry forward and are awaiting further input from our management team.
+We have sent your enquiry forward and are awaiting further input from our management team.<br><br>
 
 
-Please be assured that HP takes all enquiries seriously and appreciate your patience and support whilst our investigation is ongoing, and this is being treated with the highest priority. We will contact you as soon as possible.
+Please be assured that HP takes all enquiries seriously and appreciate your patience and support whilst our investigation is ongoing, and this is being treated with the highest priority. We will contact you as soon as possible.<br><br>
 
 
-Again, we thank you for your patience and understanding.
+Again, we thank you for your patience and understanding.<br><br>
       
 
 Kind regards,
@@ -1230,20 +1230,20 @@ Kind regards,
     {
       id: "MSCHoldingCRT",
       title: "Escalation - Holding CRT",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-As we can only assist with orders received within the last 30 days, we have passed your request onto our Customer Relations Team who will contact you direct to resolve. We apologise for any inconvenience.
+As we can only assist with orders received within the last 30 days, we have passed your request onto our Customer Relations Team who will contact you direct to resolve. We apologise for any inconvenience.<br><br>
 
 
-Again, we thank you for your patience and understanding.
+Again, we thank you for your patience and understanding.<br><br>
       
 
 Kind regards,
@@ -1252,20 +1252,20 @@ Kind regards,
     {
       id: "MSCCancelRequest",
       title: "Cancellation Request",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order ships to the courier. If this is the case, you will be notified that this has shipped, please note that if refuse delivery and let us know when you do, we will initiate the full refund.
+We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order ships to the courier. If this is the case, you will be notified that this has shipped, please note that if refuse delivery and let us know when you do, we will initiate the full refund.<br><br>
 
 
-If this does cancel successfully before shipment, you will be notified as well via email. 
+If this does cancel successfully before shipment, you will be notified as well via email. <br><br>
 
 
 Kind regards,
@@ -1274,23 +1274,23 @@ Kind regards,
     {
       id: "MSCCancelSuccess",
       title: "Cancellation Success - CC/PP",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Thank you for your request to cancel your recent HP Store order. 
+Thank you for your request to cancel your recent HP Store order.<br><br>
 
 
-We can confirm that your order is fully cancelled. 
+We can confirm that your order is fully cancelled.<br><br>
 
 
-Please note that if this purchase was made with a credit card, no money had been taken by HP for this order. Any money that appears to have been taken is simply on hold at your bank and will be returned within 3/5 business days. PayPal refunds are automatically initiated and will be back into your account within 8 business days.
+Please note that if this purchase was made with a credit card, no money had been taken by HP for this order. Any money that appears to have been taken is simply on hold at your bank and will be returned within 3/5 business days. PayPal refunds are automatically initiated and will be back into your account within 8 business days.<br><br>
 
 
 Kind regards,
@@ -1299,32 +1299,32 @@ Kind regards,
     {
       id: "MSCCancelSuccessWire",
       title: "Cancellation Success - Wire",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Thank you for your request to cancel your recent HP Store order. 
+Thank you for your request to cancel your recent HP Store order.<br><br>
 
 
-We can confirm that your order is fully cancelled. 
+We can confirm that your order is fully cancelled.<br><br>
 
 
-As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
 
 
-IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
 
 
-We would appreciate if you can also send us a screenshot of the transaction.
+We would appreciate if you can also send us a screenshot of the transaction.<br><br>
 
 
-If you need anything further, please let us know.
+If you need anything further, please let us know.<br><br>
 
 
 Kind regards,
@@ -1334,23 +1334,23 @@ Kind regards,
     {
       id: "CPCert",
       title: "Certificate Attached",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Please find attached your HP Care Pack certificate.
+Please find attached your HP Care Pack certificate.<br><br>
 
 
-Once again, we apologise for any inconvenience this may have caused.
+Once again, we apologise for any inconvenience this may have caused.<br><br>
 
 
-If there is anything further, we can assist you with please feel free to contact us.
+If there is anything further, we can assist you with please feel free to contact us.<br><br>
       
 
 Kind regards,
@@ -1359,26 +1359,26 @@ Kind regards,
     {
       id: "CPNotPhysical",
       title: "Certificate Not Physical",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Please be aware that the Care Pack Warranty purchased is not a physical product but is sent electronically to you via the email address you provided when ordering. This email will contain an activation link that will direct you to the HP website where you can continue to register the Care Pack Warranty to your HP product with the serial number of the specific unit.
+Please be aware that the Care Pack Warranty purchased is not a physical product but is sent electronically to you via the email address you provided when ordering. This email will contain an activation link that will direct you to the HP website where you can continue to register the Care Pack Warranty to your HP product with the serial number of the specific unit.<br><br>
 
 
-If you do not receive your activation email within the next 2 business days, please contact us again and we will request that this is resent to you as soon as is possible.
+If you do not receive your activation email within the next 2 business days, please contact us again and we will request that this is resent to you as soon as is possible.<br><br>
 
 
-More information on HP Store Care Pack Activation can be found on our FAQS Page.
+More information on HP Store Care Pack Activation can be found on our FAQS Page.<br><br>
 
 
-If you require any further assistance, please let us know.
+If you require any further assistance, please let us know.<br><br>
       
 
 Kind regards,
@@ -1387,40 +1387,40 @@ Kind regards,
     {
       id: "CPHWNeeded",
       title: "Hardware info needed",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-To enable us to complete the registration of your Care Pack, HP requires the following information to be sent to our Care Pack Registration team at the earliest opportunity.
+To enable us to complete the registration of your Care Pack, HP requires the following information to be sent to our Care Pack Registration team at the earliest opportunity.<br><br>
 
 
-Please copy and paste the below information into your mail.
-Send your email to: postsales.carepackregistration@hp.com
+Please copy and paste the below information into your mail.<br>
+Send your email to: postsales.carepackregistration@hp.com<br><br>
 
 
-Email Subject: Care Pack Registration for HP Store order SCEOXXXXXX
-Dear HP Care Pack Registration team,
-Please find below the following information to allow the completion of my Care Pack Registration.
-Name:
-Address:
-Phone:
-Email:
-Product Code:
-Serial No:
-Invoice: (Please attach a copy of your original invoice)
+Email Subject: Care Pack Registration for HP Store order SCEOXXXXXX<br>
+Dear HP Care Pack Registration team,<br>
+Please find below the following information to allow the completion of my Care Pack Registration.<br>
+Name:<br>
+Address:<br>
+Phone:<br>
+Email:<br>
+Product Code:<br>
+Serial No:<br>
+Invoice: (Please attach a copy of your original invoice)<br><br>
 
 
-Please note Care Pack Registration can take up to 2 weeks to complete, after which your certificate will be visible and available for download. Further information on Care Pack Registration can be found on our FAQS Page below:
-hp.com/gb-en/shop/faq.aspx
+Please note Care Pack Registration can take up to 2 weeks to complete, after which your certificate will be visible and available for download. Further information on Care Pack Registration can be found on our FAQS Page below:<br>
+<a href="https://www.hp.com/gb-en/shop/faq.aspx">hp.com/gb-en/shop/faq.aspx</a><br><br>
 
 
-If you require any further assistance after this timeframe, please do let us know.
+If you require any further assistance after this timeframe, please do let us know.<br><br>
       
       
 Kind regards,
@@ -1430,23 +1430,23 @@ Kind regards,
     {
       id: "OSAddressNeeded",
       title: "Address Needed",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We have received a request from the warehouse regarding your delivery. They have requested that you confirm your full delivery address.
+We have received a request from the warehouse regarding your delivery. They have requested that you confirm your full delivery address.<br><br>
 
 
-Once this has been sent to the warehouse, your order will be immediately shipped. You will begin to get automated emails from the system letting you know when it is on its way.
+Once this has been sent to the warehouse, your order will be immediately shipped. You will begin to get automated emails from the system letting you know when it is on its way.<br><br>
 
 
-If you need anything further, please let us know.
+If you need anything further, please let us know.<br><br>
 
 
 Kind regards,
@@ -1455,20 +1455,20 @@ Kind regards,
     {
       id: "OSDelivered",
       title: "Delivered",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Our tracking shows that your order has now been delivered.
+Our tracking shows that your order has now been delivered.<br><br>
 
 
-If you need anything further, please let us know.
+If you need anything further, please let us know.<br><br>
 
 
 Kind regards,
@@ -1477,20 +1477,20 @@ Kind regards,
     {
       id: "OSDeliveryToday",
       title: "Delivery Today",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-Our tracking shows that your order is out for delivery today
+Our tracking shows that your order is out for delivery today.<br><br>
 
 
-If you need anything further, please let us know.
+If you need anything further, please let us know.<br><br>
 
 
 Kind regards,
@@ -1499,26 +1499,26 @@ Kind regards,
     {
       id: "OSEOL",
       title: "End of Life",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to advise that we are unable to fulfil your recent order HP Store order as this product has now been discontinued and no further stock is available. Your order will now be cancelled. 
+We are sorry to advise that we are unable to fulfil your recent order HP Store order as this product has now been discontinued and no further stock is available. Your order will now be cancelled. <br><br>
 
 
-Any money on reserve at your bank will be returned to you within 5/8 business days.
+Any money on reserve at your bank will be returned to you within 5/8 business days.<br><br>
 
 
-Once again, we sincerely apologise we have not been unable to fulfil your requirements on this occasion. 
+Once again, we sincerely apologise we have not been unable to fulfil your requirements on this occasion. <br><br>
 
 
-If there is anything further we can help with, please feel free to contact us 
+If there is anything further we can help with, please feel free to contact us.<br><br>
       
 
 Kind regards,
@@ -1527,29 +1527,29 @@ Kind regards,
     {
       id: "OSETAFull",
       title: "No ETA Full",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to advise that your order has been delayed due to an unforeseen stock constraint within our supply chain.
+We are sorry to advise that your order has been delayed due to an unforeseen stock constraint within our supply chain.<br><br>
 
 
-At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.
+At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.<br><br>
 
 
-If you wish to cancel your order, please let us know in a reply here and we will do so. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.
+If you wish to cancel your order, please let us know in a reply here and we will do so. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.<br><br>
 
 
-We sincerely apologise for any inconvenience this delay may cause and thank you for your patience and understanding.
+We sincerely apologise for any inconvenience this delay may cause and thank you for your patience and understanding.<br><br>
       
 
-If there is anything further we can help with, please feel free to contact us 
+If there is anything further we can help with, please feel free to contact us.<br><br>
       
 
 Kind regards,
@@ -1558,43 +1558,41 @@ Kind regards,
     {
       id: "OSETAPart",
       title: "No ETA Part",
-      text: `Dear ${name},
+      text: `Dear ${name},<br><br>
 
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
         apology ? "Apologies for the delay in our reply" : ""
-      }
+      }<br><br>
 
 
-We are sorry to advise that your order has been delayed due to an unforeseen stock constraint within our supply chain.
+We are sorry to advise that your order has been delayed due to an unforeseen stock constraint within our supply chain.<br><br>
 
 
-The affected part is: *****.
+The affected part is: *****.<br><br>
 
 
-At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.
+At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.<br><br>
 
 
-If you wish to cancel this part from your order, please let us know in a reply here and we will do so. This will enable the rest of the order to ship.
+If you wish to cancel this part from your order, please let us know in a reply here and we will do so. This will enable the rest of the order to ship.<br><br>
 
 
-A new order can then be placed for the delayed part. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.
+A new order can then be placed for the delayed part. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.<br><br>
 
 
-We sincerely apologise for any inconvenience this delay may cause and thank you for your patience and understanding.
+We sincerely apologise for any inconvenience this delay may cause and thank you for your patience and understanding.<br><br>
 
       
 
-If there is anything further we can help with, please feel free to contact us 
+If there is anything further we can help with, please feel free to contact us.<br><br>
       
 
 Kind regards,
  `,
     },
-
-
   ];
 
   //function to set text within editor to template
@@ -1716,7 +1714,7 @@ Kind regards,
           </form>
         </Grid>
         {/* DOA BUTTONS */}
-        <Grid item xs={6} sm={3} md={2} lg={2} >
+        <Grid item xs={6} sm={3} md={2} lg={2}>
           <Typography
             variant='h6'
             component='h2'
@@ -1731,55 +1729,56 @@ Kind regards,
             style={{ display: "inline" }}
           >
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("test")}>
-                test
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("DOARepCollection")}>
                 Rep-Collect
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("DOARepLabel")}>Rep-Label</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DOARefundCCCollection")}>Refund-CC-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DOARefundPPCollection")}>Refund-PP-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DOARefundWireCollection")} >Refund-Wire-Collect</Button>
+              <Button fullWidth onClick={() => setTemplate("DOARepLabel")}>
+                Rep-Label
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth  onClick={() => setTemplate("DOARefundCCLabel")}>Refund-CC-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DOARefundCCCollection")}
+              >
+                Refund-CC-Collect
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth  onClick={() => setTemplate("DOARefundPPLabel")}>Refund-PP-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DOARefundPPCollection")}
+              >
+                Refund-PP-Collect
+              </Button>
             </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth  onClick={() => setTemplate("DOARefundWireLabel")}>Refund-Wire-Label</Button>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DOARefundWireCollection")}
+              >
+                Refund-Wire-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("DOARefundCCLabel")}>
+                Refund-CC-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("DOARefundPPLabel")}>
+                Refund-PP-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DOARefundWireLabel")}
+              >
+                Refund-Wire-Label
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -1798,43 +1797,47 @@ Kind regards,
             aria-label='outlined button group'
             style={{ display: "inline" }}
           >
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth  onClick={() => setTemplate("COMRefundCCCollection")}>Refund-CC-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("COMRefundPPCollection")}>Refund-PP-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("COMRefundWireCollection")}>Refund-Wire-Collect</Button>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("COMRefundCCCollection")}
+              >
+                Refund-CC-Collect
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("COMRefundCCLabel")}>Refund-CC-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("COMRefundPPCollection")}
+              >
+                Refund-PP-Collect
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("COMRefundPPLabel")}>Refund-PP-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("COMRefundWireCollection")}
+              >
+                Refund-Wire-Collect
+              </Button>
             </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("COMRefundWireLabel")}>Refund-Wire-Label</Button>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("COMRefundCCLabel")}>
+                Refund-CC-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("COMRefundPPLabel")}>
+                Refund-PP-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("COMRefundWireLabel")}
+              >
+                Refund-Wire-Label
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -1855,48 +1858,56 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("DMGRepCollection")}>Rep-Collect</Button>
+              <Button fullWidth onClick={() => setTemplate("DMGRepCollection")}>
+                Rep-Collect
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("DMGRepLabel")}>Rep-Label</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DMGRefundCCCollection")}>Refund-CC-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DMGRefundPPCollection")}>Refund-PP-Collect</Button>
-            </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DMGRefundWireCollection")}>Refund-Wire-Collect</Button>
+              <Button fullWidth onClick={() => setTemplate("DMGRepLabel")}>
+                Rep-Label
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("DMGRefundCCLabel")}>Refund-CC-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DMGRefundCCCollection")}
+              >
+                Refund-CC-Collect
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth  onClick={() => setTemplate("DMGRefundPPLabel")}>Refund-PP-Label</Button>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DMGRefundPPCollection")}
+              >
+                Refund-PP-Collect
+              </Button>
             </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("DMGRefundWireLabel")}>Refund-Wire-Label</Button>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DMGRefundWireCollection")}
+              >
+                Refund-Wire-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("DMGRefundCCLabel")}>
+                Refund-CC-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("DMGRefundPPLabel")}>
+                Refund-PP-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("DMGRefundWireLabel")}
+              >
+                Refund-Wire-Label
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -1917,22 +1928,34 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGAllRep")}>Rep - Mising All</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGAllRep")}>
+                Rep - Mising All
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGPartRep")}>Rep - Missing Part</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGPartRep")}>
+                Rep - Missing Part
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGAllRef")}>Ref Missing All</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGAllRef")}>
+                Ref Missing All
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGAllWireRef")}>Ref Wire Missing All</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGAllWireRef")}>
+                Ref Wire Missing All
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGPartRef")}>Ref Missing Part</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGPartRef")}>
+                Ref Missing Part
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSGPartWireRef")}>Ref Wire Missing Part</Button>
+              <Button fullWidth onClick={() => setTemplate("MSGPartWireRef")}>
+                Ref Wire Missing Part
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -1953,22 +1976,34 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRTech")}>Tech</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRTech")}>
+                Tech
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRSales")}>Sales</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRSales")}>
+                Sales
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRSapos")}>Sapos</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRSapos")}>
+                Sapos
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRRecycling")}>Recycling</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRRecycling")}>
+                Recycling
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRPromotions")}>Promotions</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRPromotions")}>
+                Promotions
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSRNonHP")}>Non-HP</Button>
+              <Button fullWidth onClick={() => setTemplate("MSRNonHP")}>
+                Non-HP
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -1989,27 +2024,37 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCHolding")}>CEL-Holding</Button>
+              <Button fullWidth onClick={() => setTemplate("MSCHolding")}>
+                CEL-Holding
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCHoldingCRT")}>CRT-Holding</Button>
+              <Button fullWidth onClick={() => setTemplate("MSCHoldingCRT")}>
+                CRT-Holding
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCInvoice")}>Invoice Copy</Button>
+              <Button fullWidth onClick={() => setTemplate("MSCInvoice")}>
+                Invoice Copy
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>Cancel Request</Button>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
+                Cancel Request
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>Cancel Success - CC/PP</Button>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
+                Cancel Success - CC/PP
+              </Button>
             </Link>
-            <Link
-              to='editor'
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccessWire")}>Cancel Success - Wire</Button>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("MSCCancelSuccessWire")}
+              >
+                Cancel Success - Wire
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -2030,13 +2075,19 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPCert")}>Certificate Attached</Button>
+              <Button fullWidth onClick={() => setTemplate("CPCert")}>
+                Certificate Attached
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPHWNeeded")}>Hardware Info Needed</Button>
+              <Button fullWidth onClick={() => setTemplate("CPHWNeeded")}>
+                Hardware Info Needed
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPNotPhysical")}>CP Not Physical</Button>
+              <Button fullWidth onClick={() => setTemplate("CPNotPhysical")}>
+                CP Not Physical
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
@@ -2057,26 +2108,38 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSAddressNeeded")}>Address Needed</Button>
+              <Button fullWidth onClick={() => setTemplate("OSAddressNeeded")}>
+                Address Needed
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSDelivered")}>Delivered</Button>
+              <Button fullWidth onClick={() => setTemplate("OSDelivered")}>
+                Delivered
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSDeliveryToday")}>Delivery Today</Button>
+              <Button fullWidth onClick={() => setTemplate("OSDeliveryToday")}>
+                Delivery Today
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSETAFull")}>No ETA - Full</Button>
+              <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
+                No ETA - Full
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSETAPart")}>No ETA - Part</Button>
+              <Button fullWidth onClick={() => setTemplate("OSETAPart")}>
+                No ETA - Part
+              </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("OSEOL")}>End of Life</Button>
+              <Button fullWidth onClick={() => setTemplate("OSEOL")}>
+                End of Life
+              </Button>
             </Link>
           </ButtonGroup>
         </Grid>
-        <Grid item xs={11} marginTop id='editor' sx={{marginBottom: '80px'}}>
+        <Grid item xs={11} marginTop id='editor' sx={{ marginBottom: "80px" }}>
           <Typography
             variant='h6'
             sx={{
