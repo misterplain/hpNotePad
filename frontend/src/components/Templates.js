@@ -557,6 +557,24 @@ If there is anything further you need, please do not hesitate to let us know.<br
 Kind regards,
         `,
     },
+    {
+      id: "COM14",
+      title: "No Return outside 14 days",
+      text: `Dear ${name}, <br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+We are unable to submit a return request for your order as it is now outside of the 14 day return period. We are sorry for any inconvenience this may cause.<br><br>
+  
+Kind regards,
+        `,
+    },
     //DAMAGE TEMPLATES
     {
       id: "DMGRepCollection",
@@ -833,6 +851,171 @@ If there is anything further you need, please do not hesitate to let us know.<br
 Kind regards,
         `,
     },
+    {
+      id: "DMGPhotosRep",
+      title: "Photos Needed - Rep ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
+In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "DMGPhotosRef",
+      title: "Photos Needed - Rep ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
+In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+//misc#2
+    {
+      id: "MSC2LowVal",
+      title: "Low Value - No Collect",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You ay dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2AddressMod",
+      title: "Address Mod Sent to LSP",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+We have sent the address information directly to the warehouse to update with the courier. Please note that this process may delay delivery by 1-2 working days.<br><br>
+
+You may monitor your tracking for further updates.<br><br>
+
+If the courier is not able to update this address before the order is fully sent back to our warehouse, please confirm whether you prefer to receive a refund, or if you prefer to have a replacement order generated to the correct address.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2VouchOff",
+      title: "Voucher Offer",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that you faced some issues and we did not achieve our normal high standards.<br><br>
+      We sincerely apologise for any inconvenience this may have caused and would like to offer you a £** e-discount voucher in recognition of this experience, which you can use on your next HP Store purchase.<br><br>
+Please confirm if you accept this voucher and we will escalate further for the code. <br><br>
+      We look forward to seeing you back at HP Store in the future.<br><br>
+      
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2VouchCode",
+      title: "Voucher Code",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that you faced some issues and we did not achieve our normal high standards.<br><br>
+      We sincerely apologise for any inconvenience this may have caused and would like to offer you a £** e-discount voucher in recognition of this experience, which you can use on your next HP Store purchase.<br><br>
+      Please find below the discount voucher code (*conditions apply) and the steps how to receive the discount online:<br><br>
+      ·     	-Log on to your account.<br>
+      ·     	-Choose the product(s) of your choice and add it/them to the basket<br>
+      ·     	-Proceed to checkout.<br>
+      ·     	-Select “Apply E-voucher” and enter your exclusive code in the field.<br>
+      ·     	<strong>-Your code is:</strong><br>
+      ·     	-A discount of the value of the voucher will be applied automatically<br>
+      ·     	-Confirm your order with the payment method of your choice<br><br>
+      <strong>**The voucher is valid until ***** on the UK HP Online Store. Please note - only 1 discount code can be applied per order, all vouchers are for single use only.</strong><br><br>
+      
+      We look forward to seeing you back at HP Store in the future.<br><br>
+      
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2ErrCancelled",
+      title: "Address Mod Sent to LSP",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+We are sorry to advise that due to an issue in processing your order
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
     // MISSING TEMPLATES
     {
       id: "MSGAllRep",
@@ -994,6 +1177,326 @@ If there is anything further you need, please do not hesitate to let me know.<br
 
 Kind regards,
       
+        `,
+    },
+    // wrong product templates
+    {
+      id: "WGPRepCollection",
+      title: "Wrong Product Rep Collection",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+We are sorry to hear that you have received the wrong product, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
+
+
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.<br><br>
+
+
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRepLabel",
+      title: "Wrong Product Rep Collection",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
+
+
+We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office.<br><br> 
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the replacement procedure.<br><br>
+
+
+Please ensure that you get a receipt from the Post Office when you return this, this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once the return has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundCCCollection",
+      title: "Wrong Product Refund CC Collection",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
+
+
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once collection has been successful, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundPPCollection",
+      title: "Wrong Product Refund PP Collection",
+      text: `Dear ${name},<br><br>
+      
+  
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
+
+
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once collection has been successful, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundWireCollection",
+      title: "Wrong Product Refund Wire Collection",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
+
+
+Our carrier Parcel Force has been requested to come to your original address on ${date}. Parcel Force are not always able to meet these requested collection dates, but they will contact you directly as soon as this date is fully booked in. Please note for any changes to this date, we require 48 hours’ notice to book it with the warehouse.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Our driver will have a return label, this allows them to track the return through their network. Please ensure you obtain a collection receipt from the driver as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
+
+
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
+
+
+After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundCCLabel",
+      title: "Wrong Product Refund CC - Label",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundPPLabel",
+      title: "Wrong Product Refund PP - Label",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPRefundWireLabel",
+      title: "Wrong Product Refund Wire Collection",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      We are sorry to hear that you have received the wrong product, and we are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
+
+
+We kindly ask you to pack the goods safely in either their original box or a suitable box for transportation to avoid any damage in transit.Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund procedure.<br><br>
+
+
+Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
+
+
+As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:<br><br>
+
+
+IBAN:<br>SWIFT:<br>Bank Name:<br>Branch:<br>AccountName:<br>Sort Code:<br>Account Number:<br>*(Important Information - Please complete all fields)<br><br>
+
+
+After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPPhotosRep",
+      title: "Wrong Prod Photos Needed - Rep ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that you have received the wrong product, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
+In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+
+
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "WGPPhotosRef",
+      title: " Wrong Prod Photos Needed - Rep ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
+In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+
+If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
         `,
     },
     {
@@ -1497,6 +2000,28 @@ Kind regards,
  `,
     },
     {
+      id: "OSWithCourier",
+      title: "Delivery Today",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+Our tracking shows that your order has shipped to the courier, you may monitor your tracking information for further updates.<br><br>
+
+
+If you need anything further, please let us know.<br><br>
+
+
+Kind regards,
+ `,
+    },
+    {
       id: "OSEOL",
       title: "End of Life",
       text: `Dear ${name},<br><br>
@@ -1839,6 +2364,14 @@ Kind regards,
                 Refund-Wire-Label
               </Button>
             </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth variant="outlined" color="secondary"
+                onClick={() => setTemplate("COM14")}
+              >
+                no return-14 days
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* DAMAGE BUTTONS */}
@@ -1909,6 +2442,22 @@ Kind regards,
                 Refund-Wire-Label
               </Button>
             </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth variant="outlined" color="secondary"
+                onClick={() => setTemplate("DMGPhotosRep")}
+              >
+                Need photos - rep
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth variant="outlined" color="secondary"
+                onClick={() => setTemplate("DMGPhotosRef")}
+              >
+               need photos - ref
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* Missing BUTTONS */}
@@ -1957,6 +2506,93 @@ Kind regards,
                 Ref Wire Missing Part
               </Button>
             </Link>
+          </ButtonGroup>
+        </Grid>
+                {/* Wrong product BUTTONS */}
+                <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Wrong Product
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("WGPRepCollection")}>
+                Rep-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("WGPRepLabel")}>
+                Rep-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("WGPRefundCCCollection")}
+              >
+                Refund-CC-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("WGPRefundPPCollection")}
+              >
+                Refund-PP-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("WGPRefundWireCollection")}
+              >
+                Refund-Wire-Collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("WGPRefundCCLabel")}>
+                Refund-CC-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("WGPRefundPPLabel")}>
+                Refund-PP-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("WGPRefundWireLabel")}
+              >
+                Refund-Wire-Label
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth variant="outlined" color="secondary"
+                onClick={() => setTemplate("WGPPhotosRep")}
+              >
+                Need photos - rep
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth variant="outlined" color="secondary"
+                onClick={() => setTemplate("WGPPhotosRef")}
+              >
+               need photos - ref
+              </Button>
+            </Link>
+
+
           </ButtonGroup>
         </Grid>
         {/* MISROUTED BUTTONS */}
@@ -2123,6 +2759,11 @@ Kind regards,
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("OSWithCourier")}>
+                Shipped to Courier
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
                 No ETA - Full
               </Button>
@@ -2137,6 +2778,50 @@ Kind regards,
                 End of Life
               </Button>
             </Link>
+          </ButtonGroup>
+        </Grid>
+        {/* MISC#2BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Misc #2
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2LowVal")}>
+                Low Val - no collect
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2AddressMod")}>
+                Address Mod Sent
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2VouchOff")}>
+                Voucher - Offer
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2VouchCode")}>
+                Voucher - Code
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2ErrCancelled")}>
+                Error - Cancelled
+              </Button>
+            </Link>
+
           </ButtonGroup>
         </Grid>
         <Grid item xs={11} marginTop id='editor' sx={{ marginBottom: "80px" }}>
