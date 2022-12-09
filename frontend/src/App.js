@@ -7,6 +7,7 @@ import Holidays from "./components/Holidays";
 import Templates from "./components/Templates";
 import Contact from "./components/Contact";
 import Container from "@mui/material/Container";
+import Tools from "./components/Tools";
 import {
   BrowserRouter as Router,
   Route,
@@ -31,6 +32,7 @@ function App() {
             <Route path='*' element={<Navigate to='/' />} />
             <Route path='/' element={<Bulletin />} />
             <Route path='/holidays' element={<Holidays />} />
+            <Route path='/tools' element={<Tools />} />
             {/* <Route path='/ebay' element={<Ebay />} /> */}
             <Route path='/templates' element={<Templates />} />
             <Route path='/contact' element={<Contact />} />
