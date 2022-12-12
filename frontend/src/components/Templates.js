@@ -895,7 +895,7 @@ If there is anything further you need, please do not hesitate to let us know.<br
 Kind regards,
         `,
     },
-//misc#2
+    //misc#2
     {
       id: "MSC2LowVal",
       title: "Low Value - No Collect",
@@ -2120,6 +2120,17 @@ Kind regards,
     },
   ];
 
+  const babyTemps = [
+    {
+      id: 1,
+      text: "We are only able to assist directly with orders placed on the HP Store and received within the last 30 days.",
+    },
+    {
+      id: 2,
+      text: "To speak directly with a Sales Agent, you may contact them at 0207 660 3859 (Option 1 and Option 1 for Sales) or by writing them via email at hpstoresalesuk@hp.com.",
+    },
+  ];
+
   //function to set text within editor to template
   const setTemplate = (id) => {
     const template = templates.find((template) => template.id === id);
@@ -2366,7 +2377,9 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
-                fullWidth variant="outlined" color="secondary"
+                fullWidth
+                variant='outlined'
+                color='secondary'
                 onClick={() => setTemplate("COM14")}
               >
                 no return-14 days
@@ -2444,7 +2457,9 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
-                fullWidth variant="outlined" color="secondary"
+                fullWidth
+                variant='outlined'
+                color='secondary'
                 onClick={() => setTemplate("DMGPhotosRep")}
               >
                 Need photos - rep
@@ -2452,10 +2467,12 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
-                fullWidth variant="outlined" color="secondary"
+                fullWidth
+                variant='outlined'
+                color='secondary'
                 onClick={() => setTemplate("DMGPhotosRef")}
               >
-               need photos - ref
+                need photos - ref
               </Button>
             </Link>
           </ButtonGroup>
@@ -2508,8 +2525,8 @@ Kind regards,
             </Link>
           </ButtonGroup>
         </Grid>
-                {/* Wrong product BUTTONS */}
-                <Grid item xs={6} sm={3} md={2} lg={2}>
+        {/* Wrong product BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
           <Typography
             variant='h6'
             component='h2'
@@ -2577,7 +2594,9 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
-                fullWidth variant="outlined" color="secondary"
+                fullWidth
+                variant='outlined'
+                color='secondary'
                 onClick={() => setTemplate("WGPPhotosRep")}
               >
                 Need photos - rep
@@ -2585,14 +2604,14 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
-                fullWidth variant="outlined" color="secondary"
+                fullWidth
+                variant='outlined'
+                color='secondary'
                 onClick={() => setTemplate("WGPPhotosRef")}
               >
-               need photos - ref
+                need photos - ref
               </Button>
             </Link>
-
-
           </ButtonGroup>
         </Grid>
         {/* MISROUTED BUTTONS */}
@@ -2821,8 +2840,39 @@ Kind regards,
                 Error - Cancelled
               </Button>
             </Link>
-
           </ButtonGroup>
+        </Grid>
+        <Grid xs={12}>
+          <Typography
+            variant='h6'
+            sx={{
+              display: "inline-block",
+              borderBottom: "1px solid green",
+              marginBottom: "10px",
+            }}
+          >
+            Baby Temps
+          </Typography>
+          {babyTemps.map((template) => {
+            return (
+              <div style={{ display: "flex", marginBottom: "5px" }}>
+                <BiCopy
+                  onClick={() => {
+                    navigator.clipboard.writeText(template.text);
+                    setOpen(true);
+                  }}
+                  style={{
+                    cursor: "pointer",
+                    margin: "5 5 0 10",
+                    color: "green",
+                    fontSize: "20px",
+                    flexShrink: 0,
+                  }}
+                />
+                <Typography>{template.text}</Typography>
+              </div>
+            );
+          })}
         </Grid>
         <Grid item xs={11} marginTop id='editor' sx={{ marginBottom: "80px" }}>
           <Typography
@@ -2868,13 +2918,7 @@ Kind regards,
           <div id='parsedText' style={{ display: "none" }}>
             {parse(text)}
           </div>
-          {/* <button
-            onClick={() => {
-              copyToClipboard();
-            }}
-          >
-            copy to clipboard
-          </button> */}
+
           <Snackbar
             open={open}
             anchorOrigin={{ vertical: "bottom", horizontal: "left" }}

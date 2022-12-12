@@ -46,16 +46,12 @@ const Contact = () => {
     id='contact'
     sx={{ marginTop: "50px" }}
   >
-    {/* <Grid item xs={12} sm={11} flex>
-      <Typography variant='h4' component='h2' gutterBottom>
-        Contact
-      </Typography>
-    </Grid> */}
     <Grid item xs={12} sm={10} md={8}>
       <Formik
         initialValues={{ name: "", message: "" }}
         validationSchema={contactSchema}
         onSubmit={async (values, { resetForm }) => {
+          handleOpen();
           try {
             let data = {
               name: values.name,
@@ -75,7 +71,7 @@ const Contact = () => {
           } catch (error) {
             console.log(error);
           }
-          handleOpen();
+         
           resetForm();
         }}
       >
