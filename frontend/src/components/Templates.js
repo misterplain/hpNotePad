@@ -14,7 +14,7 @@ import Snackbar from "@mui/material/Snackbar";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import parse from "html-react-parser";
-import { BiCopy } from "react-icons/bi";
+import { BiCopy, } from "react-icons/bi";
 
 // import TemplateText from "../assets/templates4";
 import { Link } from "react-scroll";

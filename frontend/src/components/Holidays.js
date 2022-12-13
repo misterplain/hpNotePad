@@ -1,7 +1,27 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { BiCheck } from "react-icons/bi";
 
 const Holidays = () => {
+  function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+  }
+
+  const rows = [
+    createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
+    createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
+    createData("Eclair", 262, 16.0, 24, 6.0),
+    createData("Cupcake", 305, 3.7, 67, 4.3),
+    createData("Gingerbread", 356, 16.0, 49, 3.9),
+  ];
+
   return (
     <Grid container sx={{ justifyContent: "center" }}>
       <Grid
@@ -29,7 +49,7 @@ const Holidays = () => {
           comp day. Team will be off automatically.
         </Typography>
       </Grid>
-      <Grid xs={8} sx={{ textAlign: "center" }}>
+      {/* <Grid xs={8} sx={{ textAlign: "center" }}>
         <Typography sx={{ color: "blue" }}>
           December 6th - Spain Yes, UK no
         </Typography>
@@ -45,6 +65,94 @@ const Holidays = () => {
         <Typography sx={{ color: "red" }}>
           December 27th - Spain No, UK Yes
         </Typography>
+      </Grid> */}
+      <Grid xs={8} marginTop>
+        <TableContainer component={Paper} sx={{          marginBottom: "10px",
+          border: "5px solid purple",
+          padding: "20px",
+          borderRadius: "50px",}}>
+          <Table
+            aria-label='simple table'
+            size='small'
+          >
+            <TableHead>
+              <TableRow sx={{ borderBottom: "1.5px solid black" }}>
+                <TableCell align='left'>Date</TableCell>
+                <TableCell align='center'>Spanish Bank Holiday</TableCell>
+                <TableCell align='center'>UK Bank Holiday</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  December 6th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  December 8th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  December 25th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  December 26th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "red" }}
+                >
+                  December 27th
+                </TableCell>
+                <TableCell align='center'></TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Grid>
     </Grid>
   );
