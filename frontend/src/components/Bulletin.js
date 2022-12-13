@@ -19,6 +19,12 @@ const Bulletin = () => {
         >
           <Typography variant='h6' padding>
            Change of Mind / DOA Holiday returns extension: 
+           <ul>
+            <li>Invoiced Nov 1, return end date Jan 31 - returns window 91 days</li>
+            <li>Invoiced Nov 2, return end date Jan 31 - returns window 90 days</li>
+            <li>....and so on...</li>
+            <li>Invoiced Dec 31, return end date Jan 31 - returns window 31 days</li>
+           </ul>
           </Typography>
         </Box>
       </Grid>

@@ -997,7 +997,7 @@ Kind regards,
     },
     {
       id: "MSC2ErrCancelled",
-      title: "Address Mod Sent to LSP",
+      title: "System Error - order cancelled",
       text: `Dear ${name},<br><br>
       
       
@@ -1007,10 +1007,43 @@ ${
         apology ? "Apologies for the delay in our reply" : ""
       }<br><br>
 
-We are sorry to advise that due to an issue in processing your order
+We are sorry to advise that due to an issue in processing your order and it has been fully cancelled. Any money taken will be on its way back to you within the next few working days. Please confirm if you do not receive your refund within the next few working days and we will raise an query with the Finance Team.<br><br>
 
 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2ReturnDelay",
+      title: "Return Delay / collection or label ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      We apologise for the ongoing delay with your return.<br><br>
+
+
+      There are several factors currently affecting this, including the intermittent strikes with Parcel Force, and unfortunately our collection & return label services have been greatly affected.<br><br>
+      
+      
+      Our management team is presently working to find a solution to these delays, and we will confirm the details of your return as soon as we can.<br><br>
+      
+      
+      Please note that this delay does not in any way affect your request, or your right to return.<br><br>
+      
+      
+      We sincerely apologise once again, for this inconvenience.<br><br>
+      
+
+
 
 
 Kind regards,
@@ -1655,6 +1688,27 @@ ${
 
 
 We can only assist with orders placed directly on the HP Store. If this relates to an HP Store order, please provide your order number in format SCEOxxxxxxxx and we will look into your query. If you've purchased from another seller, you may contact them directly for assistance.<br><br>
+
+
+Kind regards,
+ `,
+    },
+    {
+      id: "MSRInstantInk",
+      title: "Misrouted - Instant Ink",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+
+      Please contact the Instant Ink team directly on 0207 660 0596.<br><br>
+      If you require any further assistance, please let us know.
+      <br><br>
 
 
 Kind regards,
@@ -2660,6 +2714,11 @@ Kind regards,
                 Non-HP
               </Button>
             </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSRInstantInk")}>
+                Instant Ink
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* MISC BUTTONS */}
@@ -2815,6 +2874,11 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2ReturnDelay")}>
+                Returns Delay
+              </Button>
+            </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSC2LowVal")}>
                 Low Val - no collect
