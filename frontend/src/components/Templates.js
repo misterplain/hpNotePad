@@ -1887,6 +1887,25 @@ If you need anything further, please let us know.<br><br>
 Kind regards,
  `,
     },
+    {
+      id: "MSCBlank",
+      title: "Blank",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br><br><br>
+
+
+If you need anything further, please let us know.<br><br>
+
+
+Kind regards,
+ `,
+    },
     // CARE PACK TEMPLATES
     {
       id: "CPCert",
@@ -2182,6 +2201,10 @@ Kind regards,
     {
       id: 2,
       text: "To speak directly with a Sales Agent, you may contact them at 0207 660 3859 (Option 1 and Option 1 for Sales) or by writing them via email at hpstoresalesuk@hp.com.",
+    },
+    {
+      id: 2,
+      text: "Our apologies for the inconveniences you have seen with this order. ",
     },
   ];
 
@@ -2737,6 +2760,11 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth color="secondary" onClick={() => setTemplate("MSCBlank")}>
+                Blank
+              </Button>
+            </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSCHolding")}>
                 CEL-Holding
