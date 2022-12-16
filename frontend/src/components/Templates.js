@@ -1049,6 +1049,30 @@ ${
 Kind regards,
         `,
     },
+    {
+      id: "MSC2ARN",
+      title: "Return Delay / collection or label ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply" : ""
+      }<br><br>
+
+      Thank you for your mail relating to the refund for our HP Store order ******<br><br>
+      Our Finance Team have confirmed your refund was released on <**/**/****> and we attach the credit note invoice confirming this transaction was made from the HP bank. We also provide the following transaction reference number for the payment that was made by HPs bank < ***********>.<br><br>
+      These funds should appear back as an available balance on your account within the next few days subject to your banks standard operating procedure.<br><br>
+      For more information on our refund policy please visit our FAQ's page on the HP Store Website.<br><br>
+      
+
+
+
+
+Kind regards,
+        `,
+    },
     // MISSING TEMPLATES
     {
       id: "MSGAllRep",
@@ -2930,6 +2954,11 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSC2ErrCancelled")}>
                 Error - Cancelled
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2ARN")}>
+                ARN
               </Button>
             </Link>
           </ButtonGroup>
