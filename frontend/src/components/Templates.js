@@ -14,7 +14,7 @@ import Snackbar from "@mui/material/Snackbar";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import parse from "html-react-parser";
-import { BiCopy, } from "react-icons/bi";
+import { BiCopy } from "react-icons/bi";
 
 // import TemplateText from "../assets/templates4";
 import { Link } from "react-scroll";
@@ -87,7 +87,7 @@ const Templates = () => {
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -121,7 +121,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -152,7 +152,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
       
 
@@ -185,7 +185,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -219,7 +219,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -259,7 +259,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -290,7 +290,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -321,7 +321,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -359,7 +359,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
   
   
@@ -393,7 +393,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
   
   
@@ -427,7 +427,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -467,7 +467,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -498,7 +498,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -529,7 +529,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -566,7 +566,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -585,7 +585,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -619,7 +619,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -653,7 +653,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -687,7 +687,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -721,7 +721,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -761,7 +761,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -792,7 +792,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -823,7 +823,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -860,7 +860,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
@@ -883,7 +883,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
@@ -905,7 +905,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You ay dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
@@ -926,7 +926,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 We have sent the address information directly to the warehouse to update with the courier. Please note that this process may delay delivery by 1-2 working days.<br><br>
@@ -951,7 +951,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that you faced some issues and we did not achieve our normal high standards.<br><br>
@@ -973,7 +973,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that you faced some issues and we did not achieve our normal high standards.<br><br>
@@ -1004,7 +1004,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 We are sorry to advise that due to an issue in processing your order and it has been fully cancelled. Any money taken will be on its way back to you within the next few working days. Please confirm if you do not receive your refund within the next few working days and we will raise an query with the Finance Team.<br><br>
@@ -1025,7 +1025,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We apologise for the ongoing delay with your return.<br><br>
@@ -1058,7 +1058,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       Thank you for your mail relating to the refund for our HP Store order ******<br><br>
@@ -1083,7 +1083,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1109,7 +1109,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1135,7 +1135,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1161,7 +1161,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1190,7 +1190,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1216,7 +1216,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1246,7 +1246,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1280,7 +1280,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1314,7 +1314,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1348,7 +1348,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1382,7 +1382,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1422,7 +1422,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1453,7 +1453,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1484,7 +1484,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1521,7 +1521,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that you have received the wrong product, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
@@ -1544,7 +1544,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
       We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
@@ -1565,7 +1565,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1601,7 +1601,7 @@ Kind regards,`,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
        
@@ -1628,7 +1628,7 @@ Kind Regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1655,7 +1655,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1681,7 +1681,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1707,7 +1707,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1726,7 +1726,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1747,7 +1747,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1769,7 +1769,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1792,7 +1792,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1817,7 +1817,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1839,11 +1839,11 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
-We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order ships to the courier. If this is the case, you will be notified that this has shipped, please note that if refuse delivery and let us know when you do, we will initiate the full refund.<br><br>
+We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if refuse delivery and let us know when you do, we will initiate the full refund.<br><br>
 
 
 If this does cancel successfully before shipment, you will be notified as well via email. <br><br>
@@ -1861,7 +1861,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1886,7 +1886,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1920,7 +1920,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br><br><br>
 
 
@@ -1940,7 +1940,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1965,7 +1965,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -1993,7 +1993,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for contacting the HP Store. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2036,7 +2036,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2053,6 +2053,28 @@ Kind regards,
  `,
     },
     {
+      id: "OSFraud",
+      title: "Fraud Rejected",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>Send me the text and I'll put this up</strong><br><br>
+
+
+If you need anything further, please let us know.<br><br>
+
+
+Kind regards,
+`,
+    },
+    {
       id: "OSDelivered",
       title: "Delivered",
       text: `Dear ${name},<br><br>
@@ -2061,7 +2083,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2083,7 +2105,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2105,7 +2127,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2127,7 +2149,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2155,7 +2177,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2186,7 +2208,7 @@ Kind regards,
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
 }thank you for recent HP Store order. ${
-        apology ? "Apologies for the delay in our reply" : ""
+        apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
 
@@ -2215,6 +2237,249 @@ If there is anything further we can help with, please feel free to contact us.<b
 Kind regards,
  `,
     },
+    // RETURNS TEMPLATES
+    {
+      id: "RETLabel1",
+      title: "Failed Label 1",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETLabel2",
+      title: "Failed Label 2",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETLabel3",
+      title: "Failed Label 3",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCollect1",
+      title: "Failed Collection 1",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCollect2",
+      title: "Failed Collection 2",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCollect3",
+      title: "Failed Collection 3",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCancel",
+      title: "Claim Cancelled",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCancel",
+      title: "Claim Cancelled",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETCancel",
+      title: "Claim Cancelled",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETBillProd",
+      title: "Bill for extra product received",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "RETBillRef",
+      title: "Bill for refund incorrectly sent",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
+      
+
+If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
   ];
 
   const babyTemps = [
@@ -2229,6 +2494,10 @@ Kind regards,
     {
       id: 2,
       text: "Our apologies for the inconveniences you have seen with this order. ",
+    },
+    {
+      id: 2,
+      text: "For more immediate assistance, our Post Sales phone line is open from 9am until 5:30pm and can be reached at 0207 660 3859 (Option 1 and then Option 3).",
     },
   ];
 
@@ -2343,7 +2612,7 @@ Kind regards,
                         name='apologyButton'
                       />
                     }
-                    label='Add "Apologies for the delay in our reply."'
+                    label='Add "Apologies for the delay in our reply.."'
                   />
                 </FormGroup>
               </FormControl>
@@ -2768,95 +3037,6 @@ Kind regards,
             </Link>
           </ButtonGroup>
         </Grid>
-        {/* MISC BUTTONS */}
-        <Grid item xs={6} sm={3} md={2} lg={2}>
-          <Typography
-            variant='h6'
-            component='h2'
-            style={{ textAlign: "center" }}
-          >
-            Misc
-          </Typography>
-          <ButtonGroup
-            variant='outlined'
-            size='small'
-            aria-label='outlined button group'
-            style={{ display: "inline" }}
-          >
-            {" "}
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth color="secondary" onClick={() => setTemplate("MSCBlank")}>
-                Blank
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCHolding")}>
-                CEL-Holding
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCHoldingCRT")}>
-                CRT-Holding
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCInvoice")}>
-                Invoice Copy
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
-                Cancel Request
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
-                Cancel Success - CC/PP
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button
-                fullWidth
-                onClick={() => setTemplate("MSCCancelSuccessWire")}
-              >
-                Cancel Success - Wire
-              </Button>
-            </Link>
-          </ButtonGroup>
-        </Grid>
-        {/* CAREPACK BUTTONS */}
-        <Grid item xs={6} sm={3} md={2} lg={2}>
-          <Typography
-            variant='h6'
-            component='h2'
-            style={{ textAlign: "center" }}
-          >
-            Care Pack
-          </Typography>
-          <ButtonGroup
-            variant='outlined'
-            size='small'
-            aria-label='outlined button group'
-            style={{ display: "inline" }}
-          >
-            {" "}
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPCert")}>
-                Certificate Attached
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPHWNeeded")}>
-                Hardware Info Needed
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("CPNotPhysical")}>
-                CP Not Physical
-              </Button>
-            </Link>
-          </ButtonGroup>
-        </Grid>
         {/* ORDER STATUS BUTTONS */}
         <Grid item xs={6} sm={3} md={2} lg={2}>
           <Typography
@@ -2906,6 +3086,146 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSEOL")}>
                 End of Life
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("OSFraud")}>
+                Fraud Rejected
+              </Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+                {/* RETURNSBUTTONS */}
+                <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Return Chaser
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETLabel1")}>
+                Failed label - 1
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETLabel2")}>
+                Failed label - 2
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETLabel3")}>
+                Failed label - 3
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETCollect1")}>
+                Failed Collect - 1
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETCollect2")}>
+                Failed Collect - 2
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("RETCollect3")}>
+                Failed Collect - 3
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("RETCancel")}
+              >
+                Claim cancelled
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("RETBillProd")}
+              >
+                Bill - xtra prod
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("RETBillRef")}
+              >
+                Bill - ref sent
+              </Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+        {/* MISC BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Misc
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("MSCBlank")}
+              >
+                Blank
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCHolding")}>
+                CEL-Holding
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCHoldingCRT")}>
+                CRT-Holding
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCInvoice")}>
+                Invoice Copy
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
+                Cancel Request
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
+                Cancel Success - CC/PP
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("MSCCancelSuccessWire")}
+              >
+                Cancel Success - Wire
               </Button>
             </Link>
           </ButtonGroup>
@@ -2963,6 +3283,41 @@ Kind regards,
             </Link>
           </ButtonGroup>
         </Grid>
+
+        {/* CAREPACK BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Care Pack
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("CPCert")}>
+                Certificate Attached
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("CPHWNeeded")}>
+                Hardware Info Needed
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("CPNotPhysical")}>
+                CP Not Physical
+              </Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+
         <Grid xs={12}>
           <Typography
             variant='h6'
