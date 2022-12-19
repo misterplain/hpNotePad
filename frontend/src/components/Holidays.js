@@ -67,17 +67,19 @@ const Holidays = () => {
         </Typography>
       </Grid> */}
       <Grid xs={8} marginTop>
-        <TableContainer component={Paper} sx={{          marginBottom: "10px",
-          border: "5px solid purple",
-          padding: "20px",
-          borderRadius: "50px",}}>
-          <Table
-            aria-label='simple table'
-            size='small'
-          >
+        <TableContainer
+          component={Paper}
+          sx={{
+            marginBottom: "10px",
+            border: "5px solid purple",
+            padding: "20px",
+            borderRadius: "50px",
+          }}
+        >
+          <Table aria-label='simple table' size='small'>
             <TableHead>
               <TableRow sx={{ borderBottom: "1.5px solid black" }}>
-                <TableCell align='left'>Date</TableCell>
+                <TableCell align='left'>Date - 2022 </TableCell>
                 <TableCell align='center'>Spanish Bank Holiday</TableCell>
                 <TableCell align='center'>UK Bank Holiday</TableCell>
               </TableRow>
@@ -150,6 +152,262 @@ const Holidays = () => {
                   <BiCheck style={{ fontSize: "2rem" }} />
                 </TableCell>
               </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Grid>
+      <Grid xs={8} marginTop>
+        <TableContainer
+          component={Paper}
+          sx={{
+            marginBottom: "10px",
+            border: "5px solid purple",
+            padding: "20px",
+            borderRadius: "50px",
+          }}
+        >
+          <Table aria-label='simple table' size='small'>
+            <TableHead>
+              <TableRow sx={{ borderBottom: "1.5px solid black" }}>
+                <TableCell align='left'>Date - 2023 </TableCell>
+                <TableCell align='center'>Spanish Bank Holiday</TableCell>
+                <TableCell align='center'>UK Bank Holiday</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "red" }}
+                >
+                  January 2nd
+                </TableCell>
+                <TableCell align='center'></TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  January 6th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  April 7th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  April 10th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  May 1st
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "red" }}
+                >
+                  May 8th
+                </TableCell>
+                <TableCell align='center'></TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "red" }}
+                >
+                May 29th
+                </TableCell>
+                <TableCell align='center'></TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+             June 24th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                 August 15th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "red" }}
+                >
+                August 28th
+                </TableCell>
+                <TableCell align='center'></TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                 September 11th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                 October 12th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                 November 1st
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  December 6th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  December 8th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  December 25th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "purple" }}
+                >
+                  December 26th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+              </TableRow>
+
+
             </TableBody>
           </Table>
         </TableContainer>
