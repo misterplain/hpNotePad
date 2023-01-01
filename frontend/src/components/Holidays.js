@@ -25,7 +25,7 @@ const Holidays = () => {
   return (
     <Grid container sx={{ justifyContent: "center" }}>
       <Grid
-        xs={8}
+        xs={12} sm={10} md={8}
         sx={{
           marginBottom: "10px",
           border: "5px solid purple",
@@ -66,7 +66,7 @@ const Holidays = () => {
           December 27th - Spain No, UK Yes
         </Typography>
       </Grid> */}
-      <Grid xs={8} marginTop>
+      <Grid xs={12} sm={10} md={8} marginTop>
         <TableContainer
           component={Paper}
           sx={{
@@ -156,7 +156,7 @@ const Holidays = () => {
           </Table>
         </TableContainer>
       </Grid>
-      <Grid xs={8} marginTop>
+      <Grid xs={12} sm={10} md={8} marginTop>
         <TableContainer
           component={Paper}
           sx={{

@@ -20,15 +20,15 @@ const Bulletin = () => {
           <Typography variant='h6' padding>
            Change of Mind / DOA Holiday returns extension: 
            <ul>
-            <li>Invoiced Nov 1, return end date Jan 31 - returns window 91 days</li>
-            <li>Invoiced Nov 2, return end date Jan 31 - returns window 90 days</li>
+            <li>Invoiced Nov 25, return end date Jan 31 - returns window 67 days</li>
+            <li>Invoiced Nov 26, return end date Jan 31 - returns window 66 days</li>
             <li>....and so on...</li>
             <li>Invoiced Dec 31, return end date Jan 31 - returns window 31 days</li>
            </ul>
           </Typography>
         </Box>
       </Grid>
-      <Grid xs={12} sm={10} md={8} gutterBottom>
+      {/* <Grid xs={12} sm={10} md={8} gutterBottom>
         {" "}
         <Box
           sx={{
@@ -45,7 +45,7 @@ const Bulletin = () => {
             Official Parcel Force strike days (no collections on these days): 
           </Typography>
         </Box>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
