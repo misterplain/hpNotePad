@@ -908,7 +908,7 @@ ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
-      In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You ay dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
+      In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You may dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
 
 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -1065,6 +1065,58 @@ ${
       Our Finance Team have confirmed your refund was released on <**/**/****> and we attach the credit note invoice confirming this transaction was made from the HP bank. We also provide the following transaction reference number for the payment that was made by HPs bank < ***********>.<br><br>
       These funds should appear back as an available balance on your account within the next few days subject to your banks standard operating procedure.<br><br>
       For more information on our refund policy please visit our FAQ's page on the HP Store Website.<br><br>
+      
+
+
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2EmptyBox",
+      title: "Empty Box",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      In connection with your return, we inform you that the investigation has been completed by our logistics department and the courier, the box was found to be empty.<br><br>
+ 
+      In addition, the box showed no signs of being tampered with prior to delivery to the warehouse.<br><br>
+       
+      Since your original order was successfully delivered to you, we inform your claim has been rejected.<br><br>
+       
+      
+      
+
+
+
+
+Kind regards,
+        `,
+    },
+    {
+      id: "MSC2BillIssued",
+      title: "Bill Issued ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      Due to the lack of update on the collection request, we have been informed by our carrier that a bill will be now issued for the non-return and non-payment of this product.<br><br>
+      You will receive the bill within 2/3 days with payment instructions.<br><br>
+      If we can assist you with anything else, please let us know.<br><br>
+      
+      
       
 
 
@@ -1784,6 +1836,29 @@ Kind regards,
  `,
     },
     {
+      id: "MSCRefundSent",
+      title: "Refund Sent ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      Our Finance Team have confirmed that your refund was released on ***** and we attach your credit note invoice confirming this transaction was completed.<br><br>
+      These funds should appear back as an available balance on your account within the next few days subject to your banks standard operating procedure.<br><br>
+      
+If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:
+<a href="https://www.hp.com/gb-en/shop/faq.aspx">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
+
+
+Kind regards,
+ `,
+    },
+    {
       id: "MSCHolding",
       title: "Escalation - Holding",
       text: `Dear ${name},<br><br>
@@ -2065,7 +2140,10 @@ ${
       }<br><br>
 
 
-<strong>Send me the text and I'll put this up</strong><br><br>
+      We apologise for the order cancellation, and for any inconvenience.<br><br>
+      Our finance team were unable to complete your order as they were unable to verify all the information provided.<br><br>
+      I am sorry that we cannot offer specific reasons for order cancellations for data protection reasons. It is recommended that you contact your card holder for further advice.<br><br>
+      If you need assistance in replacing the order, you can contact a sales agent on <strong>02076603859.</strong><br><br>
 
 
 If you need anything further, please let us know.<br><br>
@@ -2112,6 +2190,31 @@ ${
 Our tracking shows that your order is out for delivery today.<br><br>
 
 
+If you need anything further, please let us know.<br><br>
+
+
+Kind regards,
+ `,
+    },
+    {
+      id: "OSCollectPO",
+      title: "Collect from PO",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+Due to failed deliveries, we have been unable to deliver your order. We have now arranged for your order to be collected from the local Post Office. Please reference your tracking information for further information.<br><br>
+
+You may find further information related to the depot where this is located by using the following tool:<br>
+<a href="https://www.parcelforce.com/depot-finder" target="__blank">https://www.parcelforce.com/depot-finder</a><br><br>
+
+If you are unable to collect, please confirm if you wish to have a full refund on the order, or if you wish to have a replacement order generated. If you wish to have a replacement order generated, please confirm the full and complete delivery address so as to prevent further failed deliveries. <br><br>
 If you need anything further, please let us know.<br><br>
 
 
@@ -2428,9 +2531,7 @@ ${
       }<br><br>
 
 
-<strong>SEND ME THE TEXT AND I'LL PUT IT UP</strong><br><br>
-      
-
+      Due to the lack of update on the return request, we have been informed by our warehouse that they will be cancelling this claim for return.<br><br>
 If there is anything further we can help with, please feel free to contact us.<br><br>
       
 
@@ -3119,6 +3220,11 @@ Kind regards,
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("OSCollectPO")}>
+                Collect PO
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
                 No ETA - Full
               </Button>
@@ -3140,8 +3246,8 @@ Kind regards,
             </Link>
           </ButtonGroup>
         </Grid>
-                {/* RETURNSBUTTONS */}
-                <Grid item xs={6} sm={3} md={2} lg={2}>
+        {/* RETURNSBUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
           <Typography
             variant='h6'
             component='h2'
@@ -3195,7 +3301,7 @@ Kind regards,
                 Claim cancelled
               </Button>
             </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
+            {/* <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
                 fullWidth
                 color='secondary'
@@ -3211,6 +3317,15 @@ Kind regards,
                 onClick={() => setTemplate("RETBillRef")}
               >
                 Bill - ref sent
+              </Button>
+            </Link> */}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("MSC2BillIssued")}
+              >
+                Bill Issued
               </Button>
             </Link>
           </ButtonGroup>
@@ -3253,6 +3368,11 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSCInvoice")}>
                 Invoice Copy
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCRefundSent")}>
+                Refund Sent
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
@@ -3324,6 +3444,11 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSC2ARN")}>
                 ARN
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2EmptyBox")}>
+                Empty Box - rejected
               </Button>
             </Link>
           </ButtonGroup>
