@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,6 +11,7 @@ import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
 import Fade from "@mui/material/Fade";
 import Fab from "@mui/material/Fab";
+import Grid from "@mui/material/Grid";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -19,6 +21,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Outlet, Link } from "react-router-dom";
+import { BiRightArrowAlt, BiLeftArrowAlt, BiUpArrowAlt, BiDownArrowAlt } from "react-icons/bi";
 
 const darkTheme = createTheme({
   palette: {
@@ -29,14 +32,14 @@ const darkTheme = createTheme({
   },
   components: {
     MuiToolbar: {
-        styleOverrides: {
-            dense: {
-                height: 40,
-                minHeight: 40
-            }
-        }
-    }
-},
+      styleOverrides: {
+        dense: {
+          height: 40,
+          minHeight: 40,
+        },
+      },
+    },
+  },
 });
 
 function HideOnScroll(props) {
@@ -101,26 +104,40 @@ function ScrollTop(props) {
 }
 
 export default function HideAppBar(props) {
+  const [productivity, setProductivity] = useState(0);
   return (
     <React.Fragment>
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
         <HideOnScroll {...props}>
           <AppBar>
-            <Toolbar variant='dense'>
+            <Toolbar variant='dense' style={{display: "flex", flexDirection: "row", }}>
               <Typography
-                component='div'
-                style={{ color: "lightblue" }}
+                component='h1'
+                sx={{
+                  color: "lightblue",
+                  flexBasis: "15%",
+                  // marginTop: "20px",
+                  // padding: "0px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  // width: "100%",
+                }}
               >
                 HP Store Notepad
               </Typography>
+
               <List
                 sx={{
                   display: "flex",
-                  margin: "0px",
-                  padding: "0px",
-                  justifyContent: "center",
-                  width: "80%",
+                  flexBasis: "85%",
+                  justifyContent: "space-evenly",
+              
+                  // margin: "0px",
+                  // padding: "0px",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  // width: "100%",
                 }}
               >
                 <Link
@@ -131,7 +148,7 @@ export default function HideAppBar(props) {
                     <ListItemButton>
                       <ListItemText
                         primary={"Bulletin Board"}
-                        style={{ textAlign: "center" }}
+                        style={{ textAlign: "center", color: "white" }}
                       />
                     </ListItemButton>
                   </ListItem>{" "}
@@ -195,7 +212,6 @@ export default function HideAppBar(props) {
                 >
                   <ListItem>
                     <ListItemButton>
-
                       <ListItemText
                         primary={"Add/Edit"}
                         style={{ textAlign: "center" }}
@@ -205,25 +221,33 @@ export default function HideAppBar(props) {
                 </Link>
               </List>
             </Toolbar>
+
+            <Toolbar variant='dense' style={{ backgroundColor: "lightblue", display: 'flex', justifyContent: 'center' }}>
+              {" "}
+              {/* <Typography
+                component='h1'
+                sx={{
+                  color: "white",
+                  // marginTop: "20px",
+                  // padding: "0px",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  // width: "100%",
+                }}
+              >
+                productivity
+              </Typography> */}
+              <BiDownArrowAlt onClick={()=>setProductivity(productivity -1)} style={{fontSize:"2rem", color: "darkblue", margin: '10px'}}/>
+              <Typography variant="h4" color="primary">{productivity}</Typography>
+              <BiUpArrowAlt onClick={()=>setProductivity(productivity +1)}  style={{fontSize:"2rem", color: "darkblue", margin: '10px'}}/>
+              {/* <BiRightArrowAlt/>
+              <BiLeftArrowAlt/> */}
+            </Toolbar>
           </AppBar>
         </HideOnScroll>
       </ThemeProvider>
       <Toolbar />
-      <Container>
-        {/* <Box sx={{ my: 2 }}>
-          <Typography id='back-to-top-anchor'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </Typography>
-        </Box> */}
-      </Container>
+
       <ScrollTop {...props}>
         <Fab size='large' aria-label='scroll back to top'>
           <KeyboardArrowUpIcon />

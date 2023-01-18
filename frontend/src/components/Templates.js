@@ -1288,6 +1288,55 @@ Kind regards,
       
         `,
     },
+    {
+      id: "MSGDeliveredRef",
+      title: "Delivered - Refund already sent ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      The Parcel Force investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
+      As you have already received the refund on this missing claim, please confirm if you prefer we arrange a return of the order, or for us to generate a bill to account for the refund already sent.<br><br>
+      
+
+
+If there is anything further you need, please do not hesitate to let me know.<br><br>
+
+
+Kind regards,
+      
+        `,
+    },
+    {
+      id: "MSGDeliveredRep",
+      title: "Delivered - Rep already delivered ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      The Parcel Force investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
+      As you have already received the replacement order generated from this missing claim, please confirm if you prefer we arrange a return of the order, or for us to generate a bill to account for the additional order received.<br><br>
+
+
+If there is anything further you need, please do not hesitate to let me know.<br><br>
+
+
+Kind regards,
+      
+        `,
+    },
     // wrong product templates
     {
       id: "WGPRepCollection",
@@ -2032,6 +2081,35 @@ Kind regards,
  `,
     },
     {
+      id: "CPNotCompat",
+      title: "Carepack not compatible",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+The Care Pack Team have advised that this Care Pack is not compatible with the hardware device you had tried to associate it with. <strong>Please confirm if you wish to have a refund on this Care Pack, or if you wish to associate this with a compatible hardware device</strong>.<br><br>
+
+To speak directly with a Sales Agent regarding compatible Care Packs, you may contact them at 0207 660 3859 (Option 1 and Option 1 for Sales) or by writing them via email at hpstoresalesuk@hp.com.<br><br>
+You may also visit the Care Pack Central to check on Care Pack compatibility with your device:<br>
+<a href="https://cpc.ext.hp.com/portal/site/cpc/" target="__blank">https://www8.hp.com/us/en/carepacks/central.html</a><br><br>
+
+Our apologies for any frustrations seen through the purchase of this Care Pack.<br><br>
+
+
+
+If there is anything further, we can assist you with please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
       id: "CPNotPhysical",
       title: "Certificate Not Physical",
       text: `Dear ${name},<br><br>
@@ -2297,6 +2375,71 @@ We sincerely apologise for any inconvenience this delay may cause and thank you 
       
 
 If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "OSRTSreforrep",
+      title: "RTS - ref or rep?",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+      I apologise for the failed delivery.<br><br>
+
+      Please confirm if you wish to have a full refund on the order, or if you wish to have a replacement order generated. If you wish to have a replacement order generated, please confirm the full and complete delivery address so as to prevent further failed deliveries. <br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "OSRTSref",
+      title: "RTS - Refund sent",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      I apologise for the failed delivery.<br><br>
+
+      We have initiated the refund today and your funds will be back in your account within 3/5 business days.<br><br>
+If there is anything further you need, please do not hesitate to let me know.<br><br>
+
+      
+Kind regards,
+ `,
+    },
+    {
+      id: "OSRTSrep",
+      title: "RTS - rep created",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      I apologise for the failed delivery.<br><br>
+
+      I have sent instructions to the warehouse to ship a replacement order to you ASAP. You will soon begin to get automated emails from the system letting you know when it is on its way.<br><br>
+
+      If there is anything further you need, please do not hesitate to let me know.<br><br>
+
+
+rep
       
 
 Kind regards,
@@ -2656,7 +2799,7 @@ Kind regards,
 
   return (
     <>
-      <Grid container>
+      <Grid container sx={{marginTop: '35px'}}>
         <Grid item xs={12}>
           <form id='back-to-top-anchor'>
             <div style={{ display: "flex" }}>
@@ -3039,6 +3182,16 @@ Kind regards,
                 Ref Wire Missing Part
               </Button>
             </Link>
+            <Link to='editor'spy={true} smooth={true} duration={500}>
+              <Button fullWidth  color="secondary" onClick={() => setTemplate("MSGDeliveredRef")}>
+                Delivered - Ref
+              </Button>
+            </Link>
+            <Link to='editor'spy={true} smooth={true} duration={500}>
+              <Button fullWidth  color="secondary" onClick={() => setTemplate("MSGDeliveredRep")}>
+                Delivered - Rep
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* Wrong product BUTTONS */}
@@ -3225,6 +3378,56 @@ Kind regards,
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
+                Cancel Request
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
+                Cancel Success - CC/PP
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("MSCCancelSuccessWire")}
+              >
+                Cancel Success - Wire
+              </Button>
+            </Link>
+
+          </ButtonGroup>
+        </Grid>
+                {/* ORDER STATUS BUTTONS */}
+                <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Order Status #2
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >            <Link to='editor' spy={true} smooth={true} duration={500}>
+          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSreforrep")}>
+            RTS - ref or rep?
+          </Button>
+        </Link>
+        <Link to='editor' spy={true} smooth={true} duration={500}>
+          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSref")}>
+            RTS - ref
+          </Button>
+        </Link>
+        <Link to='editor' spy={true} smooth={true} duration={500}>
+          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSrep")}>
+            RTS - rep
+          </Button>
+        </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
                 No ETA - Full
               </Button>
@@ -3244,6 +3447,8 @@ Kind regards,
                 Fraud Rejected
               </Button>
             </Link>
+
+
           </ButtonGroup>
         </Grid>
         {/* RETURNSBUTTONS */}
@@ -3375,24 +3580,7 @@ Kind regards,
                 Refund Sent
               </Button>
             </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
-                Cancel Request
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
-                Cancel Success - CC/PP
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button
-                fullWidth
-                onClick={() => setTemplate("MSCCancelSuccessWire")}
-              >
-                Cancel Success - Wire
-              </Button>
-            </Link>
+
           </ButtonGroup>
         </Grid>
         {/* MISC#2BUTTONS */}
@@ -3470,6 +3658,11 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth color="secondary" onClick={() => setTemplate("CPNotCompat")}>
+                CP Not compatible
+              </Button>
+            </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("CPCert")}>
                 Certificate Attached

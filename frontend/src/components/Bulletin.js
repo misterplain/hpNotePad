@@ -3,7 +3,7 @@ import { Box, Paper, Grid, Typography, Button } from "@mui/material";
 
 const Bulletin = () => {
   return (
-    <Grid container justifyContent='center'>
+    <Grid container justifyContent='center' sx={{marginTop: '25px'}}>
       <Grid xs={12} sm={10} md={8} marginBottom>
         {" "}
         <Box

@@ -45,6 +45,8 @@ const Contact = () => {
     alignItems='center'
     id='contact'
     sx={{ marginTop: "50px" }}
+
+    
   >
     <Grid item xs={12} sm={10} md={8}>
       <Formik

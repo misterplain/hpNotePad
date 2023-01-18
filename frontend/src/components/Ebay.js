@@ -27,7 +27,7 @@ const Ebay = () => {
     <>
       {templates.map((template) => {
         return (
-          <Grid container key={template.id}>
+          <Grid container key={template.id} sx={{marginTop: '30px'}}>
             <Grid item xs={12} marginBottom>
               {" "}
               {/* <Typography
