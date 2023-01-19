@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -21,7 +21,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Outlet, Link } from "react-router-dom";
-import { BiRightArrowAlt, BiLeftArrowAlt, BiUpArrowAlt, BiDownArrowAlt } from "react-icons/bi";
+import {
+  BiRightArrowAlt,
+  BiLeftArrowAlt,
+  BiUpArrowAlt,
+  BiDownArrowAlt,
+} from "react-icons/bi";
 
 const darkTheme = createTheme({
   palette: {
@@ -105,13 +110,44 @@ function ScrollTop(props) {
 
 export default function HideAppBar(props) {
   const [productivity, setProductivity] = useState(0);
+
+  const handleKeyPress = useCallback(
+    (event) => {
+      if (event.shiftKey === true) {
+        if (event.key === "ArrowUp") {
+          setProductivity(productivity + 1);
+          console.log("productivity added" + productivity);
+        } else if (event.key === "ArrowDown") {
+          setProductivity(productivity - 1);
+          console.log("productivity subtracted" + productivity);
+        } else if (event.key === "Backspace") {
+          setProductivity(0);
+          console.log("productivity reset" + productivity);
+        }
+      } else {
+        console.log("shift key not pressed");
+      }
+    },
+    [productivity]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [handleKeyPress]);
+
   return (
     <React.Fragment>
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
         <HideOnScroll {...props}>
           <AppBar>
-            <Toolbar variant='dense' style={{display: "flex", flexDirection: "row", }}>
+            <Toolbar
+              variant='dense'
+              style={{ display: "flex", flexDirection: "row" }}
+            >
               <Typography
                 component='h1'
                 sx={{
@@ -132,7 +168,7 @@ export default function HideAppBar(props) {
                   display: "flex",
                   flexBasis: "85%",
                   justifyContent: "space-evenly",
-              
+
                   // margin: "0px",
                   // padding: "0px",
                   // justifyContent: "center",
@@ -222,7 +258,14 @@ export default function HideAppBar(props) {
               </List>
             </Toolbar>
 
-            <Toolbar variant='dense' style={{ backgroundColor: "lightblue", display: 'flex', justifyContent: 'center' }}>
+            <Toolbar
+              variant='dense'
+              style={{
+                backgroundColor: "lightblue",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               {" "}
               {/* <Typography
                 component='h1'
@@ -237,9 +280,17 @@ export default function HideAppBar(props) {
               >
                 productivity
               </Typography> */}
-              <BiDownArrowAlt onClick={()=>setProductivity(productivity -1)} style={{fontSize:"2rem", color: "darkblue", margin: '10px'}}/>
-              <Typography variant="h4" color="primary">{productivity}</Typography>
-              <BiUpArrowAlt onClick={()=>setProductivity(productivity +1)}  style={{fontSize:"2rem", color: "darkblue", margin: '10px'}}/>
+              <BiDownArrowAlt
+                onClick={() => setProductivity(productivity - 1)}
+                style={{ fontSize: "2rem", color: "darkblue", margin: "10px" }}
+              />
+              <Typography variant='h4' color='primary'>
+                {productivity}
+              </Typography>
+              <BiUpArrowAlt
+                onClick={() => setProductivity(productivity + 1)}
+                style={{ fontSize: "2rem", color: "darkblue", margin: "10px" }}
+              />
               {/* <BiRightArrowAlt/>
               <BiLeftArrowAlt/> */}
             </Toolbar>
