@@ -46,7 +46,8 @@ const test = async () => {
   }
 };
 
-if (time === "6:15:00 PM") {
+if (time === '6:20:00 PM' || "18:20:00") {
+  console.log('activated')
   test();
 }
 
