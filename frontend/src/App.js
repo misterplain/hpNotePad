@@ -159,7 +159,7 @@ console.log(time);
 // if (time === "7:35:00 PM") {
 //   console.log("activated");
 //   test2();
-}
+
 
 // if (time === "07:35:00 PM" || "19:35:00") {
 //   console.log("activated");
