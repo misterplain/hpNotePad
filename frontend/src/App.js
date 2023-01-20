@@ -23,10 +23,10 @@ import { useEffect } from "react";
 
 const date = new Date();
 const time = date.toLocaleTimeString();
-console.log(time)
+console.log(time);
 
-if(time === "17:50:00"){
-  console.log("time is 5:50 PM")
+if (time ===  "6:00:00 PM") {
+  console.log("time is 6:00:00 PM");
 }
 
 function App() {
