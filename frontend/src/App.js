@@ -21,6 +21,14 @@ import { useEffect } from "react";
 
 //hash router is not for the browser it's for the server
 
+const date = new Date();
+const time = date.toLocaleTimeString();
+console.log(time)
+
+if(time === "5:00:00 PM"){
+  console.log("time is 5:00 PM")
+}
+
 function App() {
   return (
     <>
