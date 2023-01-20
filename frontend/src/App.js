@@ -29,8 +29,8 @@ console.log(time);
 const test = async () => {
   try {
     let data = {
-      name: "name test 6.25",
-      message: "message test 6.25",
+      name: "name test 6.36",
+      message: "message test 6.36",
     };
     // setBool(true);
     const res = await axios.post("/contact", data);
@@ -51,7 +51,12 @@ const test = async () => {
 //   test();
 // }
 
-if (time === '6:32:00 PM') {
+// if (time === '6:32:00 PM') {
+//   console.log('activated')
+//   test();
+// }
+
+if (time === '18:36:00') {
   console.log('activated')
   test();
 }
