@@ -25,8 +25,8 @@ const date = new Date();
 const time = date.toLocaleTimeString();
 console.log(time)
 
-if(time === "5:00:00 PM"){
-  console.log("time is 5:00 PM")
+if(time === "17:50:00"){
+  console.log("time is 5:50 PM")
 }
 
 function App() {
