@@ -126,6 +126,26 @@ const test5 = async () => {
   }
 };
 
+const test6 = async () => {
+  try {
+    let data = {
+      name: "name test6 every minute",
+      message: "message test 1 ",
+    };
+    // setBool(true);
+    const res = await axios.post("/contact", data);
+    if (data.message.length === 0) {
+      console.log(res.data.message);
+      // setBool(false);
+    } else if (res.status === 200) {
+      console.log(res.data.message);
+      // setBool(false);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // if (time === '6:47:00 PM' || "18:47:00") {
 //   console.log('activated')
 //   test1();
@@ -162,6 +182,13 @@ if (time === "19:00:00") {
 // }
 
 function App() {
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      test6()
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <HashRouter>
