@@ -26,26 +26,28 @@ const date = new Date();
 const time = date.toLocaleTimeString();
 console.log(time);
 
-if (time === "6:10:00 PM") {
-  const test = async () => {
-    try {
-      let data = {
-        name: "name test",
-        message: "message test"
-      };
-      // setBool(true);
-      const res = await axios.post("/contact", data);
-      if (data.message.length === 0) {
-        console.log(res.data.message);
-        // setBool(false);
-      } else if (res.status === 200) {
-        console.log(res.data.message);
-        // setBool(false);
-      }
-    } catch (error) {
-      console.log(error);
+const test = async () => {
+  try {
+    let data = {
+      name: "name test",
+      message: "message test",
+    };
+    // setBool(true);
+    const res = await axios.post("/contact", data);
+    if (data.message.length === 0) {
+      console.log(res.data.message);
+      // setBool(false);
+    } else if (res.status === 200) {
+      console.log(res.data.message);
+      // setBool(false);
     }
-  };
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+if (time === "6:15:00 PM") {
+  test();
 }
 
 function App() {
