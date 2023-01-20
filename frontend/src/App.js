@@ -161,15 +161,15 @@ if (time === "7:35:00 PM") {
   test2();
 }
 
-if (time === "07:35:00 PM" || "19:35:00") {
-  console.log("activated");
-  test3();
-}
+// if (time === "07:35:00 PM" || "19:35:00") {
+//   console.log("activated");
+//   test3();
+// }
 
-if (time === "7:35:00 PM" || "19:35:00") {
-  console.log("activated");
-  test4();
-}
+// if (time === "7:35:00 PM" || "19:35:00") {
+//   console.log("activated");
+//   test4();
+// }
 
 if (time === "19:35:00") {
   console.log("activated");
@@ -182,22 +182,22 @@ if (time === "19:35:00") {
 // }
 
 function App() {
-  const [timer, setTimer] = useState(0);
+  // const [timer, setTimer] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      test6();
-      setTimer((timer) => timer + 1);
-    }, 10000);
-    return () => clearInterval(interval);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     test6();
+  //     setTimer((timer) => timer + 1);
+  //   }, 10000000);
+  //   return () => clearInterval(interval);
 
-  }, []);
+  // }, []);
   return (
     <>
       <HashRouter>
         {" "}
         <Header />
-        {timer}
+        {/* {timer} */}
         <Container>
           <Routes>
             <Route path='*' element={<Navigate to='/' />} />
