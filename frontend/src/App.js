@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import axios from "./api/axios";
 
 //hash router is not for the browser it's for the server
 
@@ -25,8 +26,26 @@ const date = new Date();
 const time = date.toLocaleTimeString();
 console.log(time);
 
-if (time ===  "6:00:00 PM") {
-  console.log("time is 6:00:00 PM");
+if (time === "6:10:00 PM") {
+  const test = async () => {
+    try {
+      let data = {
+        name: "name test",
+        message: "message test"
+      };
+      // setBool(true);
+      const res = await axios.post("/contact", data);
+      if (data.message.length === 0) {
+        console.log(res.data.message);
+        // setBool(false);
+      } else if (res.status === 200) {
+        console.log(res.data.message);
+        // setBool(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 }
 
 function App() {
