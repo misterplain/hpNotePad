@@ -26,25 +26,25 @@ const date = new Date();
 const time = date.toLocaleTimeString();
 console.log(time);
 
-// const test1 = async () => {
-//   try {
-//     let data = {
-//       name: "name test1 07:20:00 PM",
-//       message: "message test 1 ",
-//     };
-//     // setBool(true);
-//     const res = await axios.post("/contact", data);
-//     if (data.message.length === 0) {
-//       console.log(res.data.message);
-//       // setBool(false);
-//     } else if (res.status === 200) {
-//       console.log(res.data.message);
-//       // setBool(false);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+const test1 = async () => {
+  try {
+    let data = {
+      name: "name test1 08:05:00 PM",
+      message: "message test 1 ",
+    };
+    // setBool(true);
+    const res = await axios.post("/contact", data);
+    if (data.message.length === 0) {
+      console.log(res.data.message);
+      // setBool(false);
+    } else if (res.status === 200) {
+      console.log(res.data.message);
+      // setBool(false);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // const test2 = async () => {
 //   try {
@@ -66,25 +66,25 @@ console.log(time);
 //   }
 // };
 
-const test3 = async () => {
-  try {
-    let data = {
-      name: "name test3 07:55:00 PM or 19:55:00",
-      message: "message test 1 ",
-    };
-    // setBool(true);
-    const res = await axios.post("/contact", data);
-    if (data.message.length === 0) {
-      console.log(res.data.message);
-      // setBool(false);
-    } else if (res.status === 200) {
-      console.log(res.data.message);
-      // setBool(false);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const test3 = async () => {
+//   try {
+//     let data = {
+//       name: "name test3 07:55:00 PM or 19:55:00",
+//       message: "message test 1 ",
+//     };
+//     // setBool(true);
+//     const res = await axios.post("/contact", data);
+//     if (data.message.length === 0) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     } else if (res.status === 200) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 // const test4 = async () => {
 //   try {
@@ -106,25 +106,25 @@ const test3 = async () => {
 //   }
 // };
 
-// const test5 = async () => {
-//   try {
-//     let data = {
-//       name: "name test5 ' 19:00:00",
-//       message: "message test 1 ",
-//     };
-//     // setBool(true);
-//     const res = await axios.post("/contact", data);
-//     if (data.message.length === 0) {
-//       console.log(res.data.message);
-//       // setBool(false);
-//     } else if (res.status === 200) {
-//       console.log(res.data.message);
-//       // setBool(false);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+const test5 = async () => {
+  try {
+    let data = {
+      name: "name test5 ' 20:05:00",
+      message: "message test 1 ",
+    };
+    // setBool(true);
+    const res = await axios.post("/contact", data);
+    if (data.message.length === 0) {
+      console.log(res.data.message);
+      // setBool(false);
+    } else if (res.status === 200) {
+      console.log(res.data.message);
+      // setBool(false);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // const test6 = async () => {
 //   try {
@@ -151,30 +151,30 @@ const test3 = async () => {
 //   test1();
 // }
 
-// if (time === "07:35:00 PM") {
-//   console.log("activated");
-//   test1();
-// }
+if (time === "08:05:00 PM") {
+  console.log("activated");
+  test1();
+}
 
 // if (time === "7:35:00 PM") {
 //   console.log("activated");
 //   test2();
 
 
-if (time === "07:55:00 PM" || "19:55:00") {
-  console.log("activated");
-  test3();
-}
+// if (time === "07:55:00 PM" || "19:55:00") {
+//   console.log("activated");
+//   test3();
+// }
 
 // if (time === "7:35:00 PM" || "19:35:00") {
 //   console.log("activated");
 //   test4();
 // }
 
-// if (time === "19:35:00") {
-//   console.log("activated");
-//   test5();
-// }
+if (time === "20:05:00") {
+  console.log("activated");
+  test5();
+}
 
 // if (time === '18:37:00') {
 //   console.log('activated')
