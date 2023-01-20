@@ -24,7 +24,13 @@ import axios from "./api/axios";
 
 const date = new Date();
 const time = date.toLocaleTimeString();
-console.log(time);
+const hour = date.getHours();
+const minutes = date.getMinutes().toString();
+const seconds = date.getSeconds().toString();
+console.log(minutes);
+console.log(typeof minutes);
+// console.log(hour)
+// console.log(time);
 
 // const test1 = async () => {
 //   try {
@@ -66,25 +72,25 @@ console.log(time);
 //   }
 // };
 
-const test3 = async () => {
-  try {
-    let data = {
-      name: "name test3 07:55:00 PM or 19:55:00",
-      message: "message test 1 ",
-    };
-    // setBool(true);
-    const res = await axios.post("/contact", data);
-    if (data.message.length === 0) {
-      console.log(res.data.message);
-      // setBool(false);
-    } else if (res.status === 200) {
-      console.log(res.data.message);
-      // setBool(false);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const test3 = async () => {
+//   try {
+//     let data = {
+//       name: "name test3 07:55:00 PM or 19:55:00",
+//       message: "message test 1 ",
+//     };
+//     // setBool(true);
+//     const res = await axios.post("/contact", data);
+//     if (data.message.length === 0) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     } else if (res.status === 200) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 // const test4 = async () => {
 //   try {
@@ -126,10 +132,30 @@ const test3 = async () => {
 //   }
 // };
 
-const test6 = async () => {
+// const test6 = async () => {
+//   try {
+//     let data = {
+//       name: "name test6 every minute",
+//       message: "message test 1 ",
+//     };
+//     // setBool(true);
+//     const res = await axios.post("/contact", data);
+//     if (data.message.length === 0) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     } else if (res.status === 200) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+const test7 = async () => {
   try {
     let data = {
-      name: "name test6 every minute",
+      name: "name test6 every half hour at 30 or top of hour",
       message: "message test 1 ",
     };
     // setBool(true);
@@ -160,11 +186,10 @@ const test6 = async () => {
 //   console.log("activated");
 //   test2();
 
-
-if (time === "08:20:00 PM" || "20:20:00") {
-  console.log("activated");
-  test3();
-}
+// if (time === "08:20:00 PM" || "20:20:00") {
+//   console.log("activated");
+//   test3();
+// }
 
 // if (time === "7:35:00 PM" || "19:35:00") {
 //   console.log("activated");
@@ -181,17 +206,22 @@ if (time === "08:20:00 PM" || "20:20:00") {
 //   test();
 // }
 
+if (minutes === "30" || minutes === "00") {
+  console.log("activated");
+  test7();
+}
+
 function App() {
   // const [timer, setTimer] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      test6();
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     test6();
 
-    }, 60000);
-    return () => clearInterval(interval);
+  //   }, 60000);
+  //   return () => clearInterval(interval);
 
-  }, []);
+  // }, []);
   return (
     <>
       <HashRouter>

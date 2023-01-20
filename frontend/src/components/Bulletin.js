@@ -57,17 +57,17 @@ const Bulletin = () => {
 
   // fetchDefinition();
 
-  const date = new Date();
-  const time = date.toLocaleTimeString();
-  console.log(time)
+  // const date = new Date();
+  // const time = date.toLocaleTimeString();
+  // console.log(time)
 
-  if(time === "5:00:00 PM"){
-    console.log("time is 5:00 PM")
-  }
+  // if(time === "5:00:00 PM"){
+  //   console.log("time is 5:00 PM")
+  // }
 
   return (
     <Grid container justifyContent='center' sx={{ marginTop: "25px" }}>
-      <Grid xs={12} sm={10} md={8} marginBottom>
+      <Grid item xs={12} sm={10} md={8} marginBottom>
         {" "}
         <Box
           sx={{
