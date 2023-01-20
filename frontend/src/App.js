@@ -17,7 +17,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "./api/axios";
 
 //hash router is not for the browser it's for the server
@@ -187,9 +187,10 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       test6();
+      setTimer((timer) => timer + 1);
     }, 10000);
     return () => clearInterval(interval);
-    setTimer(timer + 1);
+
   }, []);
   return (
     <>
