@@ -73,25 +73,25 @@ console.log(time);
 //   }
 // };
 
-const test3 = async () => {
-  try {
-    let data = {
-      name: "name test3 07:55:00 PM or 19:55:00",
-      message: "message test 1 ",
-    };
-    // setBool(true);
-    const res = await axios.post("/contact", data);
-    if (data.message.length === 0) {
-      console.log(res.data.message);
-      // setBool(false);
-    } else if (res.status === 200) {
-      console.log(res.data.message);
-      // setBool(false);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const test3 = async () => {
+//   try {
+//     let data = {
+//       name: "name test3 07:55:00 PM or 19:55:00",
+//       message: "message test 1 ",
+//     };
+//     // setBool(true);
+//     const res = await axios.post("/contact", data);
+//     if (data.message.length === 0) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     } else if (res.status === 200) {
+//       console.log(res.data.message);
+//       // setBool(false);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 // const test4 = async () => {
 //   try {
@@ -214,60 +214,60 @@ const test3 = async () => {
 
 //node-cron to post to console once per minute
 
-let intervalId;
+// let intervalId;
 
-function scheduleAPIRequest() {
-  // Get the current time
-  const now = new Date();
+// function scheduleAPIRequest() {
+//   // Get the current time
+//   const now = new Date();
 
-  // Set the time for the next scheduled API request (9:30 am)
-  const scheduledTime = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate(),
-    9,
-    30,
-    0
-  );
+//   // Set the time for the next scheduled API request (9:30 am)
+//   const scheduledTime = new Date(
+//     now.getFullYear(),
+//     now.getMonth(),
+//     now.getDate(),
+//     9,
+//     30,
+//     0
+//   );
 
-  // If the scheduled time is in the past, set it for the next day
-  if (scheduledTime < now) {
-    scheduledTime.setDate(scheduledTime.getDate() + 1);
-  }
+//   // If the scheduled time is in the past, set it for the next day
+//   if (scheduledTime < now) {
+//     scheduledTime.setDate(scheduledTime.getDate() + 1);
+//   }
 
-  // Get the time remaining until the next scheduled API request
-  const timeUntilScheduledRequest = scheduledTime - now;
-  console.log(timeUntilScheduledRequest);
+//   // Get the time remaining until the next scheduled API request
+//   const timeUntilScheduledRequest = scheduledTime - now;
+//   console.log(timeUntilScheduledRequest);
 
-  // Clear any existing interval
-  clearInterval(intervalId);
+//   // Clear any existing interval
+//   clearInterval(intervalId);
 
-  // Set the interval to make the API request
-  intervalId = setInterval(() => {
-    // make API request
-    console.log("API Request Made");
-    try {
-      let data = {
-        name: "name test scheduled 9:30am",
-        message: "message test 1 ",
-      };
-      // setBool(true);
-      const res = axios.post("/contact", data);
-      if (data.message.length === 0) {
-        console.log(res.data.message);
-        // setBool(false);
-      } else if (res.status === 200) {
-        console.log(res.data.message);
-        // setBool(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }, timeUntilScheduledRequest);
-}
+//   // Set the interval to make the API request
+//   intervalId = setInterval(() => {
+//     // make API request
+//     console.log("API Request Made");
+//     try {
+//       let data = {
+//         name: "name test scheduled 9:30am",
+//         message: "message test 1 ",
+//       };
+//       // setBool(true);
+//       const res = axios.post("/contact", data);
+//       if (data.message.length === 0) {
+//         console.log(res.data.message);
+//         // setBool(false);
+//       } else if (res.status === 200) {
+//         console.log(res.data.message);
+//         // setBool(false);
+//       }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }, timeUntilScheduledRequest);
+// }
 
-// Call the scheduleAPIRequest function to schedule the first request
-scheduleAPIRequest();
+// // Call the scheduleAPIRequest function to schedule the first request
+// scheduleAPIRequest();
 
 function App() {
   // const [timer, setTimer] = useState(0);
