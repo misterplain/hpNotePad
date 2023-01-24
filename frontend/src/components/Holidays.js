@@ -279,6 +279,19 @@ const Holidays = () => {
                   <BiCheck style={{ fontSize: "2rem" }} />
                 </TableCell>
               </TableRow>
+                            <TableRow style={{ backgroundColor: "#" }}>
+                <TableCell
+                  component='th'
+                  scope='row'
+                  sx={{ fontSize: "1.15rem", color: "blue" }}
+                >
+                  June 5th
+                </TableCell>
+                <TableCell align='center'>
+                  <BiCheck style={{ fontSize: "2rem" }} />
+                </TableCell>
+                <TableCell align='center'></TableCell>
+              </TableRow>
               <TableRow style={{ backgroundColor: "#" }}>
                 <TableCell
                   component='th'
