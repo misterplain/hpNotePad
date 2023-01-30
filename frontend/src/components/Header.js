@@ -230,6 +230,19 @@ export default function HideAppBar(props) {
                   </ListItem>
                 </Link>
                 <Link
+                  to='/chat'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Chat"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
                   to='templates'
                   style={{ textDecoration: "none", color: "white" }}
                 >

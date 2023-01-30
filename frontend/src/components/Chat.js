@@ -5,7 +5,7 @@ import { useState } from "react";
 import Divider from "@mui/material/Divider";
 import { BiCopy } from "react-icons/bi";
 
-const Ebay = () => {
+const Chat = () => {
   const [open, setOpen] = useState(false);
   const copyToClipboard = (e) => {
     setOpen(true);
@@ -36,6 +36,28 @@ const Ebay = () => {
 
 
   const templatesReturns = [
+    {
+      id: 1,
+      text: "xxxxx\nline break",
+    },
+    {
+      id: 2,
+      text: "xxx\n\nwith spacing",
+    },
+  ];
+
+//   const templatesGeneral = [
+//     {
+//       id: 1,
+//       text: "xxxxx\nline break",
+//     },
+//     {
+//       id: 2,
+//       text: "xxx\n\nwith spacing",
+//     },
+//   ];
+
+  const templatesTech = [
     {
       id: 1,
       text: "xxxxx\nline break",
@@ -121,9 +143,45 @@ const Ebay = () => {
             );
           })}
         </Grid>
-        <Grid item xs={12} sx={{backgroundColor: 'lightpink'}}>
-          <Typography variant="h4" sx={{textAlign: 'center'}} marginBottom>Returns (ret/ref in Templates)</Typography>{" "}
+        <Grid item xs={12} sx={{backgroundColor: 'lightpink'}} marginBottom>
+          <Typography variant="h4" sx={{textAlign: 'center'}} >Returns (ret/ref in Templates)</Typography>{" "}
           {templatesReturns.map((template) => {
+            return (
+              <>
+                <Grid item xs={12}>
+                  <BiCopy
+                    onClick={() => copyToClipboard(template.text)}
+                    style={{
+                      cursor: "pointer",
+                      marginLeft: "10px",
+                      marginRight: "10px",
+                      color: "green",
+                      display: "inline-block",
+                    }}
+                  />
+                  <Typography
+                    key={template.id}
+                    variant='body1'
+                    style={{ whiteSpace: "pre-wrap", display: "inline-block" }}
+                  >
+                    {template.text}
+                  </Typography>
+                  <hr />
+                </Grid>
+                <Grid item xs={12}></Grid>
+                <Snackbar
+                  open={open}
+                  onClose={() => setOpen(false)}
+                  autoHideDuration={2000}
+                  message='Copied to clipboard'
+                />
+              </>
+            );
+          })}
+        </Grid>
+        <Grid item xs={12} sx={{backgroundColor: 'mediumaquamarine'}}>
+          <Typography variant="h4" sx={{textAlign: 'center'}} marginBottom>Tech/Instant Ink</Typography>{" "}
+          {templatesTech.map((template) => {
             return (
               <>
                 <Grid item xs={12}>
@@ -162,4 +220,4 @@ const Ebay = () => {
   );
 };
 
-export default Ebay;
+export default Chat;

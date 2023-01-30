@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Bulletin from "./components/Bulletin";
 import Holidays from "./components/Holidays";
 import Ebay from "./components/Ebay";
+import Chat from "./components/Chat";
 import Templates from "./components/Templates";
 import Contact from "./components/Contact";
 import Container from "@mui/material/Container";
@@ -39,6 +40,7 @@ function App() {
             <Route path='/holidays' element={<Holidays />} />
             <Route path='/tools' element={<Tools />} />
             <Route path='/ebay' element={<Ebay />} />
+            <Route path='/chat' element={<Chat />} />
             <Route path='/templates' element={<Templates />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
