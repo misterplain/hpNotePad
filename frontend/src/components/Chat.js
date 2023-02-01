@@ -47,7 +47,7 @@ const Chat = () => {
     },
     {
       id: 9,
-      text: "I will get back to you via email with further information as soon a I have it.",
+      text: "I will get back to you via email with further information as soon I have it.",
     },
     {
       id: 10,
