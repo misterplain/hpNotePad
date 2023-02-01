@@ -1908,6 +1908,33 @@ Kind regards,
  `,
     },
     {
+      id: "MSCRefundFailed",
+      title: "CC/PP Refund Failed ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for your recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      Unfortunately, we were unable to successfully complete the refund to your original payment method on this occasion and now need to process your refund via a bank transfer. To allow us to proceed we require you to provide your bank details to us to allow us to complete the refund transaction.<br><br>
+      
+To allow us to proceed with your refund please provide the following bank details:
+<ul><li><strong>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>Account Name:</li><li>Sort Code:</li><li>Account Number:</li></ul>
+<i>(Important Information - Please complete all fields)</i><br><br></strong>
+
+Once we have received these details, we will process your refund and expect this to be completed and the funds returned to your account within 10 working days. Further information on refunds can be found in our <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs page</a> or alternatively you can view the status of your account in the <strong>My Account</strong> section of our website.<br><br>
+If there is anything further we can assist you with, please do let us know.<br><br>
+
+
+
+Kind regards,
+ `,
+    },
+    {
       id: "MSCHolding",
       title: "Escalation - Holding",
       text: `Dear ${name},<br><br>
@@ -2063,7 +2090,7 @@ Kind regards,
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
-}thank you for contacting the HP Store. ${
+}thank you for your recent HP Store order. ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
@@ -2071,10 +2098,31 @@ ${
 Please find attached your HP Care Pack certificate.<br><br>
 
 
-Once again, we apologise for any inconvenience this may have caused.<br><br>
+If there is anything further we can assist you with, please feel free to reply to this email.<br><br>
+
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "CPWrongDate",
+      title: "Change Wrong Date",
+      text: `Dear ${name},<br><br>
 
 
-If there is anything further, we can assist you with please feel free to contact us.<br><br>
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting us regarding your HP Care Pack purchase ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      We sincerely apologise that the details of your registration appear to have been incorrectly updated. We are actively reviewing this with our Care Pack registration team and will act to have the expiry date corrected accordingly.<br><br>
+      Once this action is completed and our systems are updated, you will be sent your new Care Pack certificate, please note this process can take up to 2 weeks.<br><br>
+      We apologise for any inconvenience this may have caused.<br><br>
+      If there is anything further that we can assist you with, please feel free to reply to this email.<br><br>
+      
       
 
 Kind regards,
@@ -2128,7 +2176,7 @@ Please be aware that the Care Pack Warranty purchased is not a physical product 
 If you do not receive your activation email within the next 2 business days, please contact us again and we will request that this is resent to you as soon as is possible.<br><br>
 
 
-More information on HP Store Care Pack Activation can be found on our FAQS Page.<br><br>
+More information on HP Store Care Pack Activation can be found on our <a href="https://www.hp.com/gb-en/shop/faq.aspx?p=returns#how-to-return-and-request-refund-or-replacement" target="__blank">FAQS Page.</a><br><br>
 
 
 If you require any further assistance, please let us know.<br><br>
@@ -2145,7 +2193,7 @@ Kind regards,
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
-}thank you for contacting the HP Store. ${
+}thank you for your recent HP Store order ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
@@ -2157,26 +2205,28 @@ Please copy and paste the below information into your mail.<br>
 Send your email to: postsales.carepackregistration@hp.com<br><br>
 
 
-Email Subject: Care Pack Registration for HP Store order SCEOXXXXXX<br>
-Dear HP Care Pack Registration team,<br>
-Please find below the following information to allow the completion of my Care Pack Registration.<br>
-Name:<br>
-Address:<br>
-Phone:<br>
-Email:<br>
-Product Code:<br>
-Serial No:<br>
-Invoice: (Please attach a copy of your original invoice)<br><br>
+Email Subject: Care Pack Registration for HP Store order SCEOXXXXXX<br><br>
+Dear HP Care Pack Registration team,<br><br>
+Please find below the following information to allow the completion of my Care Pack Registration.
+<ul><li>Name:</li>
+<li>Address:</li>
+<li>Phone:</li>
+<li>Email:</li>
+<li>Product Code:</li>
+<li>Serial No:</li>
+<li>Invoice: (Please attach a copy of your original invoice)</li></ul>
 
-
-Please note Care Pack Registration can take up to 2 weeks to complete, after which your certificate will be visible and available for download. Further information on Care Pack Registration can be found on our FAQS Page below:<br>
-<a href="https://www.hp.com/gb-en/shop/faq.aspx">hp.com/gb-en/shop/faq.aspx</a><br><br>
+Please note Care Pack Registration can take up to 2 weeks to complete, after which your certificate will be visible and available for download. Further information on Care Pack Registration can be found on our
+<a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs Page</a><br><br>
 
 
 If you require any further assistance after this timeframe, please do let us know.<br><br>
       
       
 Kind regards,
+
+
+
  `,
     },
     // ORDER STATUS
@@ -2218,13 +2268,12 @@ ${
       }<br><br>
 
 
-      We apologise for the order cancellation, and for any inconvenience.<br><br>
-      Our finance team were unable to complete your order as they were unable to verify all the information provided.<br><br>
-      I am sorry that we cannot offer specific reasons for order cancellations for data protection reasons. It is recommended that you contact your card holder for further advice.<br><br>
-      If you need assistance in replacing the order, you can contact a sales agent on <strong>02076603859.</strong><br><br>
-
-
-If you need anything further, please let us know.<br><br>
+      Unfortunately, our finance team were unable to complete your order as they were unable to verify all the information provided. This means that we have had to cancel your order on this occasion, and we apologise for any inconvenience this may cause.<br><br>
+      We are unable to offer specific reasons for order cancellations for data protection reasons. It is recommended that you contact your card holder for further advice.<br><br>
+      Any money that may be on hold at your bank will be returned automatically to you within 3/5 business days.<br><br>
+      If you need assistance in replacing the order, you can contact a sales agent on <strong>0207 660 3859.</strong><br><br>
+      Please feel free to reply to this email if you have any further questions.<br><br>
+      
 
 
 Kind regards,
@@ -2799,7 +2848,7 @@ Kind regards,
 
   return (
     <>
-      <Grid container sx={{marginTop: '35px'}}>
+      <Grid container sx={{ marginTop: "35px" }}>
         <Grid item xs={12}>
           <form id='back-to-top-anchor'>
             <div style={{ display: "flex" }}>
@@ -3182,13 +3231,21 @@ Kind regards,
                 Ref Wire Missing Part
               </Button>
             </Link>
-            <Link to='editor'spy={true} smooth={true} duration={500}>
-              <Button fullWidth  color="secondary" onClick={() => setTemplate("MSGDeliveredRef")}>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("MSGDeliveredRef")}
+              >
                 Delivered - Ref
               </Button>
             </Link>
-            <Link to='editor'spy={true} smooth={true} duration={500}>
-              <Button fullWidth  color="secondary" onClick={() => setTemplate("MSGDeliveredRep")}>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("MSGDeliveredRep")}
+              >
                 Delivered - Rep
               </Button>
             </Link>
@@ -3395,11 +3452,10 @@ Kind regards,
                 Cancel Success - Wire
               </Button>
             </Link>
-
           </ButtonGroup>
         </Grid>
-                {/* ORDER STATUS BUTTONS */}
-                <Grid item xs={6} sm={3} md={2} lg={2}>
+        {/* ORDER STATUS BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
           <Typography
             variant='h6'
             component='h2'
@@ -3412,21 +3468,35 @@ Kind regards,
             size='small'
             aria-label='outlined button group'
             style={{ display: "inline" }}
-          >            <Link to='editor' spy={true} smooth={true} duration={500}>
-          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSreforrep")}>
-            RTS - ref or rep?
-          </Button>
-        </Link>
-        <Link to='editor' spy={true} smooth={true} duration={500}>
-          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSref")}>
-            RTS - ref
-          </Button>
-        </Link>
-        <Link to='editor' spy={true} smooth={true} duration={500}>
-          <Button fullWidth color="secondary" onClick={() => setTemplate("OSRTSrep")}>
-            RTS - rep
-          </Button>
-        </Link>
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("OSRTSreforrep")}
+              >
+                RTS - ref or rep?
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("OSRTSref")}
+              >
+                RTS - ref
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("OSRTSrep")}
+              >
+                RTS - rep
+              </Button>
+            </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
                 No ETA - Full
@@ -3447,8 +3517,6 @@ Kind regards,
                 Fraud Rejected
               </Button>
             </Link>
-
-
           </ButtonGroup>
         </Grid>
         {/* RETURNSBUTTONS */}
@@ -3580,7 +3648,11 @@ Kind regards,
                 Refund Sent
               </Button>
             </Link>
-
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCRefundFailed")}>
+                Refund Failed
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* MISC#2BUTTONS */}
@@ -3659,13 +3731,22 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth color="secondary" onClick={() => setTemplate("CPNotCompat")}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("CPNotCompat")}
+              >
                 CP Not compatible
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("CPCert")}>
                 Certificate Attached
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("CPWrongDate")}>
+                Change Wrong Date
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
