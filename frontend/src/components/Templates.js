@@ -1877,11 +1877,10 @@ ${
       }<br><br>
 
 
-Please find attached a copy of your invoice. <br><br>
+Please find attached a copy of your invoice as requested. <br><br>
 
  
-If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:
-<a href="https://www.hp.com/gb-en/shop/faq.aspx">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
+If there is anything further you need please let us know, alternatively please review our <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs page</a> on our website<br><br>
 
 
 Kind regards,
@@ -1956,7 +1955,7 @@ We have sent your enquiry forward and are awaiting further input from our manage
 Please be assured that HP takes all enquiries seriously and appreciate your patience and support whilst our investigation is ongoing, and this is being treated with the highest priority. We will contact you as soon as possible.<br><br>
 
 
-Again, we thank you for your patience and understanding.<br><br>
+Again, we thank you for your continued patience and understanding and welcome any further queries you may have in the meantime.<br><br>
       
 
 Kind regards,
@@ -2447,7 +2446,30 @@ Kind regards,
     },
     {
       id: "OSEOL",
-      title: "End of Life",
+      title: "End of Life - CC/PP",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      We are sorry to advise that we are no longer able to fulfil your recent HP Store order as this product has now been discontinued and no further stock is available. Unfortunately, your order will now need to be cancelled. <br><br>
+      Any money on reserve at your bank will be returned to you within 3/5 business days.<br><br>
+      Once again, we sincerely apologise that we have not been able to fulfil your requirements on this occasion. If you wish to select an alternative product, you can contact our Sales Team on 0207 660 3859. They will be happy to assist you.<br><br>
+      If there is anything further we can help you with, please feel free to contact us.<br><br>
+      
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "OSEOLWire",
+      title: "End of Life - Wire",
       text: `Dear ${name},<br><br>
 
 
@@ -2458,16 +2480,16 @@ ${
       }<br><br>
 
 
-We are sorry to advise that we are unable to fulfil your recent order HP Store order as this product has now been discontinued and no further stock is available. Your order will now be cancelled. <br><br>
+      We are sorry to advise that we are no longer able to fulfil your recent HP Store order as this product has now been discontinued and no further stock is available. Unfortunately, your order will now need to be cancelled. <br><br>
+      To allow us to proceed with your refund as you paid via bank transfer, we require the following bank details:
+      <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
 
-
-Any money on reserve at your bank will be returned to you within 5/8 business days.<br><br>
-
-
-Once again, we sincerely apologise we have not been unable to fulfil your requirements on this occasion. <br><br>
-
-
+      Once we have received these details, your refund will be processed back into your account within 8 working days.<br><br>
+Once again, we sincerely apologise that we have not been able to fulfil your requirements on this occasion. If you wish to select an alternative product, you can contact our Sales Team on 0207 660 3859. They will be happy to assist you.<br><br>
 If there is anything further we can help with, please feel free to contact us.<br><br>
+
+
+      
       
 
 Kind regards,
@@ -2481,7 +2503,7 @@ Kind regards,
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
-}thank you for recent HP Store order. ${
+}thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
@@ -2577,7 +2599,7 @@ Kind regards,
 
 ${
   hour < 13 ? "Good morning, " : "Good afternoon, "
-}thank you for recent HP Store order. ${
+}thank you for contacting the HP Store. ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
@@ -2888,6 +2910,106 @@ ${
       
 
 If there is anything further we can help with, please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+
+    //empty box
+    {
+      id: "EBBeforeClaim",
+      title: "Empty Box - Before CLaim ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store.  ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      Please note that until the investigation is complete, we will not be able to release any replacement or refund.<br><br>
+      Once the investigation is complete, if the weight of the box matches the warehouse and carrier data, we will proceed to close your file.<br><br>
+      We appreciate your patience in this matter.<br><br>
+      
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "EBRejectedAfter",
+      title: "Empty Box - Rejected After investigation  ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store.  ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      In connection with your empty box enquiry, we inform you that the investigation has been completed by our logistics department and the courier.<br><br>
+      The weight of the box was the same at both the warehouse departure and the delivery time. In addition, the box showed no signs of being tampered with prior to delivery. Also, there is no comment on the delivery note indicating any discrepancies.<br><br>
+      Since your order was successfully delivered, we inform your claim has been rejected.<br><br>
+      
+      
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "EBRejectedAfterRefund",
+      title: "Empty Box - Rejected After Refund ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store.  ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      In connection with your empty box enquiry, we inform you that the investigation has been completed by our logistics department and the courier.<br><br>
+      The weight of the box was the same at both the warehouse departure and at the time of delivery. In addition, the box showed no signs of being tampered with prior to delivery. Also, there is no comment on the delivery note indicating any incident discrepancies.<br><br>
+      Our financial department will generate a new invoice that you will have to pay as soon as possible.<br><br>
+      
+      
+      
+      
+
+Kind regards,
+ `,
+    },
+    {
+      id: "EBRejectedAfterRep",
+      title: "Empty Box - Rejected After Rep ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store.  ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      In connection with your empty box enquiry, we inform you that the investigation has been completed by our logistics department and the courier.<br><br>
+      The weight of the box was the same at both the warehouse departure and the delivery time. In addition, the box showed no signs of being tampered with prior to delivery. Also, there is no comment on the delivery note indicating any discrepancies.<br><br>
+      Currently, you have two options:<br><br>
+      - Return the replacement product that has been delivered to you<br>
+      - Pay the product with a new invoice<br><br>
+      Please let us know your preference as soon as possible so that our financial department can close your file.<br><br>
+      Thank you in advance.<br><br>
+      
+      
+      
+      
       
 
 Kind regards,
@@ -3510,7 +3632,7 @@ Kind regards,
                 fullWidth
                 onClick={() => setTemplate("OSChangeAddUnder300")}
               >
-                Change Address - Under 300 
+                Change Address - Under 300
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
@@ -3533,24 +3655,7 @@ Kind regards,
                 Collect PO
               </Button>
             </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
-                Cancel Request
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
-                Cancel Success - CC/PP
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button
-                fullWidth
-                onClick={() => setTemplate("MSCCancelSuccessWire")}
-              >
-                Cancel Success - Wire
-              </Button>
-            </Link>
+
           </ButtonGroup>
         </Grid>
         {/* ORDER STATUS BUTTONS */}
@@ -3569,7 +3674,6 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
-
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
                 fullWidth
@@ -3598,6 +3702,24 @@ Kind regards,
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelRequest")}>
+                Cancel Request
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCancelSuccess")}>
+                Cancel Success - CC/PP
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("MSCCancelSuccessWire")}
+              >
+                Cancel Success - Wire
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSETAFull")}>
                 No ETA - Full
               </Button>
@@ -3609,7 +3731,12 @@ Kind regards,
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("OSEOL")}>
-                End of Life
+                End of Life - CC/PP
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("OSEOLWire")}>
+                End of Life - Wire
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
@@ -3857,6 +3984,50 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("CPNotPhysical")}>
                 CP Not Physical
+              </Button>
+            </Link>
+          </ButtonGroup>
+        </Grid>
+        {/* Empty Box BUTTONS */}
+        <Grid item xs={6} sm={3} md={2} lg={2}>
+          <Typography
+            variant='h6'
+            component='h2'
+            style={{ textAlign: "center" }}
+          >
+            Empty Box
+          </Typography>
+          <ButtonGroup
+            variant='outlined'
+            size='small'
+            aria-label='outlined button group'
+            style={{ display: "inline" }}
+          >
+            {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("EBBeforeClaim")}>
+                Before Claim
+              </Button>
+            </Link>{" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("EBRejectedAfter")}>
+                Rejected - after investigation
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("EBRejectedAfterRefund")}
+              >
+                Rejected - after Refund
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button
+                fullWidth
+                onClick={() => setTemplate("EBRejectedAfterRep")}
+              >
+                Rejected - after Rep
               </Button>
             </Link>
           </ButtonGroup>
