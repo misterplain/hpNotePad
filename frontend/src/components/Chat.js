@@ -27,7 +27,7 @@ const Chat = () => {
     },
     {
       id: 4,
-      text: "My apologies for this. Can I take your Web Order number please?",
+      text: "Can I take your Web Order number, as well as the name on the order and the first line of the billing address, please?",
     },
     {
       id: 5,
@@ -38,12 +38,20 @@ const Chat = () => {
       text: "Can you please confirm your name and the first line of your billing address?",
     },
     {
+      id: 12, 
+      text: "Order numbers will be in format SCEOxxxxxxxx"
+    },
+    {
       id: 7,
       text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 1 again.",
     },
     {
       id: 8,
       text: "We are only able to assist directly with orders placed on the HP Store. If you purchased through the HP Store, please respond with your order number in format SCEOxxxxxxxx. If you´ve purchased through a third party reseller, you may direct your query directly to them or to the Tech Support Team for assistance. ",
+    },
+    {
+      id: 13, 
+      text: "We are unable to assist directly as we are outside the 30 days after delivery."
     },
     {
       id: 9,
