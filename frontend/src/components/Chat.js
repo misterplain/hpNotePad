@@ -25,6 +25,7 @@ const Chat = () => {
       id: 3,
       text: "Of course.",
     },
+    {id: 14, text: "We are sorry to hear that this has happened."},
     {
       id: 4,
       text: "Can I take your Web Order number, as well as the name on the order and the first line of the billing address, please?",
@@ -80,6 +81,10 @@ const Chat = () => {
       id: 3,
       text: "If your order is shipped before the cancellation is complete, you may refuse the delivery to trigger the full refund. Please let us know when you do and we will raise your claim. "
     },
+    {
+      id: 4,
+      text: "Apologies for the delay in receiving your order."
+    }
 
   ];
 
@@ -91,6 +96,10 @@ const Chat = () => {
     {
       id: 2,
       text: "We will request to send you a label via email within 2-3 working days for return through your local post office. The label will be valid for 5 working days from when you receive it. Please remember to get a receipt from the post office when you drop this off.",
+    },
+    {
+      id: 4, 
+      text: "We have requested the collection date for XXX. Please note that Parcel Force are not always able to meet the requested dates, and will contact you directly when the date is fully booked in. Please remember to get a receipt from the driver when they collect"
     },
     {
       id: 3,
@@ -122,6 +131,18 @@ const Chat = () => {
       id: 3,
       text: "Sometimes they have a Virtual Agent available:\
       https://instantink.hpconnected.com/uk/en/l/"
+    },
+    {
+      id: 4,
+      text: "We are sorry to hear you are having this issue with your device."
+    },
+    {
+      id: 5,
+      text: "We would recommend you contact our Tech Support team. They will be happy to assist you. Their number can be found below:\nConsumer Products: 0207 660 0596\nBusiness Products: 0207 660 0403"
+    },
+    {
+      id: 6,
+      text: "If they determine the device is faulty, they will provide you with the necessary case ID and case notes to move forward with a return claim. Please specify to them whether you prefer a refund or a replacement device."
     }
   ];
 
