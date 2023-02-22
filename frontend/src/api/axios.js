@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://hpnotepad-api.onrender.com",
+  baseURL: "https://activeserver.onrender.com/notepad",
   // baseURL: "http://localhost:5000",
 });
