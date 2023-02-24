@@ -2940,6 +2940,43 @@ Kind regards,
  `,
     },
     {
+      id: "EBOpenInvest",
+      title: "Empty Box - Before CLaim ",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store.  ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      We are sorry hear that you have not received your order, we will now investigate this case further.<br><br>
+
+      This is protocol when a customer places a high value order and reportedly receives an empty box.<br><br>
+       
+      Our carrier Parcel Force will now begin an in-depth investigation with regards to the weight of the shipment when it left us and a thorough stock check of whether your unit did indeed leave our warehouse successfully.<br><br>
+      
+      Can you please explain briefly what happened when the courier handed over your order?<br><br>
+      
+      Did you not find it strange that the box was so light?<br><br>
+      
+      Did the packaging seem in any way tampered with?<br><br>
+       
+      Please provide clear pictures of the box and the delivery labels that were attached.<br><br>
+      
+      We hope you can bear with us whilst we investigate this further. Please note that HP takes these cases very seriously.<br><br>
+      
+      We will await your response.<br><br>
+      
+      
+      
+
+Kind regards,
+ `,
+    },
+    {
       id: "EBRejectedAfter",
       title: "Empty Box - Rejected After investigation  ",
       text: `Dear ${name},<br><br>
@@ -3933,11 +3970,11 @@ Kind regards,
                 ARN
               </Button>
             </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
+            {/* <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSC2EmptyBox")}>
                 Empty Box - rejected
               </Button>
-            </Link>
+            </Link> */}
           </ButtonGroup>
         </Grid>
 
@@ -4004,6 +4041,11 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("EBOpenInvest")}>
+                Open Investigation
+              </Button>
+            </Link>{" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("EBBeforeClaim")}>
                 Before Claim
