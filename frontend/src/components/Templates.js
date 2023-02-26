@@ -1843,6 +1843,35 @@ Kind regards,
  `,
     },
     {
+      id: "MSREbay",
+      title: "Misrouted - EBay",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      As your HP Store order was purchased through the Ebay platform, you will have to contact the HP Store within Ebay directly related to this query, they will assist you further there. <br><br>
+
+      For returns within 30 days of delivery, you may follow the below instructions to raise your request. <br><br>
+      
+      To start a return, select the item you want to send back from your recent purchases above, or follow the steps below:<br><br>
+      1.        Find the item in your Purchase history and select Return this item.<br>
+      2.        Select your reason for the return.<br>
+      3.        Select Send.<br><br>
+      
+      They will then raised your claim accordingly<br><br>
+      
+
+
+Kind regards,
+ `,
+    },
+    {
       id: "MSRInstantInk",
       title: "Misrouted - Instant Ink",
       text: `Dear ${name},<br><br>
@@ -2941,7 +2970,7 @@ Kind regards,
     },
     {
       id: "EBOpenInvest",
-      title: "Empty Box - Before CLaim ",
+      title: "Empty Box - Open Investigation",
       text: `Dear ${name},<br><br>
 
 
@@ -3625,6 +3654,11 @@ Kind regards,
                 Instant Ink
               </Button>
             </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSREbay")}>
+                ebay
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* ORDER STATUS BUTTONS */}
@@ -4042,7 +4076,7 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("EBOpenInvest")}>
+              <Button fullWidth color="secondary" onClick={() => setTemplate("EBOpenInvest")}>
                 Open Investigation
               </Button>
             </Link>{" "}
