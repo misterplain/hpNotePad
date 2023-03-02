@@ -8,11 +8,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Button from "@mui/material/Button";
 import Slide from "@mui/material/Slide";
 import Fade from "@mui/material/Fade";
 import Fab from "@mui/material/Fab";
@@ -84,9 +79,37 @@ const navItems = [
   },
 ];
 
-//hide on scroll
 function HideOnScroll(props) {
   const { children, window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant='h6' sx={{ my: 2 }}>
+        MUI
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <Link to={item.path}>
+            {" "}
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+    </Box>
+  );
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   });
@@ -100,12 +123,18 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
   window: PropTypes.func,
 };
 
-//Scroll to top
 function ScrollTop(props) {
   const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -137,40 +166,8 @@ function ScrollTop(props) {
   );
 }
 
-export default function Header(props) {
-  const { window } = props;
+export default function HideAppBar(props) {
   const [productivity, setProductivity] = useState(0);
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant='h4' sx={{ my: 2 }}>
-        HP Notepad
-      </Typography>
-      <Divider />
-      <List >
-        {navItems.map((item) => (
-          <Link to={item.path} style={{marginLeft: "5px"}}>
-            {" "}
-            <ListItem key={item.name} sx={{textDecoration: 'none', }}>
-              <ListItemButton
-                sx={{ textAlign: "center", textDecoration: "none" }}
-              >
-                <ListItemText primary={item.name} sx={{ color: "white", textDecoration: "none"  }} />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   const handleKeyPress = useCallback(
     (event) => {
@@ -199,64 +196,143 @@ export default function Header(props) {
     };
   }, [handleKeyPress]);
 
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   return (
     <React.Fragment>
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
         <HideOnScroll {...props}>
-          <AppBar >
-            <Toolbar variant="dense">
-              <IconButton
-                color='inherit'
-                aria-label='open drawer'
-                edge='start'
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { md: "none" } }}
-              >
-                <MenuIcon />
-              </IconButton>
+          <AppBar>
+            <Toolbar
+              variant='dense'
+              style={{ display: "flex", flexDirection: "row" }}
+            >
               <Typography
-                variant='h6'
-                component='div'
+                component='h1'
                 sx={{
-                  flexGrow: 1,
-                  display: { xs: "none", sm: "block", color: "lightblue" },
+                  color: "lightblue",
+                  // flexBasis: "15%",
+                  // marginTop: "20px",
+                  // padding: "0px",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  width: "15%",
                 }}
               >
-                HP Notepad
+                HP Store Notepad
               </Typography>
-              <Box sx={{ display: { xs: "none", md: "block" }, }}>
-                {navItems.map((item) => (
-                  <Link to={item.path} sx={{textDecoration:"none", padding: "0px", margin: "0px"}}>
 
-                    <Button key={item.name} sx={{ color: "#fff", textDecoration:"none" }}>
-                      {item.name}
-                    </Button>
-                  </Link>
-                ))}
-              </Box>
-            </Toolbar>
-            <AppBar />
-            <Box component='nav'>
-              <Drawer
-                container={container}
-                variant='temporary'
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-                ModalProps={{
-                  keepMounted: true, // Better open performance on mobile.
-                }}
+              <List
                 sx={{
-                  display: { xs: "block" },
-                  "& .MuiDrawer-paper": {
-                    boxSizing: "border-box",
-                    width: drawerWidth,
-                  },
+                  width: "85%",
+                  display: "flex",
                 }}
               >
-                {drawer}
-              </Drawer>
-            </Box>
+                <Link
+                  to='bulletin'
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    border: "1px solid white",
+                    padding: "0px",
+                  }}
+                >
+                  <ListItem sx={{ padding: "0px" }}>
+                    <ListItemButton sx={{ padding: "0px" }}>
+                      <ListItemText
+                        primary={"Bulletin Board"}
+                        style={{
+                          textAlign: "center",
+                          color: "white",
+                          padding: "0px",
+                        }}
+                      />
+                    </ListItemButton>
+                  </ListItem>{" "}
+                </Link>
+
+                <Link
+                  to='/holidays'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Holidays"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
+                  to='/tools'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Tools/Links"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
+                  to='/ebay'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Ebay"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
+                  to='/chat'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Chat"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
+                  to='templates'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Templates"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+                <Link
+                  to='contact'
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItem>
+                    <ListItemButton>
+                      <ListItemText
+                        primary={"Add/Edit"}
+                        style={{ textAlign: "center" }}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Link>
+              </List>
+            </Toolbar>
 
             <Toolbar
               variant='dense'
