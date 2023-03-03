@@ -152,15 +152,35 @@ export default function Header(props) {
         HP Notepad
       </Typography>
       <Divider />
-      <List >
+      <List>
         {navItems.map((item) => (
-          <Link to={item.path} style={{marginLeft: "5px"}}>
+          <Link to={item.path} style={{ marginLeft: "0px", padding: "0px" }}>
             {" "}
-            <ListItem key={item.name} sx={{textDecoration: 'none', }}>
+            <ListItem
+              key={item.name}
+              sx={{
+                textDecoration: "none",
+                margin: "15px 0px",
+                padding: "0px 0px",
+              }}
+            >
               <ListItemButton
-                sx={{ textAlign: "center", textDecoration: "none" }}
+                sx={{
+                  textAlign: "center",
+                  textDecoration: "none",
+                  margin: "0px 0px",
+                  padding: "0px 0px",
+                }}
               >
-                <ListItemText primary={item.name} sx={{ color: "white", textDecoration: "none"  }} />
+                <ListItemText
+                  primary={item.name}
+                  sx={{
+                    color: "white",
+                    textDecoration: "none",
+                    margin: "0px 0px",
+                    padding: "0px 0px",
+                  }}
+                />
               </ListItemButton>
             </ListItem>
           </Link>
@@ -204,8 +224,8 @@ export default function Header(props) {
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
         <HideOnScroll {...props}>
-          <AppBar >
-            <Toolbar variant="dense">
+          <AppBar>
+            <Toolbar variant='dense'>
               <IconButton
                 color='inherit'
                 aria-label='open drawer'
@@ -225,11 +245,27 @@ export default function Header(props) {
               >
                 HP Notepad
               </Typography>
-              <Box sx={{ display: { xs: "none", md: "block" }, }}>
+              <Box sx={{ display: { xs: "none", md: "block" } }}>
                 {navItems.map((item) => (
-                  <Link to={item.path} sx={{textDecoration:"none", padding: "0px", margin: "0px"}}>
-
-                    <Button key={item.name} sx={{ color: "#fff", textDecoration:"none" }}>
+                  <Link
+                    to={item.path}
+                    sx={{
+                      textDecoration: "none",
+                      padding: "0px 0px",
+                      margin: "0px 0px",
+                      border: "1px solid red",
+                    }}
+                  >
+                    <Button
+                      key={item.name}
+                      sx={{
+                        color: "#fff",
+                        textDecoration: "none",
+                        padding: "0px 8px",
+                        margin: "0px 5px",
+                        border: "1px solid lightblue",
+                      }}
+                    >
                       {item.name}
                     </Button>
                   </Link>
