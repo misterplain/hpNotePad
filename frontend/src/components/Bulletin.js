@@ -258,7 +258,7 @@ const Bulletin = () => {
           </Button>
         )}
       </Grid>
-      {dashboardData?.forecast && (
+      {dashboardData?.forecast && dashboardData?.moonPhase ? (
         <Grid
           item
           xs={12}
@@ -271,6 +271,11 @@ const Bulletin = () => {
             marginBottom: "20px",
           }}
         >
+          <Grid item xs={10} sx={{ display: "flex", justifyContent: "center", marginBottom: "15px", marginLeft: "70px" }} >
+            <Typography sx={{color: "purple", borderBottom: "1px solid green"}}>
+              {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.emoji}`}{" "}
+            </Typography>
+          </Grid>
           <Grid
             item
             xs={12}
@@ -305,7 +310,7 @@ const Bulletin = () => {
             </LineChart>
           </Grid>
         </Grid>
-      )}
+      ) : null}
 
       {dashboardData?.horoscope && (
         <Grid
@@ -414,7 +419,6 @@ const Bulletin = () => {
               textAlign: "center",
             }}
           >
-
             <Typography
               sx={{
                 padding: "10px",
@@ -609,4 +613,3 @@ const Bulletin = () => {
 };
 
 export default Bulletin;
-
