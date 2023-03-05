@@ -258,7 +258,7 @@ const Bulletin = () => {
           </Button>
         )}
       </Grid>
-      {dashboardData?.forecast && dashboardData?.moonPhase ? (
+      {dashboardData?.forecast ? (
         <Grid
           item
           xs={12}
@@ -271,11 +271,25 @@ const Bulletin = () => {
             marginBottom: "20px",
           }}
         >
-          <Grid item xs={10} sx={{ display: "flex", justifyContent: "center", marginBottom: "15px", marginLeft: "70px" }} >
-            <Typography sx={{color: "purple", borderBottom: "1px solid green"}}>
-              {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.emoji}`}{" "}
-            </Typography>
-          </Grid>
+          {dashboardData?.moonPhase && (
+            <Grid
+              item
+              xs={10}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "15px",
+                marginLeft: "70px",
+              }}
+            >
+              <Typography
+                sx={{ color: "purple", borderBottom: "1px solid green" }}
+              >
+                {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.emoji}`}{" "}
+              </Typography>
+            </Grid>
+          )}
+
           <Grid
             item
             xs={12}
