@@ -1834,7 +1834,7 @@ ${
       }<br><br>
 
 
-      Please contact the Instant Ink team directly on 0207 660 0596.<br><br>
+      Please contact the Instant Ink team directly on 0207 660 6027.<br><br>
       If you require any further assistance, please let us know.
       <br><br>
 
