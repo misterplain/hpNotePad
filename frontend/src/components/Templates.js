@@ -982,14 +982,22 @@ ${
 
       We are sorry to hear that you faced some issues and we did not achieve our normal high standards.<br><br>
       We sincerely apologise for any inconvenience this may have caused and would like to offer you a £** e-discount voucher in recognition of this experience, which you can use on your next HP Store purchase.<br><br>
-      Please find below the discount voucher code (*conditions apply) and the steps how to receive the discount online:<br><br>
-      ·     	-Log on to your account.<br>
-      ·     	-Choose the product(s) of your choice and add it/them to the basket<br>
-      ·     	-Proceed to checkout.<br>
-      ·     	-Select “Apply E-voucher” and enter your exclusive code in the field.<br>
-      ·     	<strong>-Your code is:</strong><br>
-      ·     	-A discount of the value of the voucher will be applied automatically<br>
-      ·     	-Confirm your order with the payment method of your choice<br><br>
+      Please find below the discount voucher code (*conditions apply) and the steps how to receive the discount online:
+
+      <ul>    
+      
+      <li>Log on to your account.</li>
+      <li>Choose the product(s) of your choice and add it/them to the basket</li>
+      <li>Proceed to checkout.</li>
+      <li>Select “Apply E-voucher” and enter your exclusive code in the field.</li>
+      <li><strong>-Your code is:</strong></li>
+      <li>A discount of the value of the voucher will be applied automatically<br><i>(your order needs to be above the value of voucher for this to apply)</i></li>
+      <li>Confirm your order with the payment method of your choice<</li>
+      
+      </ul>
+
+
+
       <strong>**The voucher is valid until ***** on the UK HP Online Store. Please note - only 1 discount code can be applied per order, all vouchers are for single use only.</strong><br><br>
       
       We look forward to seeing you back at HP Store in the future.<br><br>
