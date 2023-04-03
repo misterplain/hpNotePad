@@ -43,6 +43,10 @@ const Chat = () => {
       text: "Order numbers will be in format SCEOxxxxxxxx"
     },
     {
+id: 15, 
+text: "What is the email address you used to place this order?",
+    },
+    {
       id: 7,
       text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 1 again.",
     },
@@ -84,7 +88,15 @@ const Chat = () => {
     {
       id: 4,
       text: "Apologies for the delay in receiving your order."
-    }
+    },
+    {
+id: 5,
+text: "Unfortunately we or the courier are not always able to meet delivery estimates. "
+    },
+    {
+id: 6, 
+text: "We cannot modify an order once it is placed. We can request to re-route this delivery which may delay delivery by a day or two. "
+    },
 
   ];
 
@@ -105,6 +117,10 @@ const Chat = () => {
       id: 3,
       text: "Once the goods are received into the warehouse, your refund will initiate 3-5 working days from there and will arrive back to your original payment method.",
     },
+    {
+      id: 4, 
+      text: "Claim raised, you'll receive further info via email",
+    }
   ];
 
   //   const templatesGeneral = [

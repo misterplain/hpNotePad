@@ -1880,6 +1880,32 @@ Kind regards,
  `,
     },
     {
+      id: "MSRHyper",
+      title: "Misrouted - Hyper X",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+      
+As this is a HyperX order, please contact the HyperX team at:<br><br>
+Email: <br>
+eu_care@hyperx.com<br>
+shopeurope@hyperx.com<br><br>
+ 
+Chat: <br>
+<a href="https://row.hyperx.com/pages/support" target="_blank" >https://row.hyperx.com/pages/support</a><br><br>
+ 
+They will be able to assist you with your needs.<br><br>
+
+
+Kind regards,
+ `,
+    },
+    {
       id: "MSRInstantInk",
       title: "Misrouted - Instant Ink",
       text: `Dear ${name},<br><br>
@@ -2033,7 +2059,7 @@ ${
       }<br><br>
 
 
-We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if refuse delivery and let us know when you do, we will initiate the full refund.<br><br>
+We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if you refuse the delivery and let us know when you do, we will initiate the full refund.<br><br>
 
 
 If this does cancel successfully before shipment, you will be notified as well via email. <br><br>
@@ -3667,6 +3693,11 @@ Kind regards,
                 ebay
               </Button>
             </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSRHyper")}>
+                Hyper-X
+              </Button>
+            </Link>
           </ButtonGroup>
         </Grid>
         {/* ORDER STATUS BUTTONS */}
@@ -3734,7 +3765,6 @@ Kind regards,
                 Collect PO
               </Button>
             </Link>
-
           </ButtonGroup>
         </Grid>
         {/* ORDER STATUS BUTTONS */}
@@ -4084,7 +4114,11 @@ Kind regards,
           >
             {" "}
             <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth color="secondary" onClick={() => setTemplate("EBOpenInvest")}>
+              <Button
+                fullWidth
+                color='secondary'
+                onClick={() => setTemplate("EBOpenInvest")}
+              >
                 Open Investigation
               </Button>
             </Link>{" "}
