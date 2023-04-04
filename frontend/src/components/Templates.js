@@ -2058,8 +2058,12 @@ ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
+      I confirm that the cancellation request has been sent. You will receive an automated email from the system when it completes. Please allow 3/5 days from receipt of the cancellation email to see your money back in your account.<br><br>
+Please note that HP has not taken any money for this order, as we only take payment when the goods ship. Any money on reserve at your bank will be lifted within 3/5 days of the cancellation.<br><br>
 
-We have raised the request to fully cancel this order. Please note that due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if you refuse the delivery and let us know when you do, we will initiate the full refund.<br><br>
+
+
+Due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if you refuse the delivery and let us know when you do, we will initiate the full refund.<br><br>
 
 
 If this does cancel successfully before shipment, you will be notified as well via email. <br><br>
