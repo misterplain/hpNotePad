@@ -3152,88 +3152,110 @@ Kind regards,
       <Grid container sx={{ marginTop: "35px" }}>
         <Grid item xs={12}>
           <form id='back-to-top-anchor'>
-            <div style={{ display: "flex" }}>
-              <FormGroup sx={{ width: "30%" }}>
-                <FormControlLabel
-                  control={
-                    <TextField
-                      id='date'
-                      label='Choose Collection Date'
-                      type='date'
-                      fullWidth
-                      onChange={(e) => setDate(convertDate(e.target.value))}
-                      onSelect={(e) => setDate(convertDate(e.target.value))}
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  }
-                />
-              </FormGroup>
-              <FormGroup sx={{ width: "30%" }}>
-                <FormControlLabel
-                  control={
-                    <TextField
-                      id='name'
-                      label='Customers Name'
-                      type='text'
-                      fullWidth
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      // defaultValue={name}
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  }
-                />
-              </FormGroup>
-              <FormGroup sx={{ width: "30%" }}>
-                <FormControlLabel
-                  control={
-                    <TextField
-                      id='orderNumber'
-                      label='SCEO Number'
-                      type='text'
-                      fullWidth
-                      value={orderNumber}
-                      onChange={(e) => setOrderNumber(e.target.value)}
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  }
-                />
-              </FormGroup>
-              <Button
-                onClick={() => {
-                  setName("");
-                  setOrderNumber("");
-                  setDate("");
-                  setApology(false);
-                }}
-                sx={{ width: "5%", marginRight: ".5rem" }}
-                variant='outlined'
-                color='primary'
+            <Grid
+              container
+              sx={{
+                display: "flex",
+              }}
+            >
+              <Grid item xs={12} sm={6} md={3} lg={3} marginTop>
+                {" "}
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <TextField
+                        id='date'
+                        label='Choose Collection Date'
+                        type='date'
+                        fullWidth
+                        onChange={(e) => setDate(convertDate(e.target.value))}
+                        onSelect={(e) => setDate(convertDate(e.target.value))}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+                    }
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid item xs={12} sm={6} md={3} marginTop>
+                {" "}
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <TextField
+                        id='name'
+                        label='Customers Name'
+                        type='text'
+                        fullWidth
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        // defaultValue={name}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+                    }
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid item xs={12} sm={6} md={3} marginTop>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <TextField
+                        id='orderNumber'
+                        label='SCEO Number'
+                        type='text'
+                        fullWidth
+                        value={orderNumber}
+                        onChange={(e) => setOrderNumber(e.target.value)}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+                    }
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={3}
+                sx={{ display: "flex", justifyContent: "space-around" }} marginTop
               >
-                Clear All
-              </Button>
-              <Button
-                onClick={() => {
-                  setName("Customer");
-                  setOrderNumber("in format SCEO********");
-                  setDate(
-                    "the date confirmed in your claim confirmation email"
-                  );
-                  setApology(false);
-                }}
-                sx={{ width: "5%" }}
-                variant='outlined'
-                color='secondary'
-              >
-                Safe Values
-              </Button>{" "}
-            </div>
+                {" "}
+                <Button
+                  onClick={() => {
+                    setName("");
+                    setOrderNumber("");
+                    setDate("");
+                    setApology(false);
+                  }}
+                  sx={{ marginRight: ".5rem" }}
+                  variant='outlined'
+                  color='primary'
+                >
+                  Clear All
+                </Button>
+                <Button
+                  onClick={() => {
+                    setName("Customer");
+                    setOrderNumber("in format SCEO********");
+                    setDate(
+                      "the date confirmed in your claim confirmation email"
+                    );
+                    setApology(false);
+                  }}
+          
+                  variant='outlined'
+                  color='secondary'
+                >
+                  Safe Values
+                </Button>
+              </Grid>
+            </Grid>
             <div style={{ width: "100%" }}>
               {" "}
               <FormControl
