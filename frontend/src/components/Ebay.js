@@ -55,7 +55,7 @@ const Ebay = () => {
     },
     {
       id: 11,
-      text: "For a full technical explanation of the product specs, our support team contact info can be found below:\nhttps://www.hp.com/gb-en/shop/faq.aspx?p=technical-support#useful-links"
+      text: "For a full technical explanation of the product specs, our support team contact info can be found below:\nhttps://www.hp.com/gb-en/shop/faq.aspx?p=customer-care#useful-links"
       
     },
     {
@@ -103,7 +103,7 @@ const Ebay = () => {
     },
     {
       id: 3,
-      text: "For troubleshooting assistance, our support team contact info can be found below\nhttps://www.hp.com/gb-en/shop/faq.aspx?p=technical-support#useful-links",
+      text: "For troubleshooting assistance, our support team contact info can be found below\nhttps://www.hp.com/gb-en/shop/faq.aspx?p=customer-care#useful-links",
     },
     {
       id: 4,

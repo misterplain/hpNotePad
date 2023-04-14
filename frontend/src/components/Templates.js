@@ -1950,6 +1950,26 @@ Kind regards,
  `,
     },
     {
+      id: "MSCCRB",
+      title: "CRB - Invoice Update",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting relating to your HP Store invoice. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      We have forwarded your request to our finance team who will review and process the changes as soon as possible.<br><br>
+      Next: please expect to receive a “credit note”, which does cancel the original invoice, followed by a new invoice with the requested amendments. <br><br>The procedure of the invoice correction can take up to 5 working days.
+      If there is anything further we can assist you with please feel free to contact us.<br><br>
+      
+
+Kind regards,
+ `,
+    },
+    {
       id: "MSCRefundSent",
       title: "Refund Sent ",
       text: `Dear ${name},<br><br>
@@ -2212,7 +2232,7 @@ ${
 
 The Care Pack Team have advised that this Care Pack is not compatible with the hardware device you had tried to associate it with. <strong>Please confirm if you wish to have a refund on this Care Pack, or if you wish to associate this with a compatible hardware device</strong>.<br><br>
 
-To speak directly with a Sales Agent regarding compatible Care Packs, you may contact them at 0207 660 3859 (Option 1 and Option 1 for Sales) or by writing them via email at hpstoresalesuk@hp.com.<br><br>
+To speak directly with a Sales Agent regarding compatible Care Packs, you may contact them at 0207 660 3859 (Option 1 and Option 2 for Sales) or by writing them via email at hpstoresalesuk@hp.com.<br><br>
 You may also visit the Care Pack Central to check on Care Pack compatibility with your device:<br>
 <a href="https://cpc.ext.hp.com/portal/site/cpc/" target="__blank">https://www8.hp.com/us/en/carepacks/central.html</a><br><br>
 
@@ -3128,7 +3148,7 @@ Kind regards,
     },
     {
       id: 2,
-      text: "To speak directly with a Sales Agent, you may contact them at 0207 660 3859 (Option 1 and Option 1 for Sales) or by writing them via email at hpstoresalesuk@hp.com.",
+      text: "To speak directly with a Sales Agent, you may contact them at 0207 660 3859 (Option 1 and Option 2 for Sales) or by writing them via email at hpstoresalesuk@hp.com.",
     },
     {
       id: 2,
@@ -3136,7 +3156,7 @@ Kind regards,
     },
     {
       id: 2,
-      text: "For more immediate assistance, our Post Sales phone line is open from 9am until 5:30pm and can be reached at 0207 660 3859 (Option 1 and then Option 3).",
+      text: "For more immediate assistance, our Post Sales phone line is open from 9am until 5:30pm and can be reached at 0207 660 3859 (Option 1 and then Option 1).",
     },
   ];
 
@@ -3998,6 +4018,11 @@ Kind regards,
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSCHoldingCRT")}>
                 CRT-Holding
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCCRB")}>
+                CRB-Invoice Update
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>

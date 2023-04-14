@@ -48,7 +48,7 @@ text: "What is the email address you used to place this order?",
     },
     {
       id: 7,
-      text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 1 again.",
+      text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 2 again.",
     },
     {
       id: 8,
