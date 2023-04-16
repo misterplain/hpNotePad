@@ -15,10 +15,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import parse from "html-react-parser";
 import { BiCopy } from "react-icons/bi";
-
-// import TemplateText from "../assets/templates4";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
 
 const Templates = () => {
   //dynamic template values
@@ -41,13 +38,12 @@ const Templates = () => {
     return `${day}/${month}`;
   };
 
-  //inject "good morning or good afternoon" into template
   let time = new Date();
   let hour = time.getHours();
 
   //copy to clipboard
   const copyToClipboard = async () => {
-    console.log("copying to clipboard");
+
     try {
       const content = document.getElementById("parsedText").innerHTML;
       const blobInput = new Blob([content], { type: "text/html" });
@@ -3151,11 +3147,11 @@ Kind regards,
       text: "To speak directly with a Sales Agent, you may contact them at 0207 660 3859 (Option 1 and Option 2 for Sales) or by writing them via email at hpstoresalesuk@hp.com.",
     },
     {
-      id: 2,
+      id: 3,
       text: "Our apologies for the inconveniences you have seen with this order. ",
     },
     {
-      id: 2,
+      id: 4,
       text: "For more immediate assistance, our Post Sales phone line is open from 9am until 5:30pm and can be reached at 0207 660 3859 (Option 1 and then Option 1).",
     },
   ];
@@ -3283,7 +3279,6 @@ Kind regards,
                 component='fieldset'
                 variant='standard'
               >
-                {/* <FormLabel component="legend">Assign responsibility</FormLabel> */}
                 <FormGroup>
                   <FormControlLabel
                     control={
@@ -3956,24 +3951,6 @@ Kind regards,
                 Claim cancelled
               </Button>
             </Link>
-            {/* <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button
-                fullWidth
-                color='secondary'
-                onClick={() => setTemplate("RETBillProd")}
-              >
-                Bill - xtra prod
-              </Button>
-            </Link>
-            <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button
-                fullWidth
-                color='secondary'
-                onClick={() => setTemplate("RETBillRef")}
-              >
-                Bill - ref sent
-              </Button>
-            </Link> */}
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button
                 fullWidth
@@ -4093,11 +4070,6 @@ Kind regards,
                 ARN
               </Button>
             </Link>
-            {/* <Link to='editor' spy={true} smooth={true} duration={500}>
-              <Button fullWidth onClick={() => setTemplate("MSC2EmptyBox")}>
-                Empty Box - rejected
-              </Button>
-            </Link> */}
           </ButtonGroup>
         </Grid>
 
@@ -4202,7 +4174,7 @@ Kind regards,
           </ButtonGroup>
         </Grid>
 
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Typography
             variant='h6'
             sx={{
@@ -4215,7 +4187,7 @@ Kind regards,
           </Typography>
           {babyTemps.map((template) => {
             return (
-              <div style={{ display: "flex", marginBottom: "5px" }}>
+              <div style={{ display: "flex", marginBottom: "5px" }} key={template.id}>
                 <BiCopy
                   onClick={() => {
                     navigator.clipboard.writeText(template.text);
@@ -4261,18 +4233,18 @@ Kind regards,
             data={text}
             onReady={(editor) => {
               // You can store the "editor" and use when it is needed.
-              console.log("Editor is ready to use!", editor);
+              // console.log("Editor is ready to use!", editor);
             }}
             onChange={(event, editor) => {
               const data = editor.getData();
-              console.log({ event, editor, data });
+              // console.log({ event, editor, data });
               setText(data);
             }}
             onBlur={(event, editor) => {
-              console.log("Blur.", editor);
+              // console.log("Blur.", editor);
             }}
             onFocus={(event, editor) => {
-              console.log("Focus.", editor);
+              // console.log("Focus.", editor);
             }}
           />
           <div id='parsedText' style={{ display: "none" }}>
@@ -4293,9 +4265,3 @@ Kind regards,
 };
 
 export default Templates;
-
-// {
-//   id: "",
-//   title: "",
-//   text: ` `,
-// }

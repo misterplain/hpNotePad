@@ -32,7 +32,6 @@ function App() {
       <HashRouter>
         {" "}
         <Header />
-        {/* {timer} */}
         <Container>
           <Routes>
             <Route path='*' element={<Navigate to='/' />} />

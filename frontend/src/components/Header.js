@@ -197,13 +197,10 @@ export default function Header(props) {
       if (event.shiftKey === true) {
         if (event.key === "ArrowUp") {
           setProductivity(productivity + 1);
-          console.log("productivity added" + productivity);
         } else if (event.key === "ArrowDown") {
           setProductivity(productivity - 1);
-          console.log("productivity subtracted" + productivity);
         } else if (event.key === "Backspace") {
           setProductivity(0);
-          console.log("productivity reset" + productivity);
         }
       } else {
         console.log("shift key not pressed");
@@ -249,6 +246,7 @@ export default function Header(props) {
                 {navItems.map((item) => (
                   <Link
                     to={item.path}
+                    key={item.path}
                     sx={{
                       textDecoration: "none",
                       padding: "0px 0px",
@@ -302,20 +300,6 @@ export default function Header(props) {
                 justifyContent: "center",
               }}
             >
-              {" "}
-              {/* <Typography
-                component='h1'
-                sx={{
-                  color: "white",
-                  // marginTop: "20px",
-                  // padding: "0px",
-                  // justifyContent: "center",
-                  // alignItems: "center",
-                  // width: "100%",
-                }}
-              >
-                productivity
-              </Typography> */}
               <BiDownArrowAlt
                 onClick={() => setProductivity(productivity - 1)}
                 style={{ fontSize: "2rem", color: "darkblue", margin: "10px" }}
@@ -327,8 +311,6 @@ export default function Header(props) {
                 onClick={() => setProductivity(productivity + 1)}
                 style={{ fontSize: "2rem", color: "darkblue", margin: "10px" }}
               />
-              {/* <BiRightArrowAlt/>
-              <BiLeftArrowAlt/> */}
             </Toolbar>
           </AppBar>
         </HideOnScroll>

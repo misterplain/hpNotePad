@@ -26,7 +26,6 @@ import {
   Label,
   Tick,
 } from "recharts";
-import { Link } from "react-router-dom";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
@@ -46,8 +45,6 @@ import {
   TbZodiacAquarius,
   TbZodiacPisces,
 } from "react-icons/tb";
-// import { makeStyles } from "@mui/styles";
-import { styled } from "@mui/material/styles";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -131,7 +128,6 @@ const Bulletin = () => {
 
   //swipable
   const [activeStep, setActiveStep] = useState(0);
-  // const maxSteps = dashboardData.news.length;
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -258,6 +254,9 @@ const Bulletin = () => {
           </Button>
         )}
       </Grid>
+      {error && (
+        <Typography variant="h6" sx={{margin: "30px"}}>Error fetching data for this date</Typography>
+      )}
       {dashboardData?.forecast ? (
         <Grid
           item
@@ -366,7 +365,7 @@ const Bulletin = () => {
                   margin: "3px",
                 }}
                 onClick={() => {
-                  console.log(dashboardData.horoscope[sign]);
+              
                   setHoroscopeContent(dashboardData.horoscope[sign]);
                   setHoroscopeTitle(sign);
                   handleOpen();
@@ -617,7 +616,6 @@ const Bulletin = () => {
             {horoscopeTitle}
           </Typography>
           <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-            {/* {dashboardData.horoscope[sign]} */}
             {horoscopeContent}
           </Typography>
         </Box>

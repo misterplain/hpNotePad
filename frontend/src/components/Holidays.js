@@ -24,12 +24,12 @@ const Holidays = () => {
 
   return (
     <Grid container sx={{ justifyContent: "center", marginTop: '25px' }} >
-      <Grid xs={12} sm={10} md={8} sx={{ textAlign: "center" }} marginBottom>
+      <Grid item xs={12} sm={10} md={8} sx={{ textAlign: "center" }} marginBottom>
         <a href='https://docs.google.com/spreadsheets/d/16wuXrTP0hT-B3XaXAydmwzkVK6eVd1-qKQK6523Izq0/edit?usp=sharing' target='__blank' style={{textDecoration:'none'}}>
           <Button  variant="contained" color="secondary" sx={{textDecoration: 'none'}}>employee time off request calendar</Button>
         </a>
       </Grid>
-      <Grid
+      <Grid item
         xs={12}
         sm={10}
         md={8}
@@ -56,24 +56,7 @@ const Holidays = () => {
           comp day. Team will be off automatically.
         </Typography>
       </Grid>
-      {/* <Grid xs={8} sx={{ textAlign: "center" }}>
-        <Typography sx={{ color: "blue" }}>
-          December 6th - Spain Yes, UK no
-        </Typography>
-        <Typography sx={{ color: "blue" }}>
-          December 8th - Spain Yes, UK no
-        </Typography>
-        <Typography sx={{ color: "blue" }}>
-          December 25th - Spain Yes, UK no
-        </Typography>
-        <Typography sx={{ color: "purple" }}>
-          December 26th - Spain Yes, UK Yes
-        </Typography>
-        <Typography sx={{ color: "red" }}>
-          December 27th - Spain No, UK Yes
-        </Typography>
-      </Grid> */}
-      <Grid xs={12} sm={10} md={8} marginTop>
+      <Grid item xs={12} sm={10} md={8} marginTop>
         <TableContainer
           component={Paper}
           sx={{
@@ -163,7 +146,7 @@ const Holidays = () => {
           </Table>
         </TableContainer>
       </Grid>
-      <Grid xs={12} sm={10} md={8} marginTop>
+      <Grid item  xs={12} sm={10} md={8} marginTop>
         <TableContainer
           component={Paper}
           sx={{

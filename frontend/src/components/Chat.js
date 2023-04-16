@@ -2,7 +2,6 @@ import Typography from "@mui/material/Typography";
 import Snackbar from "@mui/material/Snackbar";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import Divider from "@mui/material/Divider";
 import { BiCopy } from "react-icons/bi";
 
 const Chat = () => {
@@ -118,21 +117,11 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
       text: "Once the goods are received into the warehouse, your refund will initiate 3-5 working days from there and will arrive back to your original payment method.",
     },
     {
-      id: 4, 
+      id: 5, 
       text: "Claim raised, you'll receive further info via email",
     }
   ];
 
-  //   const templatesGeneral = [
-  //     {
-  //       id: 1,
-  //       text: "xxxxx\nline break",
-  //     },
-  //     {
-  //       id: 2,
-  //       text: "xxx\n\nwith spacing",
-  //     },
-  //   ];
 
   const templatesTech = [
     {
@@ -171,7 +160,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
           </Typography>{" "}
           {templatesGeneral.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -185,7 +174,6 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                     }}
                   />
                   <Typography
-                    key={template.id}
                     variant='body1'
                     style={{
                       whiteSpace: "pre-wrap",
@@ -204,7 +192,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
@@ -214,7 +202,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
           </Typography>{" "}
           {templatesOrderStatus.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -228,7 +216,6 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                     }}
                   />
                   <Typography
-                    key={template.id}
                     variant='body1'
                     style={{
                       whiteSpace: "pre-wrap",
@@ -247,7 +234,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
@@ -257,7 +244,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
           </Typography>{" "}
           {templatesReturns.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -271,7 +258,6 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                     }}
                   />
                   <Typography
-                    key={template.id}
                     variant='body1'
                     style={{
                       whiteSpace: "pre-wrap",
@@ -290,7 +276,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
@@ -300,7 +286,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
           </Typography>{" "}
           {templatesTech.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -333,7 +319,7 @@ text: "We cannot modify an order once it is placed. We can request to re-route t
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>

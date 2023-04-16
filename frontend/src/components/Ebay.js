@@ -2,7 +2,6 @@ import Typography from "@mui/material/Typography";
 import Snackbar from "@mui/material/Snackbar";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import Divider from "@mui/material/Divider";
 import { BiCopy } from "react-icons/bi";
 
 const Ebay = () => {
@@ -128,7 +127,7 @@ const Ebay = () => {
           </Typography>{" "}
           {templatesGeneral.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -142,7 +141,7 @@ const Ebay = () => {
                     }}
                   />
                   <Typography
-                    key={template.id}
+        
                     variant='body1'
                     style={{
                       whiteSpace: "pre-wrap",
@@ -154,14 +153,13 @@ const Ebay = () => {
                     {template.text}
                   </Typography>
                 </Grid>
-                <Grid item xs={12}></Grid>
                 <Snackbar
                   open={open}
                   onClose={() => setOpen(false)}
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
@@ -171,7 +169,7 @@ const Ebay = () => {
           </Typography>{" "}
           {templatesOrderStatus.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -204,7 +202,7 @@ const Ebay = () => {
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
@@ -214,7 +212,7 @@ const Ebay = () => {
           </Typography>{" "}
           {templatesReturns.map((template) => {
             return (
-              <>
+              <Grid key={template.id}>
                 <Grid item xs={12} sx={{ display: "flex" }} marginBottom>
                   <BiCopy
                     onClick={() => copyToClipboard(template.text)}
@@ -247,7 +245,7 @@ const Ebay = () => {
                   autoHideDuration={2000}
                   message='Copied to clipboard'
                 />
-              </>
+              </Grid>
             );
           })}
         </Grid>
