@@ -20,6 +20,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "./api/axios";
+import TemplatesMain from './components/Templates/TemplatesMain'
 
 
 const date = new Date();
@@ -41,6 +42,7 @@ function App() {
             <Route path='/ebay' element={<Ebay />} />
             <Route path='/chat' element={<Chat />} />
             <Route path='/templates' element={<Templates />} />
+            {/* <Route path='/templates' element={<TemplatesMain />} /> */}
             <Route path='/contact' element={<Contact />} />
           </Routes>
         </Container>
