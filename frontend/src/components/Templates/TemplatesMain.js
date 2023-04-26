@@ -16,8 +16,8 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import parse from "html-react-parser";
 import { BiCopy } from "react-icons/bi";
 import { Link } from "react-scroll";
-import getTemplates from "./TemplatesText";
-import { doaLinks } from "./TemplatesLinks";
+import {getDOATemplates, doaLinks} from "./text/doaTemplates";
+import { getCOMTemplates , changeOfMindLinks} from "./text/changeMindTemplates";
 import CustomGridBlock from "./TemplatesGridBlock";
 
 const Templates = () => {
@@ -42,7 +42,7 @@ const Templates = () => {
   };
 
   let time = new Date();
-  let hour = time.getHours()
+  let hour = time.getHours();
 
   //copy to clipboard
   const copyToClipboard = async () => {
@@ -66,14 +66,40 @@ const Templates = () => {
   };
 
   //function to set text within editor to template
-//   const setTemplate = (id) => {
-//     const template = getTemplates(name, orderNumber, apology, date, hour, id);
-//     setText(template.text);
-//     setTemplateTitle(template.title);
-//   };
+  //   const setTemplate = (id) => {
+  //     const template = getTemplates(name, orderNumber, apology, date, hour, id);
+  //     setText(template.text);
+  //     setTemplateTitle(template.title);
+  //   };
+
+  const templateFunctions = {
+    DOA: getDOATemplates,
+    ChangeOfMind: getCOMTemplates,
+    // Damage: getDamageTemplates,
+    // Missing: getMissingTemplates,
+    // WrongProduct: getWrongProductTemplates,
+    // Misrouted: getMisroutedTemplates,
+    // OrderStatus: getOrderStatusTemplates,
+    // OrderStatus2: getOrderStatus2Templates,
+    // ReturnChaser: getReturnChaserTemplates,
+    // Misc: getMiscTemplates,
+    // Misc2: getMisc2Templates,
+    // CarePack: getCarePackTemplates,
+  };
   //function to set text within editor to template
   const setTemplate = (id, type) => {
-    const template = `get${type}Templates`(name, orderNumber, apology, date, hour, id);
+    // const template = `get${type}Templates`(name, orderNumber, apology, date, hour, id);
+
+    const templateFunction = templateFunctions[type];
+    const template = templateFunction(
+      name,
+      orderNumber,
+      apology,
+      date,
+      hour,
+      id
+    );
+
     setText(template.text);
     setTemplateTitle(template.title);
   };
@@ -240,7 +266,26 @@ const Templates = () => {
           {doaLinks.map((link) => {
             return (
               <Link to='editor' spy={true} smooth={true} duration={500}>
-                <Button fullWidth onClick={() => setTemplate(link.id)}>
+                <Button
+                  fullWidth
+                  color={link.important ? "secondary" : "primary"}
+                  onClick={() => setTemplate(link.id, "DOA")}
+                >
+                  {link.title}
+                </Button>
+              </Link>
+            );
+          })}
+        </CustomGridBlock>
+        <CustomGridBlock name='Change Of Mind'>
+          {changeOfMindLinks.map((link) => {
+            return (
+              <Link to='editor' spy={true} smooth={true} duration={500}>
+                <Button
+                  fullWidth
+                  color={link.important ? "secondary" : "primary"}
+                  onClick={() => setTemplate(link.id, "ChangeOfMind")}
+                >
                   {link.title}
                 </Button>
               </Link>

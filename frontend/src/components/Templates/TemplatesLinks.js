@@ -1,12 +1,18 @@
+// {
+//   id: "",
+//   title: "",
+//   important: false,
+// },
+
 export const doaLinks = [
   {
     id: "DOARepCollection",
-    title: "DOA Rep Collection",
-    important: true,
+    title: "Rep Collection",
+    important: false,
   },
   {
     id: "DOARepLabel",
-    title: "DOA Rep Label",
+    title: "Rep Label",
     important: false,
   },
   {
@@ -41,3 +47,218 @@ export const doaLinks = [
   },
 
 ];
+
+export const changeOfMindLinks = [
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+]
+
+export const damagedLinks = [
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+]
+
+export const missingLinks = [
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+]
+
+export const wrongProductLinks = [
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+]
+
+export const misroutedLinks = [
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+  {
+    id: "",
+    title: "",
+    important: false,
+  },
+]
