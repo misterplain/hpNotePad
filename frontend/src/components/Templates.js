@@ -2230,7 +2230,7 @@ The Care Pack Team have advised that this Care Pack is not compatible with the h
 
 To speak directly with a Sales Agent regarding compatible Care Packs, you may contact them at 0207 660 3859 (Option 1 and Option 2 for Sales) or by writing them via email at hpstoresalesuk@hp.com.<br><br>
 You may also visit the Care Pack Central to check on Care Pack compatibility with your device:<br>
-<a href="https://cpc.ext.hp.com/portal/site/cpc/" target="__blank">https://www8.hp.com/us/en/carepacks/central.html</a><br><br>
+<a href="https://cpc2.ext.hp.com/?countries=GB" target="__blank">https://cpc2.ext.hp.com/?countries=GB</a><br><br>
 
 Our apologies for any frustrations seen through the purchase of this Care Pack.<br><br>
 
