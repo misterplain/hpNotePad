@@ -1057,6 +1057,33 @@ ${
 Kind regards,
         `,
     },
+     {
+      id: "MSC2TechDelay",
+      title: "Tech Delay ",
+      text: `Dear ${name},<br><br>
+      
+      
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+Unfortunately, there was a data transfer issue at our warehouse which has caused delays.<br><br>
+
+The good news is that the issue seems to have just been resolved in the last couple of hours and our warehouse has started shipping orders again.<br><br>
+
+Once your order ships, you will receive an email with tracking information.<br><br>
+
+I apologise for any inconvenience.<br><br>
+
+If there is anything else, please let me know.<br><br>
+
+
+
+Kind regards,
+        `,
+    },
     {
       id: "MSC2ARN",
       title: "Return Delay / collection or label ",
@@ -4035,6 +4062,11 @@ Kind regards,
             style={{ display: "inline" }}
           >
             {" "}
+                        <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSC2TechDelay")}>
+                Tech Delay
+              </Button>
+            </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
               <Button fullWidth onClick={() => setTemplate("MSC2ReturnDelay")}>
                 Returns Delay
