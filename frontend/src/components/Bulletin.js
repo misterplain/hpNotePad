@@ -345,34 +345,32 @@ const Bulletin = () => {
           }}
         >
           {Object.keys(dashboardData?.horoscope).map((sign, text) => (
-            <Box key={sign}>
-              {" "}
-              <Grid
-                item
-                xs={4}
-                sm={3}
-                sx={{
-                  border: "1px solid green",
-                  borderRadius: "10px",
-                  boxShadow: " 8px 5px 8px -1px rgba(119,6,194,0.59);",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "40px",
-                  color: "purple",
-                  // marginLeft: "none",
-                  padding: "10px",
-                  margin: "3px",
-                }}
-                onClick={() => {
-                  setHoroscopeContent(dashboardData.horoscope[sign]);
-                  setHoroscopeTitle(sign);
-                  handleOpen();
-                }}
-              >
-                {horoscopeIcons[sign]}
-              </Grid>
-            </Box>
+            <Grid
+              item
+              key={sign}
+              xs={4}
+              sm={3}
+              sx={{
+                border: "1px solid green",
+                borderRadius: "10px",
+                boxShadow: " 8px 5px 8px -1px rgba(119,6,194,0.59);",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "40px",
+                color: "purple",
+                // marginLeft: "none",
+                padding: "10px",
+                margin: "3px",
+              }}
+              onClick={() => {
+                setHoroscopeContent(dashboardData.horoscope[sign]);
+                setHoroscopeTitle(sign);
+                handleOpen();
+              }}
+            >
+              {horoscopeIcons[sign]}
+            </Grid>
           ))}
         </Grid>
       )}
