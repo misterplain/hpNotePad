@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import { useSelector, useDispatch } from "react-redux";
 import MobileStepper from "@mui/material/MobileStepper";
+import LoadingIcon from "./LoadingIcon";
 import {
   Box,
   Paper,
@@ -150,10 +151,6 @@ const Bulletin = () => {
     })
   );
 
-  if (isLoading) {
-    return <Typography>Loading...</Typography>;
-  }
-
   //horoscope icons
   const horoscopeIcons = {
     aries: <TbZodiacAries />,
@@ -173,7 +170,7 @@ const Bulletin = () => {
   return (
     <Grid
       container
-      justifyContent='center'
+      justifyContent="center"
       sx={{ marginTop: "25px" }}
       spacing={1}
     >
@@ -197,13 +194,13 @@ const Bulletin = () => {
           }}
         >
           <a
-            href='https://docs.google.com/spreadsheets/d/18jm6P70TQOF6WZvY_TfGw3a0CKxvfZigiV73o9GPlKs/edit?usp=sharing'
-            target='__blank'
+            href="https://docs.google.com/spreadsheets/d/18jm6P70TQOF6WZvY_TfGw3a0CKxvfZigiV73o9GPlKs/edit?usp=sharing"
+            target="__blank"
             style={{ textDecoration: "none" }}
           >
             <Button
-              variant='contained'
-              color='secondary'
+              variant="contained"
+              color="secondary"
               sx={{ textDecoration: "none" }}
             >
               DOA/Change of Mind Extension Timeline
@@ -213,7 +210,7 @@ const Bulletin = () => {
       </Grid>
       <hr />
       <Grid item xs={12} sx={{ textAlign: "center", marginBottom: "5px" }}>
-        <Typography variant='h3' sx={{ color: "#194D33" }}>
+        <Typography variant="h3" sx={{ color: "#194D33" }}>
           daily dashboard
         </Typography>
       </Grid>
@@ -235,7 +232,7 @@ const Bulletin = () => {
         >
           <FaArrowLeft />
         </Button>
-        <Typography variant='h5' sx={{ color: "#880E4F" }}>
+        <Typography variant="h5" sx={{ color: "#880E4F" }}>
           {parseDateFormat(displayedDate)}
         </Typography>
 
@@ -254,8 +251,11 @@ const Bulletin = () => {
           </Button>
         )}
       </Grid>
+      {loading && <LoadingIcon />}
       {error && (
-        <Typography variant="h6" sx={{margin: "30px"}}>Error fetching data for this date</Typography>
+        <Typography variant="h6" sx={{ margin: "30px" }}>
+          Error fetching data for this date
+        </Typography>
       )}
       {dashboardData?.forecast ? (
         <Grid
@@ -302,24 +302,24 @@ const Bulletin = () => {
               style={{ padding: "0px" }}
             >
               <XAxis
-                dataKey='date'
+                dataKey="date"
                 label={{ value: "day" }}
                 interval={0}
                 tick={false}
               ></XAxis>
               <YAxis
-                dataKey='max'
+                dataKey="max"
                 label={{
                   value: "Temperature",
                   angle: -90,
                   position: "insideLeft",
                 }}
               />
-              <CartesianGrid strokeDasharray='3 3' />
+              <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Legend />
-              <Line type='monotone' dataKey='max' stroke='#8884d8' />
-              <Line type='monotone' dataKey='min' stroke='#82ca9d' />
+              <Line type="monotone" dataKey="max" stroke="#8884d8" />
+              <Line type="monotone" dataKey="min" stroke="#82ca9d" />
             </LineChart>
           </Grid>
         </Grid>
@@ -345,7 +345,7 @@ const Bulletin = () => {
           }}
         >
           {Object.keys(dashboardData?.horoscope).map((sign, text) => (
-            <>
+            <Box key={sign}>
               {" "}
               <Grid
                 item
@@ -365,7 +365,6 @@ const Bulletin = () => {
                   margin: "3px",
                 }}
                 onClick={() => {
-              
                   setHoroscopeContent(dashboardData.horoscope[sign]);
                   setHoroscopeTitle(sign);
                   handleOpen();
@@ -373,7 +372,7 @@ const Bulletin = () => {
               >
                 {horoscopeIcons[sign]}
               </Grid>
-            </>
+            </Box>
           ))}
         </Grid>
       )}
@@ -499,7 +498,7 @@ const Bulletin = () => {
                       >
                         {" "}
                         <Box
-                          component='img'
+                          component="img"
                           sx={{
                             width: "100%",
                             maxHeight: "400px",
@@ -529,12 +528,12 @@ const Bulletin = () => {
                           }}
                         >
                           <CardContent>
-                            <Typography variant='h5' color='purple'>
+                            <Typography variant="h5" color="purple">
                               {step.title}
                             </Typography>
                             <Typography
-                              variant='body'
-                              component='div'
+                              variant="body"
+                              component="div"
                               sx={{
                                 visibility: { xs: "hidden", md: "visible" },
                               }}
@@ -545,14 +544,14 @@ const Bulletin = () => {
                           <CardActions>
                             <a
                               href={step.url}
-                              target='_blank'
+                              target="_blank"
                               style={{ textDecoration: "none" }}
                             >
                               {" "}
                               <Button
-                                type='submit'
-                                variant='contained'
-                                color='secondary'
+                                type="submit"
+                                variant="contained"
+                                color="secondary"
                                 style={{}}
                               >
                                 Learn More
@@ -570,12 +569,12 @@ const Bulletin = () => {
             {" "}
             <MobileStepper
               steps={dashboardData.news.length}
-              position='static'
+              position="static"
               activeStep={activeStep}
               sx={{ width: "80%", margin: "0 auto" }}
               nextButton={
                 <Button
-                  size='small'
+                  size="small"
                   onClick={handleNext}
                   disabled={activeStep === dashboardData.news.length - 1}
                 >
@@ -589,7 +588,7 @@ const Bulletin = () => {
               }
               backButton={
                 <Button
-                  size='small'
+                  size="small"
                   onClick={handleBack}
                   disabled={activeStep === 0}
                 >
@@ -608,14 +607,14 @@ const Bulletin = () => {
       <Modal
         open={openModal}
         onClose={handleClose}
-        aria-labelledby='modal-modal-title'
-        aria-describedby='modal-modal-description'
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id='modal-modal-title' variant='h6' component='h2'>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
             {horoscopeTitle}
           </Typography>
-          <Typography id='modal-modal-description' sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {horoscopeContent}
           </Typography>
         </Box>

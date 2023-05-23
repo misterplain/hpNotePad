@@ -92,7 +92,7 @@ function HideOnScroll(props) {
   });
 
   return (
-    <Slide appear={false} direction='down' in={!trigger}>
+    <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
   );
@@ -128,7 +128,7 @@ function ScrollTop(props) {
     <Fade in={trigger}>
       <Box
         onClick={handleClick}
-        role='presentation'
+        role="presentation"
         sx={{ position: "fixed", bottom: 16, right: 16 }}
       >
         {children}
@@ -148,13 +148,17 @@ export default function Header(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant='h4' sx={{ my: 2 }}>
+      <Typography variant="h4" sx={{ my: 2 }}>
         HP Notepad
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <Link to={item.path} style={{ marginLeft: "0px", padding: "0px" }}>
+          <Link
+            to={item.path}
+            key={item.name}
+            style={{ marginLeft: "0px", padding: "0px" }}
+          >
             {" "}
             <ListItem
               key={item.name}
@@ -222,19 +226,19 @@ export default function Header(props) {
       <ThemeProvider theme={darkTheme}>
         <HideOnScroll {...props}>
           <AppBar>
-            <Toolbar variant='dense'>
+            <Toolbar variant="dense">
               <IconButton
-                color='inherit'
-                aria-label='open drawer'
-                edge='start'
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
                 onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { md: "none" } }}
               >
                 <MenuIcon />
               </IconButton>
               <Typography
-                variant='h6'
-                component='div'
+                variant="h6"
+                component="div"
                 sx={{
                   flexGrow: 1,
                   display: { xs: "none", sm: "block", color: "lightblue" },
@@ -271,10 +275,10 @@ export default function Header(props) {
               </Box>
             </Toolbar>
             <AppBar />
-            <Box component='nav'>
+            <Box component="nav">
               <Drawer
                 container={container}
-                variant='temporary'
+                variant="temporary"
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
                 ModalProps={{
@@ -293,7 +297,7 @@ export default function Header(props) {
             </Box>
 
             <Toolbar
-              variant='dense'
+              variant="dense"
               style={{
                 backgroundColor: "lightblue",
                 display: "flex",
@@ -304,7 +308,7 @@ export default function Header(props) {
                 onClick={() => setProductivity(productivity - 1)}
                 style={{ fontSize: "2rem", color: "darkblue", margin: "10px" }}
               />
-              <Typography variant='h4' color='primary'>
+              <Typography variant="h4" color="primary">
                 {productivity}
               </Typography>
               <BiUpArrowAlt
@@ -318,7 +322,7 @@ export default function Header(props) {
       <Toolbar />
 
       <ScrollTop {...props}>
-        <Fab size='large' aria-label='scroll back to top'>
+        <Fab size="large" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
