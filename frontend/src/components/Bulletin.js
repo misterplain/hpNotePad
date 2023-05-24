@@ -81,6 +81,7 @@ const Bulletin = () => {
   }
 
   const today = new Date();
+  console.log(today);
   const [displayedDate, setDisplayedDate] = useState(formatDate(today));
 
   function getPrevDate(displayedDate) {

@@ -910,7 +910,7 @@ ${
 
       In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You may dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
 
-
+<strong>Please note the return of the item is not necessary, please dis-regard any automated emails advising you are required to do so.</strong><br><br>
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
