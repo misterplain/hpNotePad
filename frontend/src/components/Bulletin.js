@@ -79,9 +79,12 @@ const Bulletin = () => {
 
     return `${year}-${month}-${day}`;
   }
-
   const today = new Date();
-  console.log(today);
+  const currentHour = today.getHours();
+  const currentMinutes = today.getMinutes();
+  console.log(currentHour);
+  console.log(currentMinutes);
+
   const [displayedDate, setDisplayedDate] = useState(formatDate(today));
 
   function getPrevDate(displayedDate) {
@@ -113,20 +116,28 @@ const Bulletin = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (Object.keys(dashboardState).length === 0) {
-      dispatch(fetchData(formatDate(today)));
-    }
-    if (!dashboardState.loading && !dashboardState) {
-      // dispatch(fetchData(dateString));
-      dispatch(fetchData(formatDate(today)));
-    }
+    const today = new Date();
+    const currentHour = today.getHours();
+    const currentMinutes = today.getMinutes();
 
-    if (dashboardState.date && dashboardState.date !== displayedDate) {
+    // If today's data is not in the dashboardState, fetch data for today
+    if (
+      dashboardState.date !== formatDate(today) &&
+      !dashboardState.loading &&
+      currentHour >= 8 &&
+      currentMinutes >= 0
+    ) {
+      dispatch(fetchData(formatDate(today)));
+    } else if (Object.keys(dashboardState).length === 0) {
+      //if nothing in the dashboardState at all, fetch data for today
+      dispatch(fetchData(formatDate(today)));
+    } else if (dashboardState.date && dashboardState.date !== displayedDate) {
+      //fetch data for the displayed date only
       dispatch(fetchData(displayedDate));
     }
 
     setIsLoading(false);
-  }, [dashboardState, dispatch, displayedDate, today]);
+  }, [dispatch, displayedDate]);
 
   //swipable
   const [activeStep, setActiveStep] = useState(0);
@@ -168,6 +179,13 @@ const Bulletin = () => {
     pisces: <TbZodiacPisces />,
   };
 
+  if (currentHour <= 8 && currentMinutes <= 0) {
+    return (
+      <Typography sx={{ marginTop: "50px" }}>
+        Not yet fetched for this date
+      </Typography>
+    );
+  }
   return (
     <Grid
       container
