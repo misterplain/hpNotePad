@@ -115,6 +115,8 @@ const Bulletin = () => {
   const { dashboardData, loading, error } = dashboardState;
   const [isLoading, setIsLoading] = useState(true);
 
+  console.log(dashboardData)
+
   useEffect(() => {
     const today = new Date();
     const currentHour = today.getHours();
@@ -582,43 +584,45 @@ const Bulletin = () => {
                 </Grid>
               ))}
           </AutoPlaySwipeableViews>
-          <Grid item xs={12}>
-            {" "}
-            <MobileStepper
-              steps={dashboardData.news.length}
-              position="static"
-              activeStep={activeStep}
-              sx={{ width: "80%", margin: "0 auto" }}
-              nextButton={
-                <Button
-                  size="small"
-                  onClick={handleNext}
-                  disabled={activeStep === dashboardData.news.length - 1}
-                >
-                  Next
-                  {theme.direction === "rtl" ? (
-                    <KeyboardArrowLeft />
-                  ) : (
-                    <KeyboardArrowRight />
-                  )}
-                </Button>
-              }
-              backButton={
-                <Button
-                  size="small"
-                  onClick={handleBack}
-                  disabled={activeStep === 0}
-                >
-                  {theme.direction === "rtl" ? (
-                    <KeyboardArrowRight />
-                  ) : (
-                    <KeyboardArrowLeft />
-                  )}
-                  Back
-                </Button>
-              }
-            />
-          </Grid>
+          {dashboardData.news && dashboardData.news.length !== 0 && (
+            <Grid item xs={12}>
+              {" "}
+              <MobileStepper
+                steps={dashboardData.news.length}
+                position="static"
+                activeStep={activeStep}
+                sx={{ width: "80%", margin: "0 auto" }}
+                nextButton={
+                  <Button
+                    size="small"
+                    onClick={handleNext}
+                    disabled={activeStep === dashboardData.news.length - 1}
+                  >
+                    Next
+                    {theme.direction === "rtl" ? (
+                      <KeyboardArrowLeft />
+                    ) : (
+                      <KeyboardArrowRight />
+                    )}
+                  </Button>
+                }
+                backButton={
+                  <Button
+                    size="small"
+                    onClick={handleBack}
+                    disabled={activeStep === 0}
+                  >
+                    {theme.direction === "rtl" ? (
+                      <KeyboardArrowRight />
+                    ) : (
+                      <KeyboardArrowLeft />
+                    )}
+                    Back
+                  </Button>
+                }
+              />
+            </Grid>
+          )}
         </Grid>
       )}
       <Modal
