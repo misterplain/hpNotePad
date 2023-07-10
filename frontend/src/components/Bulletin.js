@@ -115,7 +115,7 @@ const Bulletin = () => {
   const { dashboardData, loading, error } = dashboardState;
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log(dashboardData)
+  console.log(dashboardData);
 
   useEffect(() => {
     const today = new Date();
@@ -302,11 +302,19 @@ const Bulletin = () => {
                 marginLeft: "70px",
               }}
             >
-              <Typography
-                sx={{ color: "purple", borderBottom: "1px solid green" }}
-              >
-                {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.emoji}`}{" "}
-              </Typography>
+              <Box sx={{ color: "purple", borderBottom: "1px solid green", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                {dashboardData.moonPhase?.mainText && (
+                  <Typography>
+                    Tonights moon: {dashboardData.moonPhase.mainText}
+                  </Typography>
+                )}
+                {dashboardData.moonPhase?.fullMoon && (
+                  <Typography>
+                    Next full moon: {dashboardData.moonPhase.fullMoon} days
+                  </Typography>
+                )}
+                {/* {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.fullMoon} days until Full Moon`}{" "} */}
+              </Box>
             </Grid>
           )}
 
