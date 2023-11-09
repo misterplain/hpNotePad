@@ -5,14 +5,12 @@ import MobileStepper from "@mui/material/MobileStepper";
 import LoadingIcon from "./LoadingIcon";
 import {
   Box,
-  Paper,
   Grid,
   Typography,
   Button,
   Card,
   CardActions,
   CardContent,
-  CardMedia,
   Modal,
 } from "@mui/material";
 import {
@@ -23,9 +21,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  CustomTick,
-  Label,
-  Tick,
 } from "recharts";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -82,27 +77,30 @@ const Bulletin = () => {
   const today = new Date();
   const currentHour = today.getHours();
   const currentMinutes = today.getMinutes();
-  console.log(currentHour);
-  console.log(currentMinutes);
 
   const [displayedDate, setDisplayedDate] = useState(formatDate(today));
+
+  // const todayUTC = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
+
 
   function getPrevDate(displayedDate) {
     const prevDate = new Date(displayedDate);
     prevDate.setDate(prevDate.getDate() - 1);
     setDisplayedDate(formatDate(prevDate));
     dispatch(fetchData(formatDate(prevDate)));
-  }
+}
 
-  function getNextDate() {
+function getNextDate(displayedDate) {
     const nextDate = new Date(displayedDate);
     nextDate.setDate(nextDate.getDate() + 1);
     setDisplayedDate(formatDate(nextDate));
     dispatch(fetchData(formatDate(nextDate)));
-  }
+}
 
   function parseDateFormat(dateString) {
-    const date = new Date(dateString);
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day); // months are 0-based in JS
+
     const options = {
       weekday: "long",
       year: "numeric",
@@ -114,8 +112,6 @@ const Bulletin = () => {
   const dashboardState = useSelector((state) => state.dashboard);
   const { dashboardData, loading, error } = dashboardState;
   const [isLoading, setIsLoading] = useState(true);
-
-  console.log(dashboardData);
 
   useEffect(() => {
     const today = new Date();
@@ -159,9 +155,9 @@ const Bulletin = () => {
   const dataForecast = dashboardState?.dashboardData?.forecast?.map(
     (item, index) => ({
       keyItem: index,
-      date: item.date, // replace "date" with the actual key name in the forecast object
-      max: item.max, // replace "high" with the actual key name in the forecast object
-      min: item.min, // replace "low" with the actual key name in the forecast object
+      date: item.date, 
+      max: item.max, 
+      min: item.min, 
     })
   );
 
@@ -224,7 +220,7 @@ const Bulletin = () => {
               color="secondary"
               sx={{ textDecoration: "none" }}
             >
-              DOA/Change of Mind Extension Timeline
+              DOA/COM Extension Timeline 2024
             </Button>
           </a>
         </Box>
@@ -313,7 +309,6 @@ const Bulletin = () => {
                     Next full moon: {dashboardData.moonPhase.fullMoon} days
                   </Typography>
                 )}
-                {/* {`Tonights moon: ${dashboardData.moonPhase.mainText} - ${dashboardData.moonPhase.fullMoon} days until Full Moon`}{" "} */}
               </Box>
             </Grid>
           )}
@@ -388,7 +383,6 @@ const Bulletin = () => {
                 alignItems: "center",
                 fontSize: "40px",
                 color: "purple",
-                // marginLeft: "none",
                 padding: "10px",
                 margin: "3px",
               }}
