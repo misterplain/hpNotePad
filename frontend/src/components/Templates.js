@@ -533,7 +533,7 @@ ${
       }<br><br>
 
 
-We are sorry to hear that the product you have received is defective. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days. <br><br>
+      We are sorry to hear that your HP Store product did not meet your expectations on this occasion, and we are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days. <br><br>
 
 
 We kindly ask you to <strong>pack the goods safely</strong> in either their original box or a suitable box for transportation to avoid any damage in transit. Please write the HP Store order number ${orderNumber} on the box as well as removing your own name and address, this will ensure faster return process of the goods at our warehouse and speed up the refund process.<br><br>
@@ -2063,6 +2063,27 @@ Please be assured that HP takes all enquiries seriously and appreciate your pati
 
 Again, we thank you for your continued patience and understanding and welcome any further queries you may have in the meantime.<br><br>
       
+
+Kind regards,
+ `,
+    },
+    {
+      id: "MSCPriceMatchRaised",
+      title: "Misc - Price Match refund submitted",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+      We have sent the request for the price match refund, once this has been processed the funds should appear back as an available balance on your account within the next few days subject to your banks standard operating procedure.<br><br>
+
+      If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:<br>
+      <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
 
 Kind regards,
  `,
@@ -4012,6 +4033,11 @@ Kind regards,
                 onClick={() => setTemplate("MSCBlank")}
               >
                 Blank
+              </Button>
+            </Link>
+            <Link to='editor' spy={true} smooth={true} duration={500}>
+              <Button fullWidth onClick={() => setTemplate("MSCPriceMatchRaised")}>
+                Price Match Raised
               </Button>
             </Link>
             <Link to='editor' spy={true} smooth={true} duration={500}>
