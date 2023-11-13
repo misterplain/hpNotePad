@@ -4,6 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+// import { makeStyles } from '@material-ui/core/styles';
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -73,6 +74,12 @@ const navItems = [
   // },
 ];
 
+// const useStyles = makeStyles((theme) => ({
+//   slideTransition: {
+//     transition: `transform 0.3s ease-in-out`, // Adjust the duration and easing function as needed
+//   },
+// }));
+
 //hide on scroll
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -81,7 +88,15 @@ function HideOnScroll(props) {
   });
 
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Slide
+      appear={false}
+      direction="down"
+      in={!trigger}
+      easing={{
+        enter: "cubic-bezier(0, 1.5, .8, 1)",
+        exit: "cubic-bezier(0, 1.5, .8, 1)",
+      }}
+    >
       {children}
     </Slide>
   );
@@ -143,17 +158,26 @@ const Header = (props) => {
         HP Notepad
       </Typography>
       <Divider />
-      <Box sx={{margin:"30px 10px 30px 5px",display: "flex", flexDirection: "column", height: "100%", justifyContent:"space-around", alignItems: "flex-end"}}>
-
+      <Box
+        sx={{
+          margin: "30px 10px 30px 5px",
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          justifyContent: "space-around",
+          alignItems: "flex-end",
+        }}
+      >
         {navItems.map((item) => (
-          <Link
-            to={item.path}
-            key={item.name}
-       
-          >
+          <Link to={item.path} key={item.name}>
             <Button
               key={item.name}
-              sx={{ textDecoration: "none", color: "black", width: "100%", padding: "20px" }}
+              sx={{
+                textDecoration: "none",
+                color: "black",
+                width: "100%",
+                padding: "20px",
+              }}
             >
               {item.name}
             </Button>
@@ -197,7 +221,7 @@ const Header = (props) => {
           </Box>
         </HideOnScroll>
       </ThemeProvider>
-      <Toolbar />
+      <Toolbar id="back-to-top-anchor" />
 
       <ScrollTop {...props}>
         <Fab size="large" aria-label="scroll back to top">

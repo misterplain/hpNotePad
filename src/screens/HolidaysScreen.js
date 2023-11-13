@@ -93,7 +93,7 @@ const HolidaysScreen = () => {
         <Table aria-label="simple table" size="small">
           <TableHead>
             <TableRow sx={{ borderBottom: "2px solid grey" }}>
-              <TableCell align="left">Date - 2022 </TableCell>
+              <TableCell align="left">Date - 2023 </TableCell>
               <TableCell align="center">Spanish Bank Holiday</TableCell>
               <TableCell align="center">UK Bank Holiday</TableCell>
             </TableRow>
