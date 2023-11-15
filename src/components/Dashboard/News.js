@@ -63,8 +63,8 @@ const News = () => {
           interval={8000}
           sx={{ boxShadow: "none" }}
         >
-          {dashboardData.news &&
-            dashboardData?.news.map((step, index) => (
+          {dashboardData?.news &&
+            dashboardData?.news?.data?.map((step, index) => (
               <Grid
                 container
                 item
@@ -161,7 +161,7 @@ const News = () => {
               </Grid>
             ))}
         </AutoPlaySwipeableViews>
-        {dashboardData.news && dashboardData.news.length !== 0 && (
+        {dashboardData.news.data && dashboardData.news.data.length !== 0 && (
           <Grid item xs={12}>
             {" "}
             <MobileStepper

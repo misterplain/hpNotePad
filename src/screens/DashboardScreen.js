@@ -82,10 +82,10 @@ const DashboardScreen = () => {
       <DateToggle />
       {loading && <LoadingIcon />}
       {error && <ErrorMessage message={error} />}
-      {dashboardData?.forecast && <Forecast />}
-      {dashboardData?.horoscope && <Horoscope />}
-      {dashboardData?.joke && <Joke />}
-      {dashboardData?.news && <News />}
+      {dashboardData?.forecast?.response.success === true && <Forecast />}
+      {dashboardData?.horoscope?.response.success === true && <Horoscope />}
+      {dashboardData?.joke?.response.success === true && <Joke />}
+      {dashboardData?.news?.response.success === true && <News />}
     </Grid>
   );
 };

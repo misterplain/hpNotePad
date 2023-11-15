@@ -36,7 +36,7 @@ const Joke = () => {
         }}
       >
         <Typography sx={{ padding: "10px", color: "#33118F", fontSize: "15px" }}>
-         {dashboardData.joke.setup}
+         {dashboardData.joke.data.setup}
         </Typography>
       </Grid>
       <Grid
@@ -70,7 +70,7 @@ const Joke = () => {
             fontSize: "15px",
           }}
         >
-          {dashboardData.joke.punchline}
+          {dashboardData.joke.data.punchline}
         </Typography>
       </Grid>
     </Grid>

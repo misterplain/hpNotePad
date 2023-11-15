@@ -20,7 +20,7 @@ const Forecast = () => {
   const { dashboardData, loading, error } = dashboardState;
 
   // forecast data
-  const dataForecast = dashboardState?.dashboardData?.forecast?.map(
+  const dataForecast = dashboardState?.dashboardData?.forecast?.data?.map(
     (item, index) => ({
       keyItem: index,
       date: item.date,
@@ -43,7 +43,7 @@ const Forecast = () => {
           marginBottom: "20px",
         }}
       >
-        {dashboardData?.moonPhase && (
+        {dashboardData?.moonPhase?.data && (
           <Grid
             item
             xs={10}
@@ -63,14 +63,14 @@ const Forecast = () => {
                 alignItems: "center",
               }}
             >
-              {dashboardData.moonPhase?.mainText && (
+              {dashboardData?.moonPhase?.data?.mainText && (
                 <Typography>
-                  Tonights moon: {dashboardData.moonPhase.mainText}
+                  Tonights moon: {dashboardData.moonPhase.data.mainText}
                 </Typography>
               )}
               {dashboardData.moonPhase?.fullMoon && (
                 <Typography>
-                  Next full moon: {dashboardData.moonPhase.fullMoon} days
+                  Next full moon: {dashboardData.moonPhase.data.fullMoon} days
                 </Typography>
               )}
             </Box>

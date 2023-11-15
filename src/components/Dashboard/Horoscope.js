@@ -82,7 +82,7 @@ const Horoscope = () => {
           marginBottom: "20px",
         }}
       >
-        {Object.keys(dashboardData?.horoscope).map((sign, text) => (
+        {Object.keys(dashboardData?.horoscope?.data).map((sign, text) => (
           <Grid
             item
             key={sign}
@@ -101,7 +101,7 @@ const Horoscope = () => {
               margin: "3px",
             }}
             onClick={() => {
-              setHoroscopeContent(dashboardData.horoscope[sign]);
+              setHoroscopeContent(dashboardData.horoscope.data[sign]);
               setHoroscopeTitle(sign);
               handleOpen();
             }}
