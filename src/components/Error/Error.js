@@ -5,9 +5,8 @@ import Typography from "@mui/material/Typography";
 const ErrorMessage = ({ message }) => {
   return (
     <Box>
-      {" "}
       <Typography variant="h6" sx={{ margin: "30px" }}>
-        Error fetching data for this date
+        {message}
       </Typography>
     </Box>
   );
