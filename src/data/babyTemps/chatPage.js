@@ -4,6 +4,14 @@ const templatesChatGeneral = [
     text: "Hello. How can I help you?",
   },
   {
+    id: 20,
+    text: "Is there anything else I can assist you with before we close the chat?",
+  },
+  {
+    id: 21,
+    text: "Understood, apologies for the inconvenience. If at any stage you wish to get a complaint over to be escalated for review, you may send this to ukstore.postsales@hp.com. ",
+  },
+  {
     id: 2,
     text: "Is this regarding an order placed through our UK HP Online Store?",
   },
@@ -62,6 +70,26 @@ const templatesChatOrderStatus = [
   {
     id: 1,
     text: "The stock info on the site is not 100% live updated, so sometimes you can place an order for a product that is just then going out of stock, I do apologise for the inconvenience. ",
+  },
+  {
+    id: 20,
+    text: "Our apologies for the delay in receiving your order, there has been a stock delay. As the ETA of new stock of this item is today, your order is expected to ship to the courier within 1-2 working days.",
+  },
+  {
+    id: 21,
+    text: "The warehouse is unfortunately delayed currently. but your order is in stock so this should be shipped to the courier within 1-2 working days at which point you´ll be notified automatically. ",
+  },
+  {
+    id: 22,
+    text: "If at any stage you prefer to cancel, please let us know and we will recall the order. Alternatively, you may refuse the delivery to initiate a full refund if it arrives too late. \n\nOur apologies for the delay in receiving your order.",
+  },
+  {
+    id: 23,
+    text: "Unfortunately there was an error in processing this order and it is being fully cancelled. You will be notified as soon as it is. If any money has been taken for this order it will be refunded within 3-5 working days. Apologies for the inconvenience.",
+  },
+  {
+    id: 24,
+    text: "We can´t confirm the exact reason why this order failed, whether it was a system issue or a payment related issue, due to the financial details being data protected.",
   },
   {
     id: 2,

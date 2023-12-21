@@ -155,7 +155,7 @@ Thank you for contacting HP Store Post sales.<br><br>
 
 
 You can find all information on HP recycling at the HP Website below:<br>
-<a href="https://www8.hp.com/uk/en/home/recycling.html">https://www8.hp.com/uk/en/home/recycling.html</a><br><br>
+<a href="https://www.hp.com/gb-en/hp-information/sustainable-impact/planet-product-recycling.html">https://www.hp.com/gb-en/hp-information/sustainable-impact/planet-product-recycling.html</a><br><br>
 
 
 If you require any further assistance, please let us know.<br><br>
@@ -252,7 +252,7 @@ ${
     2.        Select your reason for the return.<br>
     3.        Select Send.<br><br>
     
-    They will then raised your claim accordingly<br><br>
+    They will then raise your claim accordingly<br><br>
     
 
 

@@ -55,9 +55,9 @@ ${
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
 
-    In regards to your recent claim to have this item returned, we will not require return for your refund or replacement claim to process. You may dispose of this item as you see fit. You will soon begin to receive emails regarding your refund or replacement.<br><br>
+    In regards to your recent claim to have this item returned, we will not require return for your claim to process. You may dispose of this item as you see fit. You will soon begin to receive emails regarding your refund. If your claim was raised to have a replacement sent out, you'll soon begin to receive order status and shipment updates via email.<br><br>
 
-<strong>Please note the return of the item is not necessary, please dis-regard any automated emails advising you are required to do so.</strong><br><br>
+<strong>Please note the return of the item is not necessary, please disregard any automated emails advising you are required to do so.</strong><br><br>
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
