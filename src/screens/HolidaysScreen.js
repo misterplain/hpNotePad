@@ -170,7 +170,7 @@ const HolidaysScreen = () => {
           <Button
             variant="contained"
             color="primary"
-            sx={{ textDecoration: "none" }}
+            sx={{ textDecoration: "none", margin: "5px" }}
           >
             employee time off request calendar 2023
           </Button>
@@ -183,7 +183,7 @@ const HolidaysScreen = () => {
           <Button
             variant="contained"
             color="secondary"
-            sx={{ textDecoration: "none", marginTop: "10px" }}
+            sx={{ textDecoration: "none", margin: "5px" }}
           >
             employee time off request calendar 2024
           </Button>
