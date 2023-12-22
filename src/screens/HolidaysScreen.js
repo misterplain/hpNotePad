@@ -128,6 +128,12 @@ const holidays2024 = [
     uk: false,
   },
   {
+    date: "December 9th",
+    holiday: "Immaculate Conception",
+    spanish: true,
+    uk: false,
+  },
+  {
     date: "December 25th",
     holiday: "Christmas Day",
     spanish: true,
@@ -257,7 +263,7 @@ const HolidaysScreen = () => {
           borderRadius: "50px",
         }}
       >
-        <Typography
+        {/* <Typography
           sx={{ textAlign: "center", color: "red", marginBottom: "30px" }}
         >
           Below dates for 2024 still not 100% confirmed, I'm just going off
@@ -272,7 +278,7 @@ const HolidaysScreen = () => {
           <a href="https://www.gov.uk/bank-holidays" target="_blank">
             UK
           </a>{" "}
-        </Typography>
+        </Typography> */}
         <Table aria-label="simple table" size="small">
           <TableHead>
             <TableRow sx={{ borderBottom: "2px solid grey" }}>
