@@ -12,21 +12,8 @@ const connectDB = require("./config/connectDB");
 const session = require("express-session");
 //notepad routes
 const contactRoute = require("./routes/contactRoute");
-const logRoute = require("./routes/logRoute");
 const dataRoute = require("./routes/dataRoute");
 const nodeCronRoute = require("./routes/nodeCronRoute");
-// //porfolio routes
-// const contactPortfolioRoute = require("./portfolio/routes/contactRoute");
-// //fantasticfy
-// const fetchDataRoute = require("./Fantasticfy/routes/fetchDataRoute");
-// //boilerPlate routes
-// const authRoutesBoilerPlate = require("./boilerPlate/routes/auth");
-// //keep active
-// const keepActiveRoutes = require("./keepActive/keepActiveRoute");
-// const keepServerActive = require("./keepActive/keepServerActive");
-// //nodecron
-// const nodemailer = require("nodemailer");
-// const nodeCron = require("node-cron");
 
 //Connect to Mongo DB
 connectDB();
@@ -83,8 +70,6 @@ app.use(
 );
 
 app.use(express.urlencoded({ extended: true }));
-
-app.use("/log", logRoute);
 
 //notepad
 app.use("/contact", contactRoute);
