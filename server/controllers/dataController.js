@@ -513,7 +513,7 @@ const getDataByDate = asyncHandler(async (req, res) => {
     }
   } catch (error) {
     console.error("An error occurred:", error.message);
-    return res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: "Internal server error - triggered getDataByDateFunction" + error.message });
   }
 });
 
