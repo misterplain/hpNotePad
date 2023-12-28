@@ -454,7 +454,7 @@ const saveDataToDB = async (objectToSave) => {
   try {
     await newData.save();
     console.log("saved to db");
-    nodeMailerConfirmationEmail("HPNotePad", newData);
+    // nodeMailerConfirmationEmail("HPNotePad", newData);
     return { success: true, message: "Data saved to DB" };
   } catch (error) {
     console.error("Error in saveDataToDB:", error.message);
