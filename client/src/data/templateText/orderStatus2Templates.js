@@ -147,7 +147,7 @@ Kind regards,
   
   
   
-  Due to the speed of the shipping system, we are not always able to fully cancel before the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if you refuse the delivery and let us know when you do, we will initiate the full refund.<br><br>
+  Due to the speed of the shipping system, we are not always able to fully cancel the order before it ships to the courier. If this is the case, you will be notified that this has shipped, please note that if you refuse the delivery and let us know when you do, we will initiate the full refund.<br><br>
   
   
   If this does cancel successfully before shipment, you will be notified as well via email. <br><br>
