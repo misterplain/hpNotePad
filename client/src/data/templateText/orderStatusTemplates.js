@@ -66,7 +66,7 @@ ${
 We have received a request from the warehouse asking you to confirm your full delivery address.<br><br>
 
 
-Please reply to this email will your full delivery address and once this has been sent to the warehouse, your order will be immediately shipped. You will begin to receive automated emails from the system letting you know when it is on its way.<br><br>
+Please reply to this email with your full delivery address and once this has been sent to the warehouse, your order will be immediately shipped. You will begin to receive automated emails from the system letting you know when it is on its way.<br><br>
 
 
 Thank you in advance and I look forward to hearing from you.<br><br>
