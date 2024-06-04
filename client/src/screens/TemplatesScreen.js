@@ -486,7 +486,7 @@ const TemplatesScreen = () => {
             variant="h5"
             sx={{
               display: "inline-block",
-              color:"#000080",
+              color: "#000080",
               borderBottom: "1px solid grey",
               margin: "20px",
             }}
@@ -517,8 +517,11 @@ const TemplatesScreen = () => {
             );
           })}
         </Grid>
+        <Grid item xs={12} sx={{border: "1px solid red", borderRadius:"50px"}} >
+          <Typography variant="h4" color="error" sx={{textAlign: "center"}}>DOUBLE CHECK YOUR TEMPLATES BEFORE SENDING, CAN UPDATE ANY TEMPLATES TO MATCH NEW PROCEDURES WHEN I'M BACK FROM VACA ON 24/06</Typography>
+        </Grid>
 
-        <Grid item xs={12}  id="editor"  sx={{marginBottom: "80px"}}>
+        <Grid item xs={12} id="editor" sx={{ marginBottom: "80px" }}>
           <Typography
             variant="h5"
             sx={{
@@ -541,6 +544,7 @@ const TemplatesScreen = () => {
               fontSize: "20px",
             }}
           />
+      
           <CKEditor
             id="editor"
             editor={ClassicEditor}
