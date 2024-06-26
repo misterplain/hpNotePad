@@ -76,10 +76,13 @@ const DashboardScreen = () => {
       </Grid>
       <Grid item xs={12} sx={{ textAlign: "center", margin: "20px 0px 10px" }}>
         <Typography variant="h3" sx={{ color: "#8b0000" }}>
-          daily dashboard temporarily down!
+          daily dashboard temporarily down
         </Typography>
-        <Typography variant="h5" sx={{ color: "#9797D8" }}>
-          The service I was using to host the server for the daily dashboard is no longer free. I'm looking for a replacement unless HP wants to pay me 19euros a month just sayin :)  </Typography>
+        {/* <Typography variant="h5" sx={{ color: "#9797D8" }}>
+          The service I was using to host the server for the daily dashboard is
+          no longer free. I'm looking for a replacement unless HP wants to pay
+          me 19euros a month just sayin :){" "}
+        </Typography> */}
       </Grid>{" "}
       {/* <DateToggle /> */}
       {/* {loading && <LoadingIcon />}
