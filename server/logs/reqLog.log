@@ -723,3 +723,7 @@
 20231227	20:48:49	f386e10c-9871-40df-b8f2-d5925804e618	GET	/product/get	http://localhost:3000
 20231227	20:48:50	80edc8ad-ed1f-4882-9b7e-83962f4f5fe6	GET	/collection/get	http://localhost:3000
 20231227	20:48:50	9bc183cb-fde4-41b9-b10b-2847fd6386db	GET	/product/get	http://localhost:3000
+20240709	17:12:15	9af8c1f5-69e3-4e58-881e-d8830f98afdc	GET	/data/2024-07-09	http://localhost:3000
+20240709	17:12:20	8ee37f95-93de-40d3-9003-b645b6e463eb	GET	/data/2024-07-09	http://localhost:3000
+20240709	17:12:24	01edc68f-6535-4a06-8baa-d2eb8afc4ef1	GET	/data/2024-07-08	http://localhost:3000
+20240709	17:12:25	1b67bd27-ca00-4ab4-9dc8-c51c4934c41d	GET	/data/2024-07-09	http://localhost:3000
