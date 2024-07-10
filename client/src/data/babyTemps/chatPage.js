@@ -44,6 +44,9 @@ const templatesChatGeneral = [
     id: 7,
     text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 2 again.",
   },
+  {id:22,
+    text: "Sorry, I'm on the Post-Sales team and we're not trained on product specifications. I'll transfer you to someone who can answer your question."
+  },
   {
     id: 8,
     text: "We are only able to assist directly with orders placed on the HP Store. If you purchased through the HP Store, please respond with your order number in format SCEOxxxxxxxx. If you´ve purchased through a third party reseller, you may direct your query directly to them or to the Tech Support Team for assistance. ",
