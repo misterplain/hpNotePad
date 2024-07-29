@@ -517,9 +517,9 @@ const TemplatesScreen = () => {
             );
           })}
         </Grid>
-        <Grid item xs={12} sx={{border: "1px solid red", borderRadius:"50px"}} >
+        {/* <Grid item xs={12} sx={{border: "1px solid red", borderRadius:"50px"}} >
           <Typography variant="h5" color="error" sx={{textAlign: "center", padding: "10px"}}>DOUBLE CHECK YOUR TEMPLATES BEFORE SENDING / INCLUDE INFO ABOUT INBOX NOT RECEIVING REPLIES</Typography>
-        </Grid>
+        </Grid> */}
 
         <Grid item xs={12} id="editor" sx={{ marginBottom: "80px" }}>
           <Typography

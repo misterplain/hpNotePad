@@ -1,46 +1,46 @@
 //links
 const changeOfMindLinks = [
-    {
-      id: "COMRefundCCCollection",
-      title: "Refund-CC-Collect",
-      important: false,
-    },
-    {
-      id: "COMRefundPPCollection",
-      title: "Refund-PP-Collect",
-      important: false,
-    },
-    {
-      id: "COMRefundWireCollection",
-      title: "Refund-Wire-Collect",
-      important: false,
-    },
-    {
-      id: "COMRefundCCLabel",
-      title: "Refund-CC-Label",
-      important: false,
-    },
-    {
-      id: "COMRefundPPLabel",
-      title: "Refund-PP-Label",
-      important: false,
-    },
-    {
-      id: "COMRefundWireLabel",
-      title: "Refund-Wire-Label",
-      important: false,
-    },
-    {
-      id: "COM14",
-      title: "no return-14 days",
-      important: true,
-    },
-  ]
-  
-//custom function 
+  {
+    id: "COMRefundCCCollection",
+    title: "Refund-CC-Collect",
+    important: false,
+  },
+  {
+    id: "COMRefundPPCollection",
+    title: "Refund-PP-Collect",
+    important: false,
+  },
+  {
+    id: "COMRefundWireCollection",
+    title: "Refund-Wire-Collect",
+    important: false,
+  },
+  {
+    id: "COMRefundCCLabel",
+    title: "Refund-CC-Label",
+    important: false,
+  },
+  {
+    id: "COMRefundPPLabel",
+    title: "Refund-PP-Label",
+    important: false,
+  },
+  {
+    id: "COMRefundWireLabel",
+    title: "Refund-Wire-Label",
+    important: false,
+  },
+  {
+    id: "COM14",
+    title: "no return-14 days",
+    important: true,
+  },
+];
+
+//custom function
 const getCOMTemplates = (name, orderNumber, apology, date, hour, id) => {
-    const templates = [
- {
+  const templates = [
+    {
       id: "COMRefundCCCollection",
       title: "Change of Mind - CC - Collection",
       text: `Dear ${name}, <br><br>
@@ -73,7 +73,7 @@ More information on the HP Store returns policy can be found on our <a href="htt
 If there is anything further you need, please do not hesitate to let us know.<br><br>
   
   
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -107,7 +107,7 @@ Once collection has been successful, our refund process will begin, and the mone
 If there is anything further you need, please do not hesitate to let us know.<br><br>
   
   
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -147,7 +147,7 @@ After successful collection and arrival of the goods at our warehouse and provid
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -178,7 +178,7 @@ Once this item is returned to our warehouse, our refund process will begin, and 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -209,7 +209,7 @@ Once this item is returned to our warehouse, our refund process will begin, and 
 If there is anything further you need, please do not hesitate to let us contact us.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -246,7 +246,7 @@ After successful collection and arrival of the goods at our warehouse and provid
 If there is anything further you need, please do not hesitate to let us know.<br><br>
   
   
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
     {
@@ -264,13 +264,12 @@ ${
 
 We are unable to submit a return request for your order as it is now outside of the 14 day return period. We are sorry for any inconvenience this may cause.<br><br>
   
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         `,
     },
-    ];
-    const template = templates.find((template) => template.id === id);
-    return template;
-  };
-  
-  export { getCOMTemplates , changeOfMindLinks};
-  
+  ];
+  const template = templates.find((template) => template.id === id);
+  return template;
+};
+
+export { getCOMTemplates, changeOfMindLinks };

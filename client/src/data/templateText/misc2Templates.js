@@ -4,36 +4,36 @@ const misc2Links = [
     title: "Tech Delay",
     important: false,
   },
-    {
-      id: "MSC2ReturnDelay",
-      title: "Returns Delay",
-      important: false,
-    },
-    {
-      id: "MSC2LowVal",
-      title: "Low Val - no collect",
-      important: false,
-    },
-    {
-      id: "MSC2AddressMod",
-      title: "Address Mod Sent",
-      important: false,
-    },
-    {
-      id: "MSC2VouchOff",
-      title: "Voucher - Offer",
-      important: false,
-    },
-    {
-      id: "MSC2VouchCode",
-      title: "Voucher - Code",
-      important: false,
-    },
-    {
-      id: "MSC2ErrCancelled",
-      title: "Error - Cancelled",
-      important: false,
-    },
+  {
+    id: "MSC2ReturnDelay",
+    title: "Returns Delay",
+    important: false,
+  },
+  {
+    id: "MSC2LowVal",
+    title: "Low Val - no collect",
+    important: false,
+  },
+  {
+    id: "MSC2AddressMod",
+    title: "Address Mod Sent",
+    important: false,
+  },
+  {
+    id: "MSC2VouchOff",
+    title: "Voucher - Offer",
+    important: false,
+  },
+  {
+    id: "MSC2VouchCode",
+    title: "Voucher - Code",
+    important: false,
+  },
+  {
+    id: "MSC2ErrCancelled",
+    title: "Error - Cancelled",
+    important: false,
+  },
   {
     id: "MSC2ARN",
     title: "ARN",
@@ -61,7 +61,7 @@ ${
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -86,7 +86,7 @@ If the courier is not able to update this address before the order is fully sent
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -108,7 +108,7 @@ Please confirm if you accept this voucher and we will escalate further for the c
     
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -147,7 +147,7 @@ ${
     
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -168,7 +168,7 @@ We are sorry to advise that due to an issue in processing your order and it has 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -201,7 +201,7 @@ ${
 
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -228,7 +228,7 @@ If there is anything else, please let me know.<br><br>
 
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -252,7 +252,7 @@ ${
 
 
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
   ];

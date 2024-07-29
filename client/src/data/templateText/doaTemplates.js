@@ -1,59 +1,59 @@
 const doaLinks = [
+  {
+    id: "DOARepCollection",
+    title: "Rep Collection",
+    important: false,
+  },
+  {
+    id: "DOARepLabel",
+    title: "Rep Label",
+    important: false,
+  },
+  {
+    id: "DOARefundCCCollection",
+    title: "Refund-CC-Collect",
+    important: false,
+  },
+  {
+    id: "DOARefundPPCollection",
+    title: "Refund-PP-Collect",
+    important: false,
+  },
+  {
+    id: "DOARefundWireCollection",
+    title: "Refund-Wire-Collect",
+    important: false,
+  },
+  {
+    id: "DOARefundCCLabel",
+    title: "Refund-CC-Label",
+    important: false,
+  },
+  {
+    id: "DOARefundPPLabel",
+    title: " Refund-PP-Label",
+    important: false,
+  },
+  {
+    id: "DOARefundWireLabel",
+    title: "Refund-Wire-Label",
+    important: false,
+  },
+];
+
+const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
+  const templates = [
     {
       id: "DOARepCollection",
-      title: "Rep Collection",
-      important: false,
-    },
-    {
-      id: "DOARepLabel",
-      title: "Rep Label",
-      important: false,
-    },
-    {
-      id: "DOARefundCCCollection",
-      title: "Refund-CC-Collect",
-      important: false,
-    },
-    {
-      id: "DOARefundPPCollection",
-      title: "Refund-PP-Collect",
-      important: false,
-    },
-    {
-      id: "DOARefundWireCollection",
-      title: "Refund-Wire-Collect",
-      important: false,
-    },
-    {
-      id: "DOARefundCCLabel",
-      title: "Refund-CC-Label",
-      important: false,
-    },
-    {
-      id: "DOARefundPPLabel",
-      title: " Refund-PP-Label",
-      important: false,
-    },
-    {
-      id: "DOARefundWireLabel",
-      title: "Refund-Wire-Label",
-      important: false,
-    },
-  ];
-  
-  const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
-    const templates = [
-      {
-        id: "DOARepCollection",
-        title: "DOA Replacemet Collection",
-        text: `Dear ${name}, <br><br>
+      title: "DOA Replacemet Collection",
+      text: `Dear ${name}, <br><br>
               
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
@@ -73,21 +73,22 @@ const doaLinks = [
         
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
+        <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br>
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARepLabel",
-        title: "DOA Rep Label",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARepLabel",
+      title: "DOA Rep Label",
+      text: `Dear ${name}, <br><br>
         
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>We will send you the necessary returns label via email within 5 working days so that you may return through your local Post Office.<br><br> 
@@ -105,20 +106,20 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundCCCollection",
-        title: "DOA Refund CC Collection",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundCCCollection",
+      title: "DOA Refund CC Collection",
+      text: `Dear ${name}, <br><br>
         
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
               
         
         We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
@@ -139,19 +140,19 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundPPCollection",
-        title: "DOA Refund PP Collection",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundPPCollection",
+      title: "DOA Refund PP Collection",
+      text: `Dear ${name}, <br><br>
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
@@ -172,20 +173,20 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundWireCollection",
-        title: "DOA Refund Wire Collection",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundWireCollection",
+      title: "DOA Refund Wire Collection",
+      text: `Dear ${name}, <br><br>
         
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
@@ -214,20 +215,20 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundCCLabel",
-        title: "DOA Refund CC - Label",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundCCLabel",
+      title: "DOA Refund CC - Label",
+      text: `Dear ${name}, <br><br>
         
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
@@ -245,20 +246,20 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundPPLabel",
-        title: "DOA Refund PP - Label",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundPPLabel",
+      title: "DOA Refund PP - Label",
+      text: `Dear ${name}, <br><br>
               
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
@@ -276,20 +277,20 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-      {
-        id: "DOARefundWireLabel",
-        title: "DOA Refund Wire Collection",
-        text: `Dear ${name}, <br><br>
+    },
+    {
+      id: "DOARefundWireLabel",
+      title: "DOA Refund Wire Collection",
+      text: `Dear ${name}, <br><br>
               
         
         ${
           hour < 13 ? "Good morning, " : "Good afternoon, "
         }thank you for contacting the HP Store. ${
-          apology ? "Apologies for the delay in our reply." : ""
-        }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
         
         
         We are sorry to hear that the product you have received is defective. We are now actively working to arrange the return and refund of your order through the Post Office. We will send the necessary labels to you via email in the next 5 working days.<br><br>
@@ -313,13 +314,12 @@ const doaLinks = [
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-        Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
-      },
-    ];
-    const template = templates.find((template) => template.id === id);
-    return template;
-  };
-  
-  export { getDOATemplates , doaLinks};
-  
+    },
+  ];
+  const template = templates.find((template) => template.id === id);
+  return template;
+};
+
+export { getDOATemplates, doaLinks };

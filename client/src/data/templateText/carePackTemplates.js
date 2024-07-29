@@ -48,7 +48,7 @@ If there is anything further we can assist you with, please feel free to reply t
 
     
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 `,
     },
     {
@@ -71,7 +71,7 @@ ${
     
     
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 `,
     },
     {
@@ -100,7 +100,7 @@ Our apologies for any frustrations seen through the purchase of this Care Pack.<
 If there is anything further, we can assist you with please feel free to contact us.<br><br>
     
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 `,
     },
     {
@@ -128,7 +128,7 @@ More information on HP Store Care Pack Activation can be found on our <a href="h
 If you require any further assistance, please let us know.<br><br>
     
 
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 `,
     },
     {
@@ -169,7 +169,7 @@ Please note Care Pack Registration can take up to 2 weeks to complete, after whi
 If you require any further assistance after this timeframe, please do let us know.<br><br>
     
     
-Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 
 
 
