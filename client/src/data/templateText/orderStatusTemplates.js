@@ -1,3 +1,6 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
+
 const orderStatusLinks = [
   {
     id: "OSAddressNeeded",

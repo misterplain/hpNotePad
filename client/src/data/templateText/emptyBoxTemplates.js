@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const emptyBoxLinks = [
   {
     id: "EBOpenInvest",

@@ -260,7 +260,7 @@ If there is anything further we can help with, please feel free to contact us.<b
       }<br><br>
   
         Due to the lack of update on the collection request, we have been informed by our carrier that a bill will be now issued for the non-return and non-payment of this product.<br><br>
-        You will receive the bill within 2/3 days with payment instructions.<br><br>
+        You will receive the bill within 2-3 days with payment instructions.<br><br>
         If we can assist you with anything else, please let us know.<br><br>
         
         

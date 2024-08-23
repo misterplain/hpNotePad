@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const missingLinks = [
   {
     id: "MSGAllRep",
@@ -56,7 +58,7 @@ ${
       }<br><br>
 
 
-We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to have a replacement order sent out as soon as possible.<br><br>
+We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to have a replacement order sent out as soon as possible. This can take up to ${replacementETA} working days.<br><br>
 
 
 You will receive a confirmation email as soon this is on its way to you.<br><br>
@@ -82,7 +84,7 @@ ${
       }<br><br>
 
 
-We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to have the missing item sent out as soon as possible.<br><br>
+We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to have the missing item sent out as soon as possible. This can take up to ${replacementETA} working days. <br><br>
 
 
 You will receive a confirmation email as soon this is on its way to you.<br><br>
@@ -111,7 +113,7 @@ ${
 We sincerely apologise that you have not received your HP order and we are actively working with our logistics team to refund you as soon as possible.<br><br>
 
 
-Your money will be returned to your account within 3-5 working days.<br><br>
+Your money will be returned to your account within ${refundETA} working days.<br><br>
 
 
 If there is anything further you need, please do not hesitate to let me know.<br><br>
@@ -142,6 +144,10 @@ As you have pre-paid your order via wire bank transfer, we require your bank det
 
 <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
 
+        Once we have received these details, your refund will be processed back into your account within ${refundETA} working days.<br><br>
+
+
+
 
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
@@ -166,7 +172,7 @@ ${
 We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.<br><br>
 
 
-Your money will be returned to your account within 3-5 working days.<br><br>
+Your money will be returned to your account within ${refundETA}  working days.<br><br>
 
 
 If there is anything further you need, please do not hesitate to let me know.<br><br>
@@ -178,7 +184,7 @@ If there is anything further you need, please do not hesitate to let me know.<br
     },
     {
       id: "MSGPartWireRef",
-      title: "Missing All - Wire Refund",
+      title: "Missing Part - Wire Refund",
       text: `Dear ${name},<br><br>
     
     
@@ -192,9 +198,13 @@ ${
 We sincerely apologise that you have not received your full HP order and we are actively working with our logistics team to refund the missing product as soon as possible.<br><br>
 
 
+
 As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
 
 <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
+
+        Once we have received these details, your refund will be processed back into your account within ${refundETA} working days.<br><br>
+
 
 
 If there is anything further you need, please do not hesitate to let me know.<br><br>

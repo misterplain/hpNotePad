@@ -74,6 +74,9 @@ const TemplatesScreen = () => {
   const [name, setName] = useState("Customer");
   const [orderNumber, setOrderNumber] = useState("in format SCEO********");
   const [apology, setApology] = useState(false);
+  const [refundETA, setRefundETA] = useState("14");
+  const [replacementETA, setReplacementETA] = useState("14");
+  console.log(refundETA, replacementETA)
 
   //snackbar
   const [open, setOpen] = useState(false);
@@ -139,16 +142,25 @@ const TemplatesScreen = () => {
   const setTemplate = (id, type) => {
     // const template = `get${type}Templates`(name, orderNumber, apology, date, hour, id);
 
+    //refund/replacement timeline variables
+    // const refundETA = "14" //days
+    // const replacementETA = "14" //days
+
+    // const refundETA = "14";
+    // const replacementETA = "14";
+
     const templateFunction = templateFunctions[type];
     const template = templateFunction(
       name,
       orderNumber,
       apology,
       date,
+      // refundETA, 
+      // replacementETA,
       hour,
       id
     );
-
+console.log(template)
     setText(template.text);
     setTemplateTitle(template.title);
   };

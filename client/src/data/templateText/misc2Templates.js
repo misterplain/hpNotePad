@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const misc2Links = [
   {
     id: "MSC2TechDelay",

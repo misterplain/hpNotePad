@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const miscLinks = [
   {
     id: "MSCBlank",
@@ -100,7 +102,7 @@ If you need anything further, please let us know.<br><br>
       }<br><br>
   
   
-        We have sent the request for the price match refund, once this has been processed the funds should appear back as an available balance on your account within the next few days subject to your banks standard operating procedure.<br><br>
+        We have sent the request for the price match refund, once this has been processed the funds should appear back as an available balance on your account within the next ${refundETA} working days subject to your banks standard operating procedure.<br><br>
   
         If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:<br>
         <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
@@ -214,7 +216,7 @@ If you need anything further, please let us know.<br><br>
   <ul><li><strong>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>Account Name:</li><li>Sort Code:</li><li>Account Number:</li></ul>
   <i>(Important Information - Please complete all fields)</i><br><br></strong>
   
-  Once we have received these details, we will process your refund and expect this to be completed and the funds returned to your account within 10 working days. Further information on refunds can be found in our <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs page</a> or alternatively you can view the status of your account in the <strong>My Account</strong> section of our website.<br><br>
+  Once we have received these details, we will process your refund and expect this to be completed and the funds returned to your account within ${refundETA} working days. Further information on refunds can be found in our <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs page</a> or alternatively you can view the status of your account in the <strong>My Account</strong> section of our website.<br><br>
   If there is anything further we can assist you with, please do let us know.<br><br>
   
   

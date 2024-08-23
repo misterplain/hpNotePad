@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const damageLinks = [
   {
     id: "DMGRepCollection",
@@ -55,7 +57,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   const templates = [
     {
       id: "DMGRepCollection",
-      title: "Damaged Refund CC Collection",
+      title: "Damaged Replacement Collection",
       text: `Dear ${name},<br><br>
   
   
@@ -78,7 +80,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Our driver will have a return label, this allows them to track the return through their network. <strong>Please ensure you obtain a collection receipt from the driver</strong> as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once collection has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
+  Once collection has been successful, the replacement process will begin, and your order will be shipped to you within ${replacementETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -112,7 +114,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Please ensure that you get a receipt from the Post Office when you return this, this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once the return has been successful, the replacement process will begin, and your order will be shipped to you within 2-3 working days.<br><br>
+  Once the return has been successful, the replacement process will begin, and your order will be shipped to you within ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -146,7 +148,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Our driver will have a return label, this allows them to track the return through their network. <strong>Please ensure you obtain a collection receipt from the driver</strong> as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once collection has been successful, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
+  Once collection has been successful, our refund process will begin, and the money will be returned to your account within ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -180,7 +182,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Our driver will have a return label, this allows them to track the return through their network. <strong>Please ensure you obtain a collection receipt from the driver</strong> as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once collection has been successful, our refund process will begin, and the money will be returned to your PayPal account within 8 working days.<br><br>
+  Once collection has been successful, our refund process will begin, and the money will be returned to your PayPal account within ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -220,7 +222,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
   
   
-  After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
+  After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -251,7 +253,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your account within 3-5 working days.<br><br>
+  Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your account within ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -282,7 +284,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   Please ensure you obtain a receipt from the Post Office as this may be required in the unlikely event something goes wrong with the return to our warehouse.<br><br>
   
   
-  Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your PayPal account within 10 working days.<br><br>
+  Once this item is returned to our warehouse, our refund process will begin, and the money will be returned to your PayPal account within ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>
@@ -319,7 +321,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
   <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
   
   
-  After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next 8 working days.<br><br>
+  After successful collection and arrival of the goods at our warehouse and provided bank details, we will proceed with the refund process. Your funds will be returned to your account within the next ${refundETA} working days.<br><br>
   
   
   If there is anything further you need, please do not hesitate to let us know.<br><br>

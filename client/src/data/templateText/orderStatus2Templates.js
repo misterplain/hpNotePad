@@ -1,3 +1,5 @@
+const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+
 const orderStatus2Links = [
   {
     id: "OSRTSreforrep",
@@ -98,7 +100,7 @@ ${
 
     I apologise for the failed delivery.<br><br>
 
-    We have initiated the refund today and your funds will be back in your account within 3/5 business days.<br><br>
+    We have initiated the refund today and your funds will be back in your account within ${refundETA} working days.<br><br>
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
     
@@ -119,7 +121,7 @@ ${
 
     I apologise for the failed delivery.<br><br>
 
-    I have sent instructions to the warehouse to ship a replacement order to you ASAP. You will soon begin to get automated emails from the system letting you know when it is on its way.<br><br>
+    I have sent instructions to the warehouse to ship a replacement order to you, this can take up to ${replacementETA} working days. You will soon begin to get automated emails from the system letting you know when it is on its way.<br><br>
 
     If there is anything further you need, please do not hesitate to let me know.<br><br>
 
@@ -142,7 +144,7 @@ rep
         apology ? "Apologies for the delay in our reply." : ""
       }<br><br>
   
-        I confirm that the cancellation request has been sent. You will receive an automated email from the system when it completes. Please allow 3/5 days from receipt of the cancellation email to see your money back in your account.<br><br>
+        I confirm that the cancellation request has been sent. You will receive an automated email from the system when it completes. Please allow 3-5 days from receipt of the cancellation email to see your money back in your account.<br><br>
   Please note that HP has not taken any money for this order, as we only take payment when the goods ship. Any money on reserve at your bank will be lifted within 3/5 days of the cancellation.<br><br>
   
   
@@ -175,7 +177,7 @@ rep
   We can confirm that your order is fully cancelled.<br><br>
   
   
-  Please note that if this purchase was made with a credit card, no money had been taken by HP for this order. Any money that appears to have been taken is simply on hold at your bank and will be returned within 3/5 business days. PayPal refunds are automatically initiated and will be back into your account within 8 business days.<br><br>
+  Please note that if this purchase was made with a credit card, no money had been taken by HP for this order. Any money that appears to have been taken is simply on hold at your bank and will be returned within 3-5 business days. PayPal refunds are automatically initiated and will be back into your account within ${refundETA} business days.<br><br>
   
   
       <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
@@ -229,7 +231,7 @@ rep
   
   
         We are sorry to advise that we are no longer able to fulfil your recent HP Store order as this product has now been discontinued and no further stock is available. Unfortunately, your order will now need to be cancelled. <br><br>
-        Any money on reserve at your bank will be returned to you within 3/5 business days.<br><br>
+        Any money on reserve at your bank will be returned to you within 3-5 business days.<br><br>
         Once again, we sincerely apologise that we have not been able to fulfil your requirements on this occasion. If you wish to select an alternative product, you can contact our Sales Team on 0207 660 3859. They will be happy to assist you.<br><br>
         If there is anything further we can help you with, please feel free to contact us.<br><br>
         
@@ -255,7 +257,7 @@ rep
         To allow us to proceed with your refund as you paid via bank transfer, we require the following bank details:
         <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
   
-        Once we have received these details, your refund will be processed back into your account within 8 working days.<br><br>
+        Once we have received these details, your refund will be processed back into your account within ${refundETA} working days.<br><br>
   Once again, we sincerely apologise that we have not been able to fulfil your requirements on this occasion. If you wish to select an alternative product, you can contact our Sales Team on 0207 660 3859. They will be happy to assist you.<br><br>
   If there is anything further we can help with, please feel free to contact us.<br><br>
   
@@ -350,7 +352,7 @@ rep
   
         Unfortunately, our finance team were unable to complete your order as they were unable to verify all the information provided. This means that we have had to cancel your order on this occasion, and we apologise for any inconvenience this may cause.<br><br>
         We are unable to offer specific reasons for order cancellations for data protection reasons. It is recommended that you contact your card holder for further advice.<br><br>
-        Any money that may be on hold at your bank will be returned automatically to you within 3/5 business days.<br><br>
+        Any money that may be on hold at your bank will be returned automatically to you within 3-5 business days.<br><br>
         If you need assistance in replacing the order, you can contact a sales agent on <strong>0207 660 3859.</strong><br><br>
         Please feel free to reply to this email if you have any further questions.<br><br>
         
