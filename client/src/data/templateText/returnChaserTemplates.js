@@ -65,7 +65,7 @@ ${
 
     We have been informed by our carrier that the label generated for the return of your HP Store order has not been used. To allow us to proceed with your claim, you may use the current label if it is still valid, or we will generate a fresh label for you if required. This will enable you to drop the parcel off at a local post office.<br><br>
 
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website. <br><br>
     
@@ -94,7 +94,7 @@ ${
 
     We have been informed by our carrier that the label generated for the return of your HP Store order has not been used. To allow us to proceed with your claim, you may use the current label if it is still valid, or we will generate a fresh label for you if required. This will enable you to drop the parcel off at a local post office.<br><br>
      
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website.<br><br>
     
@@ -124,7 +124,7 @@ ${
     
     We have been informed by our carrier that the label generated for the return of your HP Store order has not been used. To allow us to proceed with your claim, you may use the current label if it is still valid, or we will generate a fresh label for you if required. This will enable you to drop the parcel off at a local post office.<br><br>
      
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website.<br><br>
     
@@ -154,7 +154,7 @@ ${
     HP Store does not provide timed collections (i.e. a specific time to collect items). You will be notified by the driver of a time on the day of collection.<br>
     Our carrier operates Monday – Friday only, please note collections can be made up to 6pm in the evening.<br><br>
 
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website.<br><br>
     
@@ -185,7 +185,7 @@ ${
     HP Store does not provide timed collections (i.e. a specific time to collect items). You will be notified by the driver of a time on the day of collection.<br>
     Our carrier operates Monday – Friday only, please note collections can be made up to 6pm in the evening.<br><br>
 
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website.<br><br>
@@ -217,7 +217,7 @@ ${
     HP Store does not provide timed collections (i.e. a specific time to collect items). You will be notified by the driver of a time on the day of collection.<br>
     Our carrier operates Monday – Friday only, please note collections can be made up to 6pm in the evening.<br><br>
 
-   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your order number in the subject of the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
+   If your order has already been returned, we apologise for any confusion and kindly request that you send us a photo of the receipt provided by the Post Office upon return by emailing us at hpstore-uk@hp.com (please include your SCEO order number in the subjectof the email) or via our Chat service on the HP Store. We will forward this to the warehouse to ensure the goods are checked in properly.<br><br>
      
      
     Further details on the HP Store returns procedure can be found in our HP Store FAQs page on the HP Store website.<br><br>

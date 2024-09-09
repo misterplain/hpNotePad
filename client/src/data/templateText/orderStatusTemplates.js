@@ -236,7 +236,7 @@ You can also review your order details below and status online via our <a href="
   
   Due to failed deliveries, we have been unable to deliver your order. We have now arranged for your order to be collected from the local Post Office. Please reference your tracking information for further information.<br><br>
   
-
+<strong>INSERT POST OFFICE ADDRESS HERE</strong><br><br>
 
    Please take 2 forms of ID proving address as well as the tracking number to ensure collection.<br><br>
   
