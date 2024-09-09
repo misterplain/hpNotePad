@@ -23,6 +23,11 @@ const orderStatusLinks = [
     important: false,
   },
   {
+    id: "ETAShippingToday",
+    title: "ETA - Shipping Today",
+    important: false,
+  },
+  {
     id: "OSDelivered",
     title: "Delivered",
     important: false,
@@ -143,6 +148,32 @@ ${
 `,
     },
     {
+      id: "ETAShippingToday",
+      title: "ETA - Shipping Today",
+      text: `Dear ${name},<br><br>
+  
+  
+  ${
+    hour < 13 ? "Good morning, " : "Good afternoon, "
+  }thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+  
+  
+We confirm your order has been successfully processed by our warehouse and shipment is expected to take place today with delivery within the next 1-2 business days.<br><br>
+ 
+You will receive a shipping confirmation email once your order has fully dispatched, the tracking link within your order shipment confirmation email allows you to track you order on our carrier site, alternatively you can track your order via your HP Store account in <a href="https://www.hp.com/gb-en/shop/Order.aspx?view=login" target="__blank">My Orders</a>.<br><br>
+ 
+Please let us know if you require any further assistance.<br><br>
+ 
+You can also review your order details below and status online via our <a href="https://www.hp.com/gb-en/shop/order.aspx?view=login" target="__blank">Track My Order</a> page.<br><br>
+
+  
+  
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+   `,
+    },
+    {
       id: "OSDelivered",
       title: "Delivered",
       text: `Dear ${name},<br><br>
@@ -205,10 +236,11 @@ ${
   
   Due to failed deliveries, we have been unable to deliver your order. We have now arranged for your order to be collected from the local Post Office. Please reference your tracking information for further information.<br><br>
   
-  You may find further information related to the depot where this is located by using the following tool:<br>
-  <a href="https://www.parcelforce.com/depot-finder" target="__blank">https://www.parcelforce.com/depot-finder</a><br><br>
+
+
+   Please take 2 forms of ID proving address as well as the tracking number to ensure collection.<br><br>
   
-  If you are unable to collect, please confirm if you wish to have a full refund on the order, or if you wish to have a replacement order generated. If you wish to have a replacement order generated, please confirm the full and complete delivery address so as to prevent further failed deliveries. <br><br>
+ If you are unable to collect, please confirm if you wish to have a full refund on the order, and we will have the order returned to HP and raise a refund for you.<br><br>
   If you need anything further, please let us know.<br><br>
   
   
@@ -247,3 +279,7 @@ ${
 };
 
 export { getOrderStatusTemplates, orderStatusLinks };
+
+//collect PO bit about post office
+// You may find further information related to the depot where this is located by using the following tool:<br>
+// <a href="https://www.parcelforce.com/depot-finder" target="__blank">https://www.parcelforce.com/depot-finder</a><br><br>
