@@ -71,14 +71,62 @@ const getJoke = async () => {
   }
 };
 
+// const getHoroscope = async (signHS) => {
+
+//   const options = {
+//     method: "GET",
+//     url: `https://ohmanda.com/api/horoscope/${signHS}/`,
+//     httpsAgent: agent,
+//   };
+//   try {
+//     let response = await axios.request(options);
+//     if (response.data.horoscope) {
+//       return {
+//         data: response.data.horoscope,
+//         response: {
+//           success: true,
+//           errorMessage: "",
+//         },
+//       };
+//     } else {
+//       return {
+//         data: {},
+//         response: {
+//           success: false,
+//           errorMessage: "Horoscope not found or API error",
+//         },
+//       };
+//     }
+//   } catch (error) {
+//     console.log({
+//       message: "Error in Horoscope",
+//       response: error,
+//     });
+//     return {
+//       data: {},
+//       response: {
+//         success: false,
+//         errorMessage: "Error fetching horoscope",
+//       },
+//     };
+//   }
+// };
+
 const getHoroscope = async (signHS) => {
 
   const options = {
-    method: "GET",
-    url: `https://ohmanda.com/api/horoscope/${signHS}/`,
+    method: 'GET',
+    hostname: 'horoscope-astrology.p.rapidapi.com',
+    port: null,
+    path: '/horoscope?day=today&sunsign=${signHS}',
+    headers: {
+      'x-rapidapi-key': '0824a2c382mshb6a7ecac1677e76p11250cjsndc3ea1d6ec95',
+      'x-rapidapi-host': 'horoscope-astrology.p.rapidapi.com'
+    }
   };
   try {
     let response = await axios.request(options);
+    console.log(response)
     if (response.data.horoscope) {
       return {
         data: response.data.horoscope,
@@ -285,6 +333,7 @@ const fetchData = asyncHandler(async (req, res) => {
     // fetchedDataObject.horoscope = {};
     // const horoscopeData = {};
 
+    //commented out on nov 7th for the purpose of this exercise
     const [joke, moonPhase, forecast, news] = await Promise.all([
       getJoke(),
       getMoonPhase(),
@@ -294,11 +343,6 @@ const fetchData = asyncHandler(async (req, res) => {
       console.error("Error fetching data:", error);
     });
 
-    // if (!joke || !forecast || !news) {
-    //   console.log("Error fetching data joke or moonphase or forecast or news");
-    //   return;
-    // }
-
     fetchedDataObject.joke = joke;
 
     fetchedDataObject.moonPhase = moonPhase;
@@ -307,70 +351,77 @@ const fetchData = asyncHandler(async (req, res) => {
 
     fetchedDataObject.news = news;
 
-    const horoscopeSigns = [
-      "aquarius",
-      "pisces",
-      "aries",
-      "taurus",
-      "gemini",
-      "cancer",
-      "leo",
-      "virgo",
-      "libra",
-      "scorpio",
-      "sagittarius",
-      "capricorn",
-    ];
-    const results = await Promise.all(
-      horoscopeSigns.map(async (sign) => await getHoroscope(sign))
-    ).catch((error) => {
-      console.error("Error fetching horoscopes:", error);
-      return horoscopeSigns.map(() => ({
-        data: {},
-        response: {
-          success: false,
-          errorMessage: "Error fetching horoscopes",
-        },
-      }));
-    });
+    //end lines comentted out on nov 7th
+    // const horoscopeSigns = [
+    //   "aquarius",
+    //   "pisces",
+    //   "aries",
+    //   "taurus",
+    //   "gemini",
+    //   "cancer",
+    //   "leo",
+    //   "virgo",
+    //   "libra",
+    //   "scorpio",
+    //   "sagittarius",
+    //   "capricorn",
+    // ];
+    // const results = await Promise.all(
+    //   horoscopeSigns.map(async (sign) => await getHoroscope(sign))
+    // ).catch((error) => {
+    //   console.error("Error fetching horoscopes:", error);
+    //   return horoscopeSigns.map(() => ({
+    //     data: {},
+    //     response: {
+    //       success: false,
+    //       errorMessage: "Error fetching horoscopes",
+    //     },
+    //   }));
+    // });
 
     // if (!results || results.length !== horoscopeSigns.length) {
     //   console.log("Error fetching horoscopes");
     //   return;
     // }
+    // let horoscopeData = {
+    //   data: {},
+    //   response: {
+    //     success: true,
+    //     errorMessage: "",
+    //   },
+    // };
 
+    // console.log(results, "results");
+    // console.log(horoscopeData, "horoscopeData");
+
+    // console.log(fetchedDataObject, "fetchedDataObject before results applied to it");
+    
     // results.forEach((result, index) => {
     //   horoscopeData[horoscopeSigns[index]] = result;
     // });
     // fetchedDataObject.horoscope = horoscopeData;
 
-    let horoscopeData = {
-      data: {},
-      response: {
-        success: true,
-        errorMessage: "",
-      },
-    };
+    // console.log(fetchedDataObject, "fetchedDataObject after results applied to it");
 
-    let allSuccess = true;
-    results.forEach((result, index) => {
-      if (!result.response.success) {
-        allSuccess = false;
-        horoscopeData.response.success = false;
-        horoscopeData.response.errorMessage =
-          "One or more horoscope fetches failed";
-      }
-      horoscopeData.data[horoscopeSigns[index]] = result.data;
-    });
 
-    if (!allSuccess) {
-      console.log("Error fetching some horoscopes");
-    }
 
-    fetchedDataObject.horoscope = horoscopeData;
+    // let allSuccess = true;
+    // results.forEach((result, index) => {
+    //   if (!result.response.success) {
+    //     allSuccess = false;
+    //     horoscopeData.response.success = false;
+    //     horoscopeData.response.errorMessage =
+    //       "One or more horoscope fetches failed";
+    //   }
+    //   horoscopeData.data[horoscopeSigns[index]] = result.data;
+    // });
 
-    console.log(fetchedDataObject, "fetchedDataObject");
-    console.log(fetchedDataObject, "fetchedDataObject");
+    // if (!allSuccess) {
+    //   console.log("Error fetching some horoscopes");
+    // }
+
+    // fetchedDataObject.horoscope = horoscopeData;
+    //end lines commented out on nov 7th//
 
     const saveObject = await saveDataToDB(fetchedDataObject);
 
@@ -521,7 +572,7 @@ const getDataByDate = asyncHandler(async (req, res) => {
 const deleteAllData = asyncHandler(async (req, res) => {
   console.log("deleteAllData");
 
-  const dateToFind = "2023-11-14";
+  const dateToFind = "2024-10-14";
   const startOfDay = new Date(dateToFind);
   console.log(startOfDay);
   const endOfDay = new Date(startOfDay.getTime() + 24 * 60 * 60 * 1000 - 1);
