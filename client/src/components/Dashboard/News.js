@@ -25,6 +25,8 @@ const News = () => {
 
   //swipable
   const [activeStep, setActiveStep] = useState(0);
+  console.log(activeStep)
+  console.log(dashboardData.news.data.length)
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -43,16 +45,18 @@ const News = () => {
       <Grid
         item
         xs={12}
-        sm={10}
-        md={10}
+        sm={12}
+        md={11}
+        lg={10}
         sx={{
-          boxShadow: "13px 13px 45px #adacac, -13px -13px 45px #ABAC3C",
+          boxShadow: "5px 5px 30px #f8f5f5, -5px -5px 30px #42038e",
 
           backgroundColor: "white",
           borderRadius: "20px",
           overflow: "hidden",
           border: "none",
           margin: "50px",
+          height: "100%",
         }}
       >
         <AutoPlaySwipeableViews
@@ -60,7 +64,7 @@ const News = () => {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-          interval={8000}
+          interval={800000}
           sx={{ boxShadow: "none" }}
         >
           {dashboardData?.news &&
@@ -77,7 +81,8 @@ const News = () => {
                   flexDirection: { xs: "column", md: "row" },
                   border: "none",
                   borderRadius: "15px",
-                  width: "100%",
+                  width: "97%",
+                  margin: "10px"
                 }}
               >
                 {Math.abs(activeStep - index) <= 1 ? (
@@ -97,29 +102,26 @@ const News = () => {
                         component="img"
                         sx={{
                           width: "100%",
-                          maxHeight: "400px",
+                          height: "400px",
                           boxShadow: "none",
-                          marginTop: { xs: "none", md: "15px" },
                           padding: "none",
-                          marginLeft: { xs: "none", md: "30px" },
                           borderRadius: "20px",
                         }}
                         src={step.image}
                         alt={step.body}
                       />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={4} display="flex" justifyContent="center" alignItems="center">
                       {" "}
                       <Card
                         sx={{
                           boxShadow: {
                             xs: "none",
-                            md: "20px 20px 25px #adacac, -20px -20px 25px #738AC8",
+                            md: "5px 5px 30px #f8f5f5, -5px -5px 30px #08018e",
                           },
                           borderRadius: "20px",
-                          marginRight: { xs: "none", md: "30px" },
-                          width: "100%",
-                          margin: "-10px",
+                          width: "80%",
+                          maxHeight: "80%", 
                           padding: "none",
                         }}
                       >
@@ -131,7 +133,7 @@ const News = () => {
                             variant="body"
                             component="div"
                             sx={{
-                              visibility: { xs: "hidden", md: "visible" },
+                              display: { xs: "hidden", md: "visible" },
                             }}
                           >
                             {step.description}
@@ -141,14 +143,13 @@ const News = () => {
                           <a
                             href={step.url}
                             target="_blank"
-                            style={{ textDecoration: "none" }}
+                            style={{ textDecoration: "none", marginLeft:"auto", marginRight: "auto" }}
                           >
                             {" "}
                             <Button
                               type="submit"
                               variant="contained"
                               color="primary"
-                              style={{}}
                             >
                               Learn More
                             </Button>{" "}
@@ -165,7 +166,7 @@ const News = () => {
           <Grid item xs={12}>
             {" "}
             <MobileStepper
-              steps={dashboardData.news.length}
+              steps={dashboardData.news.data.length}
               position="static"
               activeStep={activeStep}
               sx={{ width: "80%", margin: "0 auto" }}
@@ -173,7 +174,7 @@ const News = () => {
                 <Button
                   size="small"
                   onClick={handleNext}
-                  disabled={activeStep === dashboardData.news.length - 1}
+                  disabled={activeStep === dashboardData.news.data.length - 1}
                 >
                   Next
                   {theme.direction === "rtl" ? (
