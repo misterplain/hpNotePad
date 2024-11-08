@@ -36,12 +36,7 @@ const fetchData = asyncHandler(async (req, res) => {
     fetchedDataObject.horoscope = {};
     let horoscopeData = {};
 
-    const [
-      joke,
-      moonPhase,
-      forecast,
-      news
-    ] = await Promise.all([
+    const [joke, moonPhase, forecast, news] = await Promise.all([
       getJoke(),
       getMoonPhase(),
       getForecast(),
@@ -117,19 +112,19 @@ const fetchData = asyncHandler(async (req, res) => {
     const saveObject = await saveDataToDB(fetchedDataObject);
 
     if (saveObject.success) {
-      return res.json({
+      return {
         success: true,
         message: "Data Fetched and saved successfully",
-      });
+      };
     } else {
-      return res.json({ success: false, message: "Error saving data to DB" });
+      return { success: false, message: "Error saving data to DB" };
     }
   } catch (error) {
     console.error("Error in fetchData:", error.message);
-    return res.json({
+    return {
       success: false,
       errorMessage: "An error occurred while fetching data.",
-    });
+    };
   }
 });
 
