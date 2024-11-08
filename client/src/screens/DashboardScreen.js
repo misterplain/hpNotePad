@@ -88,7 +88,7 @@ const DashboardScreen = () => {
       {loading && <LoadingIcon />}
       {error && <ErrorMessage message={error} />}
       {dashboardData?.forecast?.response.success === true && <Forecast />}
-      {/* {dashboardData?.horoscope?.response.success === true && <Horoscope />} */}
+      {dashboardData?.horoscope?.response.success === true && <Horoscope />}
       {dashboardData?.joke?.response.success === true && <Joke />}
       {dashboardData?.news?.response.success === true && <News />}
     </Grid>
