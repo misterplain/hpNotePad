@@ -18,6 +18,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import parse from "html-react-parser";
 import { BiCopy } from "react-icons/bi";
+import PriceMatchCalculator from "../components/PriceMatchCalculator/PriceMatchCalculator";
 
 // import TemplateText from "../assets/templates4";
 import { Link } from "react-scroll";
@@ -62,13 +63,21 @@ const LinksScreen = () => {
             <Button
               variant="contained"
               color="primary"
-              style={{ marginBottom: "20px", width: "100%", height: "100%", padding: "10px" }}
+              style={{
+                marginBottom: "20px",
+                width: "100%",
+                height: "100%",
+                padding: "10px",
+              }}
             >
               {link.name}
             </Button>
           </a>{" "}
         </Grid>
       ))}
+      <Grid item xs={12} display="flex" justifyContent="center">
+        <PriceMatchCalculator />
+      </Grid>
     </Grid>
   );
 };
