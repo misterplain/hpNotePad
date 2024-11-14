@@ -12,32 +12,29 @@ import {
 } from "@mui/material";
 import parse from "html-react-parser";
 import { BiCopy } from "react-icons/bi";
+import Snackbar from "@mui/material/Snackbar";
 
 const PriceMatchCalculator = () => {
   const [pricePaid, setPricePaid] = useState(0);
   const [newPrice, setNewPrice] = useState(0);
   const [refundWithVAT, setRefundWithVAT] = useState(0);
   const [refundWithoutVAT, setRefundWithoutVAT] = useState(0);
-  const [claimNotes, setClaimNotes] = useState(`Price Match Refund, Price Paid:
+  const [claimNotesDisplay, setClaimNotesDisplay] =
+    useState(`Price Match Refund, Price Paid:
      ${pricePaid}, New Price: ${newPrice}, Refund With VAT: ${refundWithVAT}, Refund Without VAT: ${refundWithoutVAT}`);
+  const [claimNotesCopy, setClaimNotesCopy] =
+    useState(`Price Match Refund, Price Paid:
+      ${pricePaid}, New Price: ${newPrice}, Refund With VAT: ${refundWithVAT}, Refund Without VAT: ${refundWithoutVAT}`);
+
+  //snackbar
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const updatedClaimNotes = `Price Match Refund\nPrice Paid: ${pricePaid} GBP\nNew Price: ${newPrice} GBP\nRefund With VAT: ${refundWithVAT} GBP\nRefund Without VAT: ${refundWithoutVAT} GBP`;
-    setClaimNotes(updatedClaimNotes);
+    const updatedClaimNotesDisplay = `Price Match Refund<br/>Price Paid: ${pricePaid} GBP<br/>New Price: ${newPrice} GBP<br/>Refund With VAT: ${refundWithVAT} GBP<br/>Refund Without VAT: ${refundWithoutVAT} GBP`;
+    const updatedClaimNotesCopy = `Price Match Refund\nPrice Paid: ${pricePaid} GBP\nNew Price: ${newPrice} GBP\nRefund With VAT: ${refundWithVAT} GBP\nRefund Without VAT: ${refundWithoutVAT} GBP`;
+    setClaimNotesDisplay(updatedClaimNotesDisplay);
+    setClaimNotesCopy(updatedClaimNotesCopy);
   }, [pricePaid, newPrice, refundWithVAT, refundWithoutVAT]);
-
-  // //copy to clipboard
-  // const copyToClipboard = async () => {
-  //   try {
-  //     const content = document.getElementById("parsedText").innerHTML;
-  //     const blobInput = new Blob([content], { type: "text/html" });
-  //     const clipboardItemInput = new ClipboardItem({ "text/html": blobInput });
-  //     navigator.clipboard.write([clipboardItemInput]);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  //   setOpen(true);
-  // };
 
   const changePricePaid = (e) => {
     const newPricePaid = parseFloat(e.target.value) || 0;
@@ -63,8 +60,14 @@ const PriceMatchCalculator = () => {
 
   return (
     <>
-      <Grid container display="flex" flexDirection="column" alignItems="center">
-        <Grid item>
+      <Grid
+        container
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+   
+      >
+        <Grid item xs={3} sx={{paddingTop: "25px"}}>
           <FormGroup>
             <FormControlLabel
               control={
@@ -78,7 +81,7 @@ const PriceMatchCalculator = () => {
               }
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup sx={{ marginTop: "15px" }}>
             <FormControlLabel
               control={
                 <TextField
@@ -92,23 +95,46 @@ const PriceMatchCalculator = () => {
             />
           </FormGroup>
         </Grid>{" "}
-        {/* <p>{pricePaid} - pricePaid</p>
-        <p>{newPrice} - newPrice</p>
-        <p>{refundWithVAT} - refundWithVAT</p>
-        <p>{refundWithoutVAT} - refundWithoutVAT</p> */}
-        <BiCopy
-          onClick={() => {
-            navigator.clipboard.writeText(claimNotes);
-          }}
-          style={{
-            cursor: "pointer",
-            margin: "5 5 0 10",
-            color: "green",
-            fontSize: "20px",
-            flexShrink: 0,
-          }}
+        {/* <Grid item xs={1} sx={{border: "1px solid green"}}>
+          {" "}
+          <BiCopy
+            onClick={() => {
+              navigator.clipboard.writeText(parse(claimNotesCopy));
+              setOpen(true);
+            }}
+            style={{
+              cursor: "pointer",
+              margin: "40 30 50 25",
+              color: "green",
+              fontSize: "20px",
+              flexShrink: 0,
+            }}
+          />
+        </Grid> */}
+        <Grid item xs={5}>
+          {" "}
+          <BiCopy
+            onClick={() => {
+              navigator.clipboard.writeText(parse(claimNotesCopy));
+              setOpen(true);
+            }}
+            style={{
+              cursor: "pointer",
+              margin: "0 0 0 0",
+              color: "green",
+              fontSize: "20px",
+              flexShrink: 0,
+            }}
+          />
+          <Typography id="parsedText">{parse(claimNotesDisplay)}</Typography>
+        </Grid>
+        <Snackbar
+          open={open}
+          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+          onClose={() => setOpen(false)}
+          autoHideDuration={2000}
+          message="Copied to clipboard"
         />
-        <p id="parsedText">{parse(claimNotes)} - claim notes</p>
       </Grid>
     </>
   );

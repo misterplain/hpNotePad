@@ -75,7 +75,7 @@ const LinksScreen = () => {
           </a>{" "}
         </Grid>
       ))}
-      <Grid item xs={12} display="flex" justifyContent="center">
+      <Grid item xs={12}>
         <PriceMatchCalculator />
       </Grid>
     </Grid>
