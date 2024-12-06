@@ -287,7 +287,7 @@ rep
   At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.<br><br>
   
   
-  If you wish to cancel your order, please let us know in a reply here and we will do so. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.<br><br>
+  If you wish to cancel your order, contact us via phone or chat at your earliest convenience. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.<br><br>
   
   
   We sincerely apologise for any inconvenience this delay may cause and thank you for your patience and understanding.<br><br>
@@ -321,7 +321,7 @@ rep
   At present we do not have a firm date on when the new stock will arrive in our warehouse, but we continue to closely monitor this with our supply chain team, and we will notify you via email once your order has shipped.<br><br>
   
   
-  If you wish to cancel this part from your order, please let us know in a reply here and we will do so. This will enable the rest of the order to ship.<br><br>
+  If you wish to cancel this part from your order, please contact us via phone or chat at your earliest convenience. This will enable the rest of the order to ship.<br><br>
   
   
   A new order can then be placed for the delayed part. Alternatively, if you would need advice to select an alternative product, please contact our Sales Team via email hpstoresalesuk@hp.com or by phone on 02076603859.<br><br>

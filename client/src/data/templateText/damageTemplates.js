@@ -343,7 +343,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
       }<br><br>
   
         We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
-  In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+  In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in? You may send these photos to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
   
   
   
@@ -366,7 +366,7 @@ const getDamageTemplates = (name, orderNumber, apology, date, hour, id) => {
       }<br><br>
   
         We are sorry to hear that the product you have received is damaged, we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
-  In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in?<br><br>
+  In order to raise the issue with the warehouse, and organise your return can you please send us photos of the damage to the product and the box it was delivered in? You may send these photos to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
   
   Thank you in advance.<br><br>
   

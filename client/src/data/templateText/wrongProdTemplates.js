@@ -350,7 +350,7 @@ ${
       }<br><br>
 
     We are sorry to hear that you have received the wrong product, we are actively working to have this item returned and have your replacement issued as soon as possible.<br><br>
-    In order to raise the issue with the warehouse, and organise your return can you please send us photos of the item received, showing the product number and if possible, the serial number?<br><br>
+    In order to raise the issue with the warehouse, and organise your return can you please send us photos of the item received, showing the product number and if possible, the serial number? You may send these photos to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
 
 
 
@@ -362,7 +362,7 @@ If there is anything further you need, please do not hesitate to let us know.<br
     },
     {
       id: "WGPPhotosRef",
-      title: " Wrong Prod Photos Needed - Rep ",
+      title: " Wrong Prod Photos Needed - Ref ",
       text: `Dear ${name},<br><br>
     
     
@@ -373,7 +373,7 @@ ${
       }<br><br>
 
     We are sorry to hear that you have received the wrong product, and we are actively working to have this item returned and have your refund issued as soon as possible.<br><br>
-In order to raise the issue with the warehouse, and organise your return can you please send us photos of the item received, showing the product number and if possible, the serial number?<br><br>
+In order to raise the issue with the warehouse, and organise your return can you please send us photos of the item received, showing the product number and if possible, the serial number? You may send these photos to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 

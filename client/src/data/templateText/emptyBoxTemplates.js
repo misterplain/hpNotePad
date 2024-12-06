@@ -77,7 +77,7 @@ ${
     
     Did the packaging seem in any way tampered with?<br><br>
      
-    Please provide clear pictures of the box and the delivery labels that were attached.<br><br>
+    Please provide clear pictures of the box and the delivery labels that were attached. You may send these photos to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
     
     We hope you can bear with us whilst we investigate this further. Please note that HP takes these cases very seriously.<br><br>
     
