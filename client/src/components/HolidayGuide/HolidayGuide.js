@@ -23,7 +23,7 @@ const HolidayGuide = () => {
         have backlog, so as not to use the comp day.
       </Typography>
       <Typography sx={{ color: "blue", marginBottom: "10px" }}>
-        Spain BH YES, UK BH No - work as normal, get a comp day in lieu and 1.5
+      UK BH No, Spain BH Yes - work as normal, get a comp day in lieu and 1.5
         pay to be paid a month in arrears. To take it off requires a request
         confirmed in meta4. No holiday or comp day will be used for Spanish bank
         holiday that is requested as off.

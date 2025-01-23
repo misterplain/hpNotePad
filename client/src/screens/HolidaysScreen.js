@@ -42,7 +42,112 @@ const holidays2022 = [
   },
 ];
 
-const holidays2024 = [
+// const holidays2024 = [
+//   {
+//     date: "January 1st",
+//     holiday: "New Year's Day",
+//     spanish: true,
+//     uk: true,
+//   },
+//   {
+//     date: "January 6th",
+//     holiday: "Epiphany",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "March 29th",
+//     holiday: "Good Friday",
+//     spanish: true,
+//     uk: true,
+//   },
+//   {
+//     date: "April 1st",
+//     holiday: "Easter Monday",
+//     spanish: true,
+//     uk: true,
+//   },
+//   {
+//     date: "May 1st",
+//     holiday: "Labour Day",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "May 6th",
+//     holiday: "Early May Bank Hol",
+//     spanish: false,
+//     uk: true,
+//   },
+//   {
+//     date: "May 27th",
+//     holiday: "Spring Bank Hol",
+//     spanish: false,
+//     uk: true,
+//   },
+//   {
+//     date: "June 24th",
+//     holiday: "St. John's Day",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "August 15th",
+//     holiday: "Assumption of Mary",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "August 26th",
+//     holiday: "Summer Bank Hol",
+//     spanish: false,
+//     uk: true,
+//   },
+//   {
+//     date: "September 11th",
+//     holiday: "Nat'l Day of Catalonia",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "October 12th",
+//     holiday: "Fiesta Nacional de España",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "November 1st",
+//     holiday: "All Saints Day",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "December 6th",
+//     holiday: "Constitution Day",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "December 9th",
+//     holiday: "Immaculate Conception",
+//     spanish: true,
+//     uk: false,
+//   },
+//   {
+//     date: "December 25th",
+//     holiday: "Christmas Day",
+//     spanish: true,
+//     uk: true,
+//   },
+//   {
+//     date: "December 26th",
+//     holiday: "St Stephens Day",
+//     spanish: true,
+//     uk: true,
+//   },
+// ];
+
+const holidays2025 = [
   {
     date: "January 1st",
     holiday: "New Year's Day",
@@ -55,95 +160,107 @@ const holidays2024 = [
     spanish: true,
     uk: false,
   },
+  // {
+  //   date: "",
+  //   holiday: "",
+  //   uk: false,
+  //   spanish: false,
+  // },
   {
-    date: "March 29th",
+    date: "April 18th",
     holiday: "Good Friday",
-    spanish: true,
     uk: true,
+    spanish: true,
   },
   {
-    date: "April 1st",
+    date: "April 21st",
     holiday: "Easter Monday",
-    spanish: true,
     uk: true,
+    spanish: true,
   },
   {
     date: "May 1st",
-    holiday: "Labour Day",
-    spanish: true,
+    holiday: "Labor day - Spain",
     uk: false,
+    spanish: true,
   },
   {
-    date: "May 6th",
-    holiday: "Early May Bank Hol",
-    spanish: false,
+    date: "May 5th",
+    holiday: "UK bank hol",
     uk: true,
+    spanish: false,
   },
   {
-    date: "May 27th",
-    holiday: "Spring Bank Hol",
-    spanish: false,
+    date: "May 26th",
+    holiday: "UK bank hol",
     uk: true,
+    spanish: false,
   },
   {
     date: "June 24th",
-    holiday: "St. John's Day",
-    spanish: true,
+    holiday: "St Johns day",
     uk: false,
+    spanish: true,
   },
   {
     date: "August 15th",
     holiday: "Assumption of Mary",
-    spanish: true,
     uk: false,
+    spanish: true,
   },
   {
-    date: "August 26th",
-    holiday: "Summer Bank Hol",
-    spanish: false,
+    date: "August 25th",
+    holiday: "UK bank hol",
     uk: true,
+    spanish: false,
   },
   {
     date: "September 11th",
-    holiday: "Nat'l Day of Catalonia",
-    spanish: true,
+    holiday: "Nat'l day of Catalunya",
     uk: false,
+    spanish: true,
   },
   {
-    date: "October 12th",
-    holiday: "Fiesta Nacional de España",
-    spanish: true,
+    date: "September 24th",
+    holiday: "La Merce",
     uk: false,
+    spanish: true,
+  },
+  {
+    date: "October 13th",
+    holiday: "Spain bank hol",
+    uk: false,
+    spanish: true,
   },
   {
     date: "November 1st",
-    holiday: "All Saints Day",
-    spanish: true,
+    holiday: "Spain bank hol",
     uk: false,
+    spanish: true,
   },
   {
     date: "December 6th",
     holiday: "Constitution Day",
-    spanish: true,
     uk: false,
+    spanish: true,
   },
   {
-    date: "December 9th",
+    date: "December 8th",
     holiday: "Immaculate Conception",
-    spanish: true,
     uk: false,
+    spanish: true,
   },
   {
     date: "December 25th",
     holiday: "Christmas Day",
-    spanish: true,
     uk: true,
+    spanish: true,
   },
   {
     date: "December 26th",
-    holiday: "St Stephens Day",
-    spanish: true,
+    holiday: "Boxing Day",
     uk: true,
+    spanish: true,
   },
 ];
 
@@ -279,7 +396,7 @@ const HolidaysScreen = () => {
             UK
           </a>{" "}
         </Typography> */}
-        <Table aria-label="simple table" size="small">
+        {/* <Table aria-label="simple table" size="small">
           <TableHead>
             <TableRow sx={{ borderBottom: "2px solid grey" }}>
               <TableCell align="left">Year - 2024 </TableCell>
@@ -308,6 +425,46 @@ const HolidaysScreen = () => {
                 </TableCell>
                 <TableCell align="center">
                   {holiday.uk ? (
+                    <BiCheck
+                      style={{
+                        fontSize: "25px",
+                      }}
+                    />
+                  ) : null}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table> */}
+        <Table aria-label="simple table" size="small">
+          <TableHead>
+            <TableRow sx={{ borderBottom: "2px solid grey" }}>
+              <TableCell align="left">Year - 2025 </TableCell>{" "}
+              <TableCell align="center">UK Bank Holiday</TableCell>
+              <TableCell align="center">Spanish Bank Holiday</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {holidays2025.map((holiday) => (
+              <TableRow key={holiday.date}>
+                <TableCell
+                  component="th"
+                  scope="row"
+                  sx={{ color: getHolidayColor(holiday) }}
+                >
+                  {holiday.date} - {holiday.holiday}
+                </TableCell>{" "}
+                <TableCell align="center">
+                  {holiday.uk ? (
+                    <BiCheck
+                      style={{
+                        fontSize: "25px",
+                      }}
+                    />
+                  ) : null}
+                </TableCell>
+                <TableCell align="center">
+                  {holiday.spanish ? (
                     <BiCheck
                       style={{
                         fontSize: "25px",
