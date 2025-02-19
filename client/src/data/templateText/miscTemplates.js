@@ -41,6 +41,12 @@ const miscLinks = [
     title: "Refund Failed",
     important: false,
   },
+  {
+    id: "MSCWireBlock",
+    title: "Wire refund",
+    important: true,
+  },
+
 ];
 
 const getMiscTemplates = (name, orderNumber, apology, date, hour, id) => {
@@ -222,6 +228,17 @@ If you need anything further, please let us know.<br><br>
   
   
       <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+   `,
+    },
+
+    {
+      id: "MSCWireBlock",
+      title: "Block of text for wire refunds",
+      text: `As you have pre-paid your order via wire bank transfer, we require your bank details to allow us to transfer the funds for this item back into your account. Please provide the following bank details to enable us to process this refund:
+        
+        
+        <strong><ul><li>IBAN:</li><li>SWIFT:</li><li>Bank Name:</li><li>Branch:</li><li>AccountName:</li><li>Sort Code:</li><li>Account Number:</li></ul>*(Important Information - Please complete all fields)</strong><br><br>
+        You may send this information to us at <strong>hpstore-uk@hp.com</strong>, please ensure to put your order number in the subject line of the email.<br><br>
    `,
     },
   ];
