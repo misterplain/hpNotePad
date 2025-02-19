@@ -4,7 +4,7 @@ const emptyBoxLinks = [
   {
     id: "EBOpenInvest",
     title: "Open Investigation",
-    important: true,
+    important: false,
   },
   {
     id: "EBBeforeClaim",

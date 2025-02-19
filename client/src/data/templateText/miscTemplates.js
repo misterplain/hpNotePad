@@ -4,7 +4,7 @@ const miscLinks = [
   {
     id: "MSCBlank",
     title: "Blank",
-    important: true,
+    important: false,
   },
   {
     id: "MSCPriceMatchRaised",

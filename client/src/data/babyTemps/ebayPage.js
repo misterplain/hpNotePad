@@ -59,6 +59,10 @@ const templatesEbayGeneral = [
     id: 14,
     text: "On the product page, the dropdown menus 'What's in the box' and 'Choose item' allow you to select the quantity and type of ink.",
   },
+  {
+    id: 22, 
+    text:"Our full range of products can be found on the HP Store, you may use the advanced search filters to find an item that suits your needs. If you prefer to purchase the item via our Ebay store, you may perform a search for that item here on Ebay.\nhttps://www.hp.com/gb-en/shop/"
+  }
 ];
 
 const templatesEbayOrderStatus = [

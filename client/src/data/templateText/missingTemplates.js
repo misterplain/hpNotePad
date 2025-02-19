@@ -16,21 +16,21 @@ const missingLinks = [
     title: "Ref Missing All",
     important: false,
   },
-  {
-    id: "MSGAllWireRef",
-    title: "Ref Wire Missing All",
-    important: false,
-  },
+  // {
+  //   id: "MSGAllWireRef",
+  //   title: "Ref Wire Missing All",
+  //   important: false,
+  // },
   {
     id: "MSGPartRef",
     title: "Ref Missing Part",
     important: false,
   },
-  {
-    id: "MSGPartWireRef",
-    title: "Ref Wire Missing Part",
-    important: false,
-  },
+  // {
+  //   id: "MSGPartWireRef",
+  //   title: "Ref Wire Missing Part",
+  //   important: false,
+  // },
   {
     id: "MSGDeliveredRef",
     title: "Delivered - Ref",
@@ -41,10 +41,76 @@ const missingLinks = [
     title: "Delivered - Rep",
     important: false,
   },
+  {
+    id: "MSGDeliveredPhotoOpen",
+    title: "Delivered/Photo - Open Invest",
+    important: true,
+  },
+  {
+    id: "MSGDeliveredPhotoPolice",
+    title: "Delivered/Photo - Police report",
+    important: true,
+  },
 ];
 
 const getMissingTemplates = (name, orderNumber, apology, date, hour, id) => {
   const templates = [
+    {
+      id: "MSGDeliveredPhotoOpen",
+      title: "Missing - Delivered/photo - open investigation",
+      text: `Dear ${name},<br><br>
+    
+    
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+      We are sorry to hear that you have not received your order.<br><br>
+
+We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, Parcel Force. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
+
+We are committed to resolving this matter as quickly as possible. We appreciate your patience as we work through the investigation.<br><br>
+
+
+
+If there is anything further you need, please do not hesitate to let me know.<br><br>
+
+
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    
+      `,
+    },
+        {
+          id: "MSGDeliveredPhotoPolice",
+          title: "Missing - Delivered/photo - police report",
+          text: `Dear ${name},<br><br>
+        
+        
+    ${
+      hour < 13 ? "Good morning, " : "Good afternoon, "
+    }thank you for contacting the HP Store. ${
+            apology ? "Apologies for the delay in our reply." : ""
+          }<br><br>
+    
+    We are sorry to hear that you have not received your order.<br><br>
+    
+We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, Parcel Force. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
+
+To assist us in this process, we kindly ask that you provide a police crime report in PDF format, as this is required when there is a discrepancy between delivery records and the customer's claim. Please email the report to us at hpstore-uk@hp.com so we can proceed with the investigation. You may also be required to complete a declaration from Parcel Force, and we will contact you if this is necessary.<br><bR>
+
+We are committed to resolving this matter as quickly as possible. We appreciate your patience as we work through the investigation.<br><br>
+
+    
+    
+    If there is anything further you need, please do not hesitate to let me know.<br><br>
+    
+    
+        <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+        
+          `,
+        },
     {
       id: "MSGAllRep",
       title: "Missing All - Rep",

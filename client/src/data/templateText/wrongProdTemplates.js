@@ -21,11 +21,11 @@ const wrongProductLinks = [
     title: "Refund-PP-Collect",
     important: false,
   },
-  {
-    id: "WGPRefundWireCollection",
-    title: "Refund-Wire-Collect",
-    important: false,
-  },
+  // {
+  //   id: "WGPRefundWireCollection",
+  //   title: "Refund-Wire-Collect",
+  //   important: false,
+  // },
   {
     id: "WGPRefundCCLabel",
     title: "Refund-CC-Label",
@@ -36,20 +36,20 @@ const wrongProductLinks = [
     title: "Refund-PP-Label",
     important: false,
   },
-  {
-    id: "WGPRefundWireLabel",
-    title: "Refund-Wire-Label",
-    important: false,
-  },
+  // {
+  //   id: "WGPRefundWireLabel",
+  //   title: "Refund-Wire-Label",
+  //   important: false,
+  // },
   {
     id: "WGPPhotosRep",
     title: "Need photos - rep",
-    important: true,
+    important: false,
   },
   {
     id: "WGPPhotosRef",
     title: "need photos - ref",
-    important: true,
+    important: false,
   },
 ];
 

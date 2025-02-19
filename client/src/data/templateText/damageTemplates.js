@@ -21,11 +21,11 @@ const damageLinks = [
     title: "Refund-PP-Collect",
     important: false,
   },
-  {
-    id: "DMGRefundWireCollection",
-    title: "Refund-Wire-Collect",
-    important: false,
-  },
+  // {
+  //   id: "DMGRefundWireCollection",
+  //   title: "Refund-Wire-Collect",
+  //   important: false,
+  // },
   {
     id: "DMGRefundCCLabel",
     title: "Refund-CC-Label",
@@ -36,20 +36,20 @@ const damageLinks = [
     title: "Refund-PP-Label",
     important: false,
   },
-  {
-    id: "DMGRefundWireLabel",
-    title: "Refund-Wire-Label",
-    important: false,
-  },
+  // {
+  //   id: "DMGRefundWireLabel",
+  //   title: "Refund-Wire-Label",
+  //   important: false,
+  // },
   {
     id: "DMGPhotosRep",
     title: "Need photos - rep",
-    important: true,
+    important: false,
   },
   {
     id: "DMGPhotosRef",
     title: "need photos - ref",
-    important: true,
+    important: false,
   },
 ];
 

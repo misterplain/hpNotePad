@@ -44,8 +44,9 @@ const templatesChatGeneral = [
     id: 7,
     text: "I would recommend speaking with one of our Sales team regarding this.  They can be contacted either via email (hpstoresalesuk@hp.com) or by telephone (0207 660 3859) Option 1 and then Option 2 again.",
   },
-  {id:22,
-    text: "Sorry, I'm on the Post-Sales team and we're not trained on product specifications. I'll transfer you to someone who can answer your question."
+  {
+    id: 22,
+    text: "Sorry, I'm on the Post-Sales team and we're not trained on product specifications. I'll transfer you to someone who can answer your question.",
   },
   {
     id: 8,
@@ -73,6 +74,10 @@ const templatesChatOrderStatus = [
   {
     id: 1,
     text: "The stock info on the site is not 100% live updated, so sometimes you can place an order for a product that is just then going out of stock, I do apologise for the inconvenience. ",
+  },
+  {
+    id: 25,
+    text: "There has been an issue with orders placed via Klarna, we are escalating all cases to Klarna and they will then contact you directly on if this will be cancelled or if this will progress. Please provide the email address you used for this order, and we or Klarna will get back to you within 1-2 working days with further information. ",
   },
   {
     id: 20,
@@ -143,6 +148,10 @@ const templatesChatTech = [
   {
     id: 1,
     text: "Is this in regards to an Instant Ink subscription?",
+  },
+  {
+    id: 7,
+    text: "In this department we are unable to assist directly with Instant ink subscriptions. you would need to speak with our Instant Ink team directly at 0207 660 6027. They will be happy to assist you. Sometimes they have a Virtual Agent available:\nhttps://instantink.hpconnected.com/uk/en/l/",
   },
   {
     id: 2,

@@ -12,11 +12,11 @@ const changeOfMindLinks = [
     title: "Refund-PP-Collect",
     important: false,
   },
-  {
-    id: "COMRefundWireCollection",
-    title: "Refund-Wire-Collect",
-    important: false,
-  },
+  // {
+  //   id: "COMRefundWireCollection",
+  //   title: "Refund-Wire-Collect",
+  //   important: false,
+  // },
   {
     id: "COMRefundCCLabel",
     title: "Refund-CC-Label",
@@ -27,15 +27,15 @@ const changeOfMindLinks = [
     title: "Refund-PP-Label",
     important: false,
   },
-  {
-    id: "COMRefundWireLabel",
-    title: "Refund-Wire-Label",
-    important: false,
-  },
+  // {
+  //   id: "COMRefundWireLabel",
+  //   title: "Refund-Wire-Label",
+  //   important: false,
+  // },
   {
     id: "COM14",
     title: "no return-14 days",
-    important: true,
+    important: false,
   },
 ];
 

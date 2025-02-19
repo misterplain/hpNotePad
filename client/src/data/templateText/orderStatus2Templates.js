@@ -4,22 +4,27 @@ const orderStatus2Links = [
   {
     id: "OSRTSreforrep",
     title: "RTS - ref or rep?",
-    important: true,
+    important: false,
   },
   {
     id: "OSRTSref",
     title: "RTS - ref",
-    important: true,
+    important: false,
   },
   {
     id: "OSRTSrep",
     title: "RTS - rep",
-    important: true,
+    important: false,
   },
   {
     id: "MSCCancelRequest",
     title: "Cancel Request",
     important: false,
+  },
+  {
+    id: "OSRefuseDelivery",
+    title: "Shipped - Refuse Delivery",
+    important: true,
   },
   {
     id: "MSCCancelSuccess",
@@ -46,11 +51,11 @@ const orderStatus2Links = [
     title: "End of Life - CC/PP",
     important: false,
   },
-  {
-    id: "OSEOLWire",
-    title: "End of Life - Wire",
-    important: false,
-  },
+  // {
+  //   id: "OSEOLWire",
+  //   title: "End of Life - Wire",
+  //   important: false,
+  // },
   {
     id: "OSFraud",
     title: "Fraud Rejected",
@@ -67,6 +72,28 @@ const getOrderStatus2Templates = (
   id
 ) => {
   const templates = [
+    {
+      id: "OSRefuseDelivery",
+      title: "Shipped - Refuse delivery",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for recent HP Store order. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+ Unfortunately, your cancellation request wasn´t received by our warehouse due to the speed of our shipping system.<br><br>
+ You order has already shipped and you can track it here:<br>
+ <strong>*******INSERT TRACKING*******</strong><br><br>
+ We apologise for any inconvenience this may cause and advise you to <strong>refuse</strong> the delivery from our carrier and inform us as soon as possible once this has taken place.<br><br>
+ A refund will need to be initiated. For orders already delivered we will be required to raise a return claim to enable the refund and we will process your refund at the earliest opportunity once we have the goods returned.<br><br>
+ Further information on order cancellation and refunds can be found in our FAQs Page.<br><br>
+
+
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+`,
+    },
     {
       id: "OSRTSreforrep",
       title: "RTS - ref or rep?",

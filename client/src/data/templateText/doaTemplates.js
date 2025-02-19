@@ -21,11 +21,11 @@ const doaLinks = [
     title: "Refund-PP-Collect",
     important: false,
   },
-  {
-    id: "DOARefundWireCollection",
-    title: "Refund-Wire-Collect",
-    important: false,
-  },
+  // {
+  //   id: "DOARefundWireCollection",
+  //   title: "Refund-Wire-Collect",
+  //   important: false,
+  // },
   {
     id: "DOARefundCCLabel",
     title: "Refund-CC-Label",
@@ -36,11 +36,11 @@ const doaLinks = [
     title: " Refund-PP-Label",
     important: false,
   },
-  {
-    id: "DOARefundWireLabel",
-    title: "Refund-Wire-Label",
-    important: false,
-  },
+  // {
+  //   id: "DOARefundWireLabel",
+  //   title: "Refund-Wire-Label",
+  //   important: false,
+  // },
 ];
 
 const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {

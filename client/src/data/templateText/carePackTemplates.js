@@ -1,10 +1,15 @@
-const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+const { refundETA, replacementETA } = require("../ref-rep-ETAs.js");
 
 const carePackLinks = [
   {
+    id: "CPBundleIssue",
+    title: "CP Bundle Issue",
+    important: true,
+  },
+  {
     id: "CPNotCompat",
     title: "CP Not compatible",
-    important: true,
+    important: false,
   },
   {
     id: "CPCert",
@@ -30,6 +35,32 @@ const carePackLinks = [
 
 const getCarePackTemplates = (name, orderNumber, apology, date, hour, id) => {
   const templates = [
+    {
+      id: "CPBundleIssue",
+      title: "Carepack Bundle Issue",
+      text: `Dear ${name},<br><br>
+
+
+${
+  hour < 13 ? "Good morning, " : "Good afternoon, "
+}thank you for contacting the HP Store. ${
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
+
+
+The Care Pack Team have advised that this Care Pack is not compatible with the hardware device from the order. As this was a bundled Hardware + Care Pack order, the error was on our end, not yours. We will be escalating this to query regarding the correct Care Pack on your behalf. If you receive notification of a new order created for the correct Care Pack, please disregard any request to pay for this order, as this will be paid for by us on our end. <br><br>
+Once this new order goes through, we will contact the Care Pack team to ensure that the correct Care Pack is associated with your hardware. A new Care Pack certificate will be created and sent to you directly. <br><br>
+Our apologies for the inconvenience seen.<br><br>
+
+
+
+
+If there is anything further, we can assist you with please feel free to contact us.<br><br>
+  
+
+  <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+`,
+    },
     {
       id: "CPCert",
       title: "Certificate Attached",
