@@ -1,4 +1,4 @@
-const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+const { refundETA, replacementETA } = require("../ref-rep-ETAs.js");
 
 const doaLinks = [
   {
@@ -77,7 +77,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         
 
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -108,7 +108,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -142,7 +142,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -175,7 +175,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -217,7 +217,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -248,7 +248,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -279,7 +279,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
     {
@@ -316,7 +316,7 @@ const getDOATemplates = (name, orderNumber, apology, date, hour, id) => {
         If there is anything further you need, please do not hesitate to let us know.<br><br>
         
         
-            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+            <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
                 `,
     },
   ];

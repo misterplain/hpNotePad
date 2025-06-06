@@ -1,4 +1,4 @@
-const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+const { refundETA, replacementETA } = require("../ref-rep-ETAs.js");
 
 const misc2Links = [
   {
@@ -63,7 +63,7 @@ ${
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -88,7 +88,7 @@ If the courier is not able to update this address before the order is fully sent
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -110,7 +110,7 @@ Please confirm if you accept this voucher and we will escalate further for the c
     
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -149,7 +149,7 @@ ${
     
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -170,7 +170,7 @@ We are sorry to advise that due to an issue in processing your order and it has 
 If there is anything further you need, please do not hesitate to let us know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -203,7 +203,7 @@ ${
 
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -230,7 +230,7 @@ If there is anything else, please let me know.<br><br>
 
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
     {
@@ -254,7 +254,7 @@ ${
 
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
       `,
     },
   ];

@@ -1,4 +1,4 @@
-const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+const { refundETA, replacementETA } = require("../ref-rep-ETAs.js");
 
 const miscLinks = [
   {
@@ -46,7 +46,6 @@ const miscLinks = [
     title: "Wire refund",
     important: true,
   },
-
 ];
 
 const getMiscTemplates = (name, orderNumber, apology, date, hour, id) => {
@@ -67,7 +66,7 @@ ${
 If you need anything further, please let us know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
 `,
     },
     {
@@ -92,7 +91,7 @@ If you need anything further, please let us know.<br><br>
   Again, we thank you for your continued patience and understanding and welcome any further queries you may have in the meantime.<br><br>
         
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -113,7 +112,7 @@ If you need anything further, please let us know.<br><br>
         If there is anything further you need please let us know, alternatively please review our FAQS on our website as seen below:<br>
         <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -135,7 +134,7 @@ If you need anything further, please let us know.<br><br>
   If we can help you with anything else, please let us know.<br><br>
         
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -157,7 +156,7 @@ If you need anything further, please let us know.<br><br>
   If there is anything further you need please let us know, alternatively please review our <a href="https://www.hp.com/gb-en/shop/faq.aspx" target="__blank">FAQs page</a> on our website<br><br>
   
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -177,7 +176,7 @@ If you need anything further, please let us know.<br><br>
         If there is anything further we can assist you with please feel free to contact us.<br><br>
         
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -200,7 +199,7 @@ If you need anything further, please let us know.<br><br>
   <a href="https://www.hp.com/gb-en/shop/faq.aspx">https://www.hp.com/gb-en/shop/faq.aspx</a><br><br>
   
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
     {
@@ -227,7 +226,7 @@ If you need anything further, please let us know.<br><br>
   
   
   
-      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+      <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
    `,
     },
 

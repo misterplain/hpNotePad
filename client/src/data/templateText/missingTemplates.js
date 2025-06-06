@@ -1,4 +1,4 @@
-const {refundETA, replacementETA} = require('../ref-rep-ETAs.js')
+const { refundETA, replacementETA } = require("../ref-rep-ETAs.js");
 
 const missingLinks = [
   {
@@ -78,21 +78,21 @@ We are committed to resolving this matter as quickly as possible. We appreciate 
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
-        {
-          id: "MSGDeliveredPhotoPolice",
-          title: "Missing - Delivered/photo - police report",
-          text: `Dear ${name},<br><br>
+    {
+      id: "MSGDeliveredPhotoPolice",
+      title: "Missing - Delivered/photo - police report",
+      text: `Dear ${name},<br><br>
         
         
     ${
       hour < 13 ? "Good morning, " : "Good afternoon, "
     }thank you for contacting the HP Store. ${
-            apology ? "Apologies for the delay in our reply." : ""
-          }<br><br>
+        apology ? "Apologies for the delay in our reply." : ""
+      }<br><br>
     
     We are sorry to hear that you have not received your order.<br><br>
     
@@ -107,10 +107,10 @@ We are committed to resolving this matter as quickly as possible. We appreciate 
     If there is anything further you need, please do not hesitate to let me know.<br><br>
     
     
-        <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+        <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
         
           `,
-        },
+    },
     {
       id: "MSGAllRep",
       title: "Missing All - Rep",
@@ -133,7 +133,7 @@ You will receive a confirmation email as soon this is on its way to you.<br><br>
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -159,7 +159,7 @@ You will receive a confirmation email as soon this is on its way to you.<br><br>
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -185,7 +185,7 @@ Your money will be returned to your account within ${refundETA} working days.<br
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -218,7 +218,7 @@ As you have pre-paid your order via wire bank transfer, we require your bank det
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -244,7 +244,7 @@ Your money will be returned to your account within ${refundETA}  working days.<b
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -276,7 +276,7 @@ As you have pre-paid your order via wire bank transfer, we require your bank det
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -301,7 +301,7 @@ ${
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
@@ -325,7 +325,7 @@ ${
 If there is anything further you need, please do not hesitate to let me know.<br><br>
 
 
-    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please call us at 0207 660 3859 or use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
+    <strong>Kindly note that this email address does not receive replies. If you wish to reply to this email, please use our chat service, available from 9:00 am to 5:30 pm.</strong><br><br> Kind regards,
     
       `,
     },
