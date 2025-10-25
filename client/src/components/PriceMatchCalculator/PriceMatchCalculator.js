@@ -65,9 +65,8 @@ const PriceMatchCalculator = () => {
         display="flex"
         flexDirection="row"
         justifyContent="center"
-   
       >
-        <Grid item xs={3} sx={{paddingTop: "25px"}}>
+        <Grid item xs={3} sx={{ paddingTop: "25px" }}>
           <FormGroup>
             <FormControlLabel
               control={

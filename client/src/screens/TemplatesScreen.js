@@ -76,7 +76,7 @@ const TemplatesScreen = () => {
   const [apology, setApology] = useState(false);
   const [refundETA, setRefundETA] = useState("14");
   const [replacementETA, setReplacementETA] = useState("14");
-  console.log(refundETA, replacementETA)
+  console.log(refundETA, replacementETA);
 
   //snackbar
   const [open, setOpen] = useState(false);
@@ -155,12 +155,12 @@ const TemplatesScreen = () => {
       orderNumber,
       apology,
       date,
-      // refundETA, 
+      // refundETA,
       // replacementETA,
       hour,
       id
     );
-console.log(template)
+    console.log(template);
     setText(template.text);
     setTemplateTitle(template.title);
   };
@@ -556,7 +556,7 @@ console.log(template)
               fontSize: "20px",
             }}
           />
-      
+
           <CKEditor
             id="editor"
             editor={ClassicEditor}
