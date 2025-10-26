@@ -38,8 +38,6 @@ const ProductivityTracker = () => {
         } else if (event.key === "Backspace") {
           setProductivity(0);
         }
-      } else {
-        console.log("shift key not pressed");
       }
     },
     [productivity]

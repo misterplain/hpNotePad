@@ -76,7 +76,6 @@ const TemplatesScreen = () => {
   const [apology, setApology] = useState(false);
   const [refundETA, setRefundETA] = useState("14");
   const [replacementETA, setReplacementETA] = useState("14");
-  console.log(refundETA, replacementETA);
 
   //snackbar
   const [open, setOpen] = useState(false);
@@ -103,7 +102,7 @@ const TemplatesScreen = () => {
       const clipboardItemInput = new ClipboardItem({ "text/html": blobInput });
       navigator.clipboard.write([clipboardItemInput]);
     } catch (e) {
-      console.log(e);
+      // Error copying to clipboard
     }
     setOpen(true);
   };
@@ -115,13 +114,6 @@ const TemplatesScreen = () => {
     } = event;
     setApology(!apology);
   };
-
-  //function to set text within editor to template
-  //   const setTemplate = (id) => {
-  //     const template = getTemplates(name, orderNumber, apology, date, hour, id);
-  //     setText(template.text);
-  //     setTemplateTitle(template.title);
-  //   };
 
   const templateFunctions = {
     DOA: getDOATemplates,
@@ -138,29 +130,18 @@ const TemplatesScreen = () => {
     CarePack: getCarePackTemplates,
     EmptyBox: getEmptyBoxTemplates,
   };
+
   //function to set text within editor to template
   const setTemplate = (id, type) => {
-    // const template = `get${type}Templates`(name, orderNumber, apology, date, hour, id);
-
-    //refund/replacement timeline variables
-    // const refundETA = "14" //days
-    // const replacementETA = "14" //days
-
-    // const refundETA = "14";
-    // const replacementETA = "14";
-
     const templateFunction = templateFunctions[type];
     const template = templateFunction(
       name,
       orderNumber,
       apology,
       date,
-      // refundETA,
-      // replacementETA,
       hour,
       id
     );
-    console.log(template);
     setText(template.text);
     setTemplateTitle(template.title);
   };
@@ -562,19 +543,17 @@ const TemplatesScreen = () => {
             editor={ClassicEditor}
             data={text}
             onReady={(editor) => {
-              // You can store the "editor" and use when it is needed.
-              // console.log("Editor is ready to use!", editor);
+              // Editor is ready to use
             }}
             onChange={(event, editor) => {
               const data = editor.getData();
-              // console.log({ event, editor, data });
               setText(data);
             }}
             onBlur={(event, editor) => {
-              // console.log("Blur.", editor);
+              // Editor blur event
             }}
             onFocus={(event, editor) => {
-              // console.log("Focus.", editor);
+              // Editor focus event
             }}
           />
           <div id="parsedText" style={{ display: "none" }}>

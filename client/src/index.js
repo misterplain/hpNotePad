@@ -8,8 +8,6 @@ import store from "./store";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
-// import { MaterialDesignContent } from "notistack";
-// import { styled } from "@mui/material/styles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
