@@ -6,10 +6,6 @@ router.post("/", async (req, res) => {
   const { result, name, email, message, phoneNum } = req.body;
   const { source } = req.query;
 
-  console.log({ result, name, email, message, phoneNum });
-
-  const test = nodeMailerConfirmationEmail(source, req.body);
-
   try {
     const emailSent = await nodeMailerConfirmationEmail(source, req.body);
     return res
@@ -19,6 +15,5 @@ router.post("/", async (req, res) => {
     nodeMailerConfirmationEmail(source, { message: "Failure to send message" });
     return res.status(500).json({ message: "Error sending message" });
   }
-  console.log(test);
 });
 module.exports = router;

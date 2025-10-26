@@ -42,7 +42,6 @@ mongoose.connection.on("error", (err) => {
   );
 });
 
-// console.log(typeof process.env.RAPID_API_KEY)
 app.use("/", express.static(path.resolve(path.join(__dirname, "./build"))));
 
 app.use(express.json());
@@ -52,12 +51,11 @@ const whitelist = [
   "https://hpnotepad.onrender.com",
   "https://fantasticfy.onrender.com",
   "https://patrickobrien.onrender.com",
-  "https://e-commerce-mern-eryu.onrender.com"
+  "https://e-commerce-mern-eryu.onrender.com",
 ];
 app.use(
   cors({
     origin: function (origin, callback) {
-      console.log("Origin: ", origin); 
       if (whitelist.indexOf(origin) !== -1 || !origin) {
         callback(null, true);
       } else {
@@ -71,23 +69,9 @@ app.use(
 
 app.use(express.urlencoded({ extended: true }));
 
-//notepad
 app.use("/contact", contactRoute);
 app.use("/data", dataRoute);
 app.use("/nodeCron", nodeCronRoute);
-
-// //portfolio
-// app.use("/portfolio/contact", contactPortfolioRoute);
-
-// //fantasticfy
-// app.use("/fantasticfy/data", fetchDataRoute);
-
-// //boilerPlate
-// app.use("/auth", authRoutesBoilerPlate);
-
-//keepActive
-// keepServerActive()
-// app.use("/keepActive", keepActiveRoutes);
 
 const port = process.env.PORT || 5000;
 
