@@ -13,6 +13,7 @@ export const fetchData = (date) => async (dispatch) => {
 
     // Check if data already exists in the database
     const { data: existingData } = await axios.get(`/data/${date}`);
+   
 
     // If data does not exist, make the API call
     if (existingData.message === "No data for this date") {
@@ -24,6 +25,7 @@ export const fetchData = (date) => async (dispatch) => {
       const { data: newData } = await axios.get(`/data/${date}`);
       dispatch({ type: FETCH_DATA_SUCCESS, payload: newData });
     } else {
+      console.log(existingData)
       dispatch({ type: FETCH_DATA_SUCCESS, payload: existingData });
     }
   } catch (error) {

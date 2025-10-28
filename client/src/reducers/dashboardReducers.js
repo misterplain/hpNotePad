@@ -21,9 +21,10 @@ export const dashboardReducer = (state = {}, action) => {
     case FETCH_DATA_REQUEST:
       return { loading: true };
     case FETCH_DATA_SUCCESS:
+      console.log("reducer",  action.payload)
       return {
         loading: false,
-        dashboardData: action.payload[0] ? action.payload[0] : null,
+        dashboardData: action.payload.data[0] ? action.payload.data[0] : null,
         date: action.payload[0]
           ? formatDate(new Date(action.payload[0].date))
           : formatDate(new Date()),

@@ -56,6 +56,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const DashboardScreen = () => {
   const dashboardState = useSelector((state) => state.dashboard);
   const { dashboardData, loading, error } = dashboardState;
+  console.log(dashboardData)
 
   return (
     <Grid container sx={{ display: "flex", justifyContent: "center" }}>
