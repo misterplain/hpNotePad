@@ -13,7 +13,7 @@ This is a full-stack MERN application that helps post-sales teams manage their d
 
 The deployed site can be found [HERE](https://hpnotepad.onrender.com/)
 
-The code for version 1 of this project can be found [HERE](https://github.com/misterplain/hpNotePad/tree/9728a68fb34802168db68cebda4070e406bddce5)
+The backend code for this project can be found [HERE](https://github.com/misterplain/node-server/tree/main/hpnotepad)
 
 ## Tech Stack
 
