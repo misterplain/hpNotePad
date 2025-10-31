@@ -69,7 +69,7 @@ ${
 
     This is protocol when a customer places a high value order and reportedly receives an empty box.<br><br>
      
-    Our carrier Parcel Force will now begin an in-depth investigation with regards to the weight of the shipment when it left us and a thorough stock check of whether your unit did indeed leave our warehouse successfully.<br><br>
+    Our carrier DPD will now begin an in-depth investigation with regards to the weight of the shipment when it left us and a thorough stock check of whether your unit did indeed leave our warehouse successfully.<br><br>
     
     Can you please explain briefly what happened when the courier handed over your order?<br><br>
     

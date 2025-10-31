@@ -60,9 +60,9 @@ const templatesEbayGeneral = [
     text: "On the product page, the dropdown menus 'What's in the box' and 'Choose item' allow you to select the quantity and type of ink.",
   },
   {
-    id: 22, 
-    text:"Our full range of products can be found on the HP Store, you may use the advanced search filters to find an item that suits your needs. If you prefer to purchase the item via our Ebay store, you may perform a search for that item here on Ebay.\nhttps://www.hp.com/gb-en/shop/"
-  }
+    id: 22,
+    text: "Our full range of products can be found on the HP Store, you may use the advanced search filters to find an item that suits your needs. If you prefer to purchase the item via our Ebay store, you may perform a search for that item here on Ebay.\nhttps://www.hp.com/gb-en/shop/",
+  },
 ];
 
 const templatesEbayOrderStatus = [
@@ -76,7 +76,7 @@ const templatesEbayOrderStatus = [
   },
   {
     id: 22,
-    text: "Our records show that your order has been shipped to the courier, please see your tracking below. As soon as Parcel Force scan this into their system, your tracking will update with further ETA information.\n\n Our apologies for the delays and inconvenience seen with this order.",
+    text: "Our records show that your order has been shipped to the courier, please see your tracking below. As soon as DPD scan this into their system, your tracking will update with further ETA information.\n\n Our apologies for the delays and inconvenience seen with this order.",
   },
 
   {
@@ -112,7 +112,7 @@ const templatesEbayReturns = [
   },
   {
     id: 6,
-    text: "Please find attached your parcel force return label, valid for 5 working days.\n\nPlease remember to get a receipt from the post office when you drop this off. ",
+    text: "Please find attached your DPD return label, valid for 5 working days.\n\nPlease remember to get a receipt from the post office when you drop this off. ",
   },
 ];
 

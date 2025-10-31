@@ -124,7 +124,7 @@ const templatesChatOrderStatus = [
 const templatesChatReturns = [
   {
     id: 1,
-    text: "Do you wish to return this via the Post Office with a free returns label, or for a collection from your address with our courier Parcel Force?",
+    text: "Do you wish to return this via the Post Office with a free returns label, or for a collection from your address with our courier DPD?",
   },
   {
     id: 2,
@@ -132,7 +132,7 @@ const templatesChatReturns = [
   },
   {
     id: 4,
-    text: "We have requested the collection date for XXX. Please note that Parcel Force are not always able to meet the requested dates, and will contact you directly when the date is fully booked in. Please remember to get a receipt from the driver when they collect",
+    text: "We have requested the collection date for XXX. Please note that DPD are not always able to meet the requested dates, and will contact you directly when the date is fully booked in. Please remember to get a receipt from the driver when they collect",
   },
   {
     id: 3,

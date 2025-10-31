@@ -38,8 +38,8 @@ const links = [
     url: "http://www.vatcalculator.co.uk/",
   },
   {
-    name: "Parcel Force Tracking",
-    url: "https://www.parcelforce.com/track-trace",
+    name: "DPD Tracking",
+    url: "https://track.dpd.co.uk/",
   },
 ];
 

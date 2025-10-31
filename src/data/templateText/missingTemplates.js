@@ -69,7 +69,7 @@ ${
 
       We are sorry to hear that you have not received your order.<br><br>
 
-We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, Parcel Force. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
+We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, DPD. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
 
 We are committed to resolving this matter as quickly as possible. We appreciate your patience as we work through the investigation.<br><br>
 
@@ -96,9 +96,9 @@ If there is anything further you need, please do not hesitate to let me know.<br
     
     We are sorry to hear that you have not received your order.<br><br>
     
-We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, Parcel Force. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
+We have reviewed our records and, according to the tracking information, there is a delivery image and proof of delivery for your order. Given this, we will need to investigate the situation further with our delivery partner, DPD. This may involve checking the GPS location of the delivery and potentially conducting an interview with the driver. Please note that this investigation can take up to 30 days to complete.<br><br>
 
-To assist us in this process, we kindly ask that you provide a police crime report in PDF format, as this is required when there is a discrepancy between delivery records and the customer's claim. Please email the report to us at hpstore-uk@hp.com so we can proceed with the investigation. You may also be required to complete a declaration from Parcel Force, and we will contact you if this is necessary.<br><bR>
+To assist us in this process, we kindly ask that you provide a police crime report in PDF format, as this is required when there is a discrepancy between delivery records and the customer's claim. Please email the report to us at hpstore-uk@hp.com so we can proceed with the investigation. You may also be required to complete a declaration from DPD, and we will contact you if this is necessary.<br><bR>
 
 We are committed to resolving this matter as quickly as possible. We appreciate your patience as we work through the investigation.<br><br>
 
@@ -293,7 +293,7 @@ ${
       }<br><br>
 
 
-    The Parcel Force investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
+    The DPD investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
     As you have already received the refund on this missing claim, please confirm if you prefer we arrange a return of the order, or for us to generate a bill to account for the refund already sent.<br><br>
     
 
@@ -318,7 +318,7 @@ ${
       }<br><br>
 
 
-    The Parcel Force investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
+    The DPD investigation came back showing proper delivery of the original order. <strong>Please see delivery image attached.</strong><br><br>
     As you have already received the replacement order generated from this missing claim, please confirm if you prefer we arrange a return of the order, or for us to generate a bill to account for the additional order received.<br><br>
 
 

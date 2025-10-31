@@ -188,7 +188,7 @@ ${
     We apologise for the ongoing delay with your return.<br><br>
 
 
-    There are several factors currently affecting this, including the intermittent strikes with Parcel Force, and unfortunately our collection & return label services have been greatly affected.<br><br>
+    There are several factors currently affecting this, including the intermittent strikes with DPD, and unfortunately our collection & return label services have been greatly affected.<br><br>
     
     
     Our management team is presently working to find a solution to these delays, and we will confirm the details of your return as soon as we can.<br><br>
